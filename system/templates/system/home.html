@@ -1,4 +1,7 @@
 {% extends "system/base.html" %}
 {% block content %}
   <h1>Home!</h1>
+  {% if user %}
+    user <b>{{user}}</b> is connected
+  {% endif %}
 {% endblock content %}

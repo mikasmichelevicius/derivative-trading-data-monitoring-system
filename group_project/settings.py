@@ -11,6 +11,8 @@ https://docs.djangoproject.com/en/3.0/ref/settings/
 """
 
 import os
+# import warnings
+# import exceptions
 
 # Build paths inside the project like this: os.path.join(BASE_DIR, ...)
 BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
@@ -26,6 +28,8 @@ SECRET_KEY = '31)e^4ksz7=yf&v7gin^z8!aa$%2!$50wxxanh*e^mlhya+c9k'
 DEBUG = True
 
 ALLOWED_HOSTS = []
+
+DATE_INPUT_FORMATS = ['%d-%m-%Y']
 
 
 # Application definition
@@ -114,8 +118,13 @@ USE_I18N = True
 
 USE_L10N = True
 
-USE_TZ = True
+USE_TZ = False
 
+# warnings.filterwarnings(u'ignore',
+#         message=u'DateTimeField DerivativeTrades.date received a naive datetime',
+#         category=RuntimeWarning,
+#         )
+# warnings.filterwarnings("ignore", category=exceptions.RuntimeWarning, module='django.db.backends.sqlite3.base', lineno=53)
 
 # Static files (CSS, JavaScript, Images)
 # https://docs.djangoproject.com/en/3.0/howto/static-files/
@@ -124,5 +133,5 @@ STATIC_URL = '/static/'
 
 CRISPY_TEMPLATE_PACK = 'bootstrap4'
 
-LOGIN_REDIRECT_URL = 'system-home'
+LOGIN_REDIRECT_URL = 'system:home'
 LOGIN_URL = 'login'
