@@ -1,0 +1,606 @@
+date,product,marketPrice
+09/11/2014,Moloko Plus,40.26
+09/11/2014,Pan-Galactic Gargle Blaster,711.63
+09/11/2014,Victory Gin,57.17
+09/11/2014,Vesper,342.41
+09/11/2014,Duff,406.35
+09/11/2014,Dark Planet Cola,78.0
+09/11/2014,Slurm,146.3
+09/11/2014,Nuka-cola,34.68
+09/11/2014,Ent-draught,26.87
+09/11/2014,Ambrosia,47.71
+09/11/2014,Romulan Ale,114.13
+09/11/2014,Astro Boys,2271.57
+09/11/2014,Marvins,51.39
+09/11/2014,K-9s,79.24
+09/11/2014,Autobots,49.12
+09/11/2014,Decepticons,64.55
+09/11/2014,Golems,17.04
+09/11/2014,Master Balls,110.69
+09/11/2014,Ultra Balls,62.24
+09/11/2014,T-800s,246.92
+09/11/2014,T-1000s,71.03
+09/11/2014,Flubbers,345.37
+09/11/2014,Spyders,129.87
+09/11/2014,B-4s,53.39
+09/11/2014,Ultrons,186.49
+09/11/2014,Ruby Slippers,49.17
+09/11/2014,Catbuses,868.21
+09/11/2014,Evangelions,448.16
+09/11/2014,Behelits,727.73
+09/11/2014,Lightsabres,16.63
+09/11/2014,Devil Fruits,182.25
+09/11/2014,SMILEs,241.73
+09/11/2014,Cornballers,234.09
+09/11/2014,Sabor de Soledad Chips,175.37
+09/11/2014,Red Apple Cigarettes,284.27
+09/11/2014,Wonka Bars,216.67
+09/11/2014,Bags of Holding,371.85
+09/11/2014,Sending Stones,1061.75
+09/11/2014,Elder Wands,255.16
+09/11/2014,Dornish Red,243.0
+09/11/2014,Valaryian Steel Bars,191.2
+09/11/2014,Dragon Eggs,561.34
+09/11/2014,Cranium Inflolinks,79.33
+09/11/2014,LiDAR Mark-Trackers,312.79
+09/11/2014,Arm Nanoblades,470.34
+09/11/2014,Replicants,8.18
+09/11/2014,Venom Canisters,149.73
+09/11/2014,Atium Bars,151.5
+09/11/2014,Otataral Bars,17.51
+09/11/2014,Night Dust,251.64
+09/11/2014,Dragon Scales,266.98
+09/11/2014,Teeth of the Dragon,338.38
+09/11/2014,Chunin Headband,160.03
+09/11/2014,Djinns,233.45
+09/11/2014,Flying Brooms,12.37
+09/11/2014,Flying Carpets,168.12
+09/11/2014,Mjolnirs,690.41
+09/11/2014,Infinity Stones,116.09
+09/11/2014,Infinity Gauntlets,10.74
+09/11/2014,Repulsor Beams,417.45
+09/11/2014,Super Soldier Serums,154.16
+09/11/2014,Vibranium Bars,442.56
+09/11/2014,Adamantium Bars,196.21
+09/11/2014,Mithril Bars,2.37
+09/11/2014,Rune Bars,276.52
+09/11/2014,True Names,67.86
+09/11/2014,Sigils,98.68
+09/11/2014,Strongest Potions,78.52
+09/11/2014,Knightmare Frames,584.34
+09/11/2014,Mirrors of Erised,495.16
+09/11/2014,Pensieves,73.66
+09/11/2014,Veritaserums,396.76
+09/11/2014,Felix Felicis,309.32
+09/11/2014,Horcuxes,216.47
+09/11/2014,Philosopher Stones,89.78
+09/11/2014,Sorceror Stones,24.4
+09/11/2014,Dragon Balls,70.37
+09/11/2014,Wind Shurikens,89.93
+09/11/2014,Time Turners,427.85
+09/11/2014,Moranth Burners,406.57
+09/11/2014,Moranth Crackers,152.75
+09/11/2014,Moranth Cussers,265.46
+09/11/2014,Moranth Flamers,241.3
+09/11/2014,Moranth Melters,152.4
+09/11/2014,Moranth Shapers,110.48
+09/11/2014,Moranth Smokers,90.26
+09/11/2014,Finnests,169.07
+09/11/2014,Terondais,192.38
+09/11/2014,White Gold Rings,113.94
+09/11/2014,Hurtloam,254.95
+09/11/2014,Rare Candies,95.69
+09/11/2014,PP Ups,440.5
+09/11/2014,Phoenix Downs,15.11
+09/11/2014,Zanpakutos,11.15
+09/11/2014,Sensu Beans,278.58
+09/11/2014,Namekian Spring Water,12.74
+09/11/2014,Australium Bars,85.34
+09/11/2014,Aether Tanks,17.34
+09/11/2014,Mana Ore,91.88
+09/11/2014,Dilithium Crystals,237.87
+09/11/2014,Dust Cannisters,337.2
+09/11/2014,Energon Cubes,716.0
+09/11/2014,Jumbonium Atoms,192.09
+09/11/2014,Katchin Bars,20.74
+09/11/2014,Krytonite Ore,249.65
+09/11/2014,Nanomachines,215.26
+09/11/2014,Octiron Bars,186.43
+09/11/2014,Redstone Blocks,523.64
+09/11/2014,Seastone Cuffs,108.4
+09/11/2014,Z-crystals,220.82
+09/11/2014,Digivices,99.62
+09/11/2014,Pym Particles,15.84
+09/11/2014,Wild Card Virus Vials,58.34
+09/11/2014,Tachyons,241.7
+09/11/2014,Hope,278.39
+09/11/2014,Decks of Many Things,185.93
+09/11/2014,Golden Fleeces,123.68
+09/11/2014,Argonaughts,399.78
+09/11/2014,Vestiges,608.37
+09/11/2014,Tricorders,162.16
+09/11/2014,Replicators,84.55
+09/11/2014,Transporters,310.64
+09/11/2014,Sonic Screwdrivers,243.89
+09/11/2014,Holy Grails,399.59
+09/11/2014,Nails of Helena,291.47
+09/11/2014,Shrouds of Turin,346.84
+09/11/2014,Hoverboards,27.99
+09/11/2014,Holodecks,222.06
+09/11/2014,Neuralizers,141.84
+09/11/2014,Symbiotes,224.03
+09/11/2014,Meow Meow Beans,329.91
+09/11/2014,6IV Shiny Dittos,660.13
+09/11/2014,Holy Hand Grenades,220.15
+09/11/2014,Alpha-Omega Bombs,845.85
+09/11/2014,Fatmans,73.32
+09/11/2014,BFG 9000s,99.87
+09/11/2014,Noisy Crickets,116.75
+09/11/2014,Lawgivers,94.7
+09/11/2014,Phasers,248.66
+09/11/2014,Pulse Rifles,20.69
+09/11/2014,Vorpal Swords,228.75
+09/11/2014,Sausages inna bun,11.15
+09/11/2014,Gundams,488.43
+09/11/2014,HALs,406.65
+09/11/2014,Agents,226.65
+09/11/2014,Pipboys,185.64
+09/11/2014,Scouters,45.89
+09/11/2014,Daemons,212.18
+09/11/2014,Pacts,109.12
+09/11/2014,Souls,72.9
+09/11/2014,Key of Kings,151.65
+09/11/2014,Horns of Gondor,291.15
+09/11/2014,Excalibers,33.85
+09/11/2014,Thousand Sunnys,178.62
+09/11/2014,Ampules,164.11
+09/11/2014,Badgers,498.98
+09/11/2014,Blinds,172.13
+09/11/2014,Butterflys,208.01
+09/11/2014,Cancellers,222.1
+09/11/2014,Carpenters,236.36
+09/11/2014,Centipedes,156.65
+09/11/2014,Chainsaws,68.28
+09/11/2014,Cocoons,218.89
+09/11/2014,Drops,211.63
+09/11/2014,Diverseys,105.31
+09/11/2014,Fridays,101.29
+09/11/2014,Full Faces,467.95
+09/11/2014,Fumbles,271.17
+09/11/2014,Gauntlets,329.33
+09/11/2014,Javelins,286.76
+09/11/2014,Lavenders,251.78
+09/11/2014,Beams,18.56
+09/11/2014,Pressures,532.49
+09/11/2014,Rapids,154.42
+09/11/2014,Reflectors,572.61
+09/11/2014,Scripts,74.45
+09/11/2014,Shooters,24.59
+09/11/2014,Stalkers,205.75
+09/11/2014,Stations,237.98
+09/11/2014,Stickers,164.99
+09/11/2014,Stoles,288.38
+09/11/2014,Stringers,633.44
+09/11/2014,Surfacers,67.49
+09/11/2014,Surrounders,90.47
+09/11/2014,Tasters,329.36
+09/11/2014,Tortures,37.42
+09/11/2014,3D Maneuver Gears,3.01
+09/11/2014,Red Orbs,444.33
+09/11/2014,Blue Orbs,248.76
+09/11/2014,Choice Bands,95.62
+09/11/2014,Choice Scarfs,38.16
+09/11/2014,Choice Specs,154.55
+09/11/2014,Binding Bands,245.01
+09/11/2014,Damp Rocks,32.04
+09/11/2014,Grip Claws,245.9
+09/11/2014,Heat Rocks,11.36
+09/11/2014,Icy Rocks,323.33
+09/11/2014,Light Clays,60.54
+09/11/2014,Smooth Rocks,390.52
+09/11/2014,Terrain Extenders,239.61
+09/11/2014,Mental Herbs,272.35
+09/11/2014,Power Herbs,158.87
+09/11/2014,White Herbs,358.34
+09/11/2014,Big Roots,237.24
+09/11/2014,Leftovers,280.6
+09/11/2014,Shell Bells,733.0
+09/11/2014,Absorb Bulbs,231.96
+09/11/2014,Assault Vests,379.8
+09/11/2014,Berserk Genes,84.12
+09/11/2014,Cell Batteries,26.61
+09/11/2014,Electric Seeds,275.37
+09/11/2014,Expert Belts,374.26
+09/11/2014,Grassy Seeds,8.95
+09/11/2014,Life Orbs,12.93
+09/11/2014,Metronomes,129.92
+09/11/2014,Misty Seeds,236.43
+09/11/2014,Muscle Bands,270.28
+09/11/2014,Psychic Seeds,219.63
+09/11/2014,Scope Lens,8.67
+09/11/2014,Snowballs,61.38
+09/11/2014,Weakness Policies,213.72
+09/11/2014,Wide Lenses,57.85
+09/11/2014,Wise Glasses,261.89
+09/11/2014,Zoom Lens,179.18
+09/11/2014,Lagging Tails,133.12
+09/11/2014,Quick Claws,64.01
+09/11/2014,Focus Bands,770.65
+09/11/2014,Focus Sashes,30.01
+09/11/2014,Flame Orbs,113.26
+09/11/2014,Toxic Orbs,25.06
+09/11/2014,Sticky Barbs,187.92
+09/11/2014,Iron Balls,151.78
+09/11/2014,Black Sludges,360.69
+09/11/2014,Ring Targets,288.71
+09/11/2014,Adrenaline Orbs,225.24
+09/11/2014,Air Balloons,57.56
+09/11/2014,Amulet Coins,293.86
+09/11/2014,Bright Powders,149.21
+09/11/2014,Destiny Knots,19.75
+09/11/2014,Eject Buttons,49.69
+09/11/2014,Float Stones,326.01
+09/11/2014,King Rocks,203.71
+09/11/2014,Protective Pads,196.72
+09/11/2014,Razor Claws,29.46
+09/11/2014,Razor Fangs,17.55
+09/11/2014,Red Cards,318.19
+09/11/2014,Rocky Helmets,226.59
+09/11/2014,Safety Goggles,489.97
+09/11/2014,Shed Shells,49.27
+09/11/2014,Smoke Balls,398.33
+09/11/2014,Cainhurst Badges,382.59
+09/11/2014,Blood Dregs,155.3
+09/11/2014,Blue Elixirs,513.72
+09/11/2014,Bold Hunter's Marks,179.8
+09/11/2014,Bolt Papers,155.09
+09/11/2014,Bone Marrow Ashes,56.32
+09/11/2014,Coldblood Dews,211.09
+09/11/2014,Fire Papers,147.95
+09/11/2014,Frenzied Coldbloods,422.35
+09/11/2014,Gold Pendants,552.9
+09/11/2014,Great One's Wisdoms,474.39
+09/11/2014,Hand Lanterns,682.06
+09/11/2014,Lead Elixirs,130.16
+09/11/2014,Madman's Knowledges,304.71
+09/11/2014,Quicksilver Bullets,179.81
+09/11/2014,Red Jewelled Brooches,102.39
+09/11/2014,Shaman Bone Blades,193.95
+09/11/2014,Deck of Dragons,234.26
+09/11/2014,Shining Coins,369.25
+09/11/2014,Tear Stones,282.86
+09/11/2014,Cainhurt Summons,356.15
+09/11/2014,Celestial Dials,130.18
+09/11/2014,Old Hunter Bells,272.03
+09/11/2014,Tonsil Stones,289.33
+09/11/2014,Gorgon Heads,161.66
+09/11/2014,Niflheim Alloy Bars,23.88
+09/11/2014,Pandora Boxes,162.63
+09/11/2014,Wings of Icarus,119.42
+09/11/2014,Flames of Apollo,193.81
+09/11/2014,Keys of the Ram,335.57
+09/11/2014,Owls of Athena,192.67
+09/11/2014,Nemean Cestuses,745.62
+09/11/2014,Nemesis Whips,44.11
+09/11/2014,Primordial Flames,32.27
+09/11/2014,Spears of Destiny,25.88
+09/11/2014,Gauntlets of Zeus,155.62
+09/11/2014,Titan Horns,109.72
+09/11/2014,Hades Helms,488.02
+09/11/2014,Urns of Power,235.74
+09/11/2014,Unity Stones,180.14
+09/11/2014,Cerebros,318.37
+09/11/2014,Radioactive Spiders,264.76
+09/11/2014,Potora Earrings,10.15
+09/11/2014,Rejuvenation Tanks,679.91
+09/11/2014,Death Notes,446.38
+09/11/2014,Shinigami Eyes,177.7
+09/11/2014,Protopacks,356.51
+09/11/2014,Scooby Snacks,113.1
+09/11/2014,Blasting Rods,211.66
+09/11/2014,Millennium Puzzles,12.74
+09/11/2014,Millennium Eyes,371.63
+09/11/2014,Millennium Rings,20.52
+09/11/2014,Millennium Keys,585.38
+09/11/2014,Millennium Rods,228.57
+09/11/2014,Millennium Necklaces,353.83
+09/11/2014,Millennium Scales,70.93
+09/11/2014,Bolts,405.75
+09/11/2014,Gadgetrons,23.09
+09/11/2014,Raritanium Ore,380.76
+09/11/2014,Nanotech Crates,347.28
+09/11/2014,Armour Magnetizers,247.9
+09/11/2014,Zoni Vessels,204.88
+09/11/2014,Box Basher 2000s,284.39
+09/11/2014,Nefarious Security Cards,285.27
+09/11/2014,Omnigaskets,606.01
+09/11/2014,Treasure Mappers,104.34
+09/11/2014,Gold Bolts,336.3
+09/11/2014,Qwark Statuettes,52.57
+09/11/2014,Electrolyzers,666.82
+09/11/2014,Levitators,76.48
+09/11/2014,Infiltrators,557.93
+09/11/2014,Megacorp Helmets,106.74
+09/11/2014,Momentum Gliders,308.13
+09/11/2014,Platinum Bolts,182.19
+09/11/2014,Infobots,303.51
+09/11/2014,Rift Crackers,96.73
+09/11/2014,Clank Model Robots,124.19
+09/11/2014,CodeBots,38.06
+09/11/2014,Persuaders,528.23
+09/11/2014,Map-o-matics,416.79
+09/11/2014,Ultra Nanotech,57.0
+09/11/2014,Premium Nanotech,265.06
+09/11/2014,Gadgebot Upgrade Chips,121.44
+09/11/2014,Nano-paks,750.12
+09/11/2014,Mr. Zerkons,147.04
+09/11/2014,Golden Lucky Cats,263.51
+09/11/2014,Peace Bells,92.51
+09/11/2014,Wood Mats,247.79
+09/11/2014,Fog Pots,142.95
+09/11/2014,Golden Ink Pots,481.1
+09/11/2014,Thief Gloves,481.45
+09/11/2014,Fire Tablets,137.58
+09/11/2014,Water Tablets,63.96
+09/11/2014,Lucky Cat Paws,189.03
+09/11/2014,Scent Charms,22.05
+09/11/2014,String of Beads,4.8
+09/11/2014,Feedbags,97.48
+09/11/2014,Holy Bones,317.7
+09/11/2014,Exorcism Slips,148.67
+09/11/2014,Inkfinity Stones,79.69
+09/11/2014,Traveler Charms,203.6
+09/11/2014,Goldy Charms,19.67
+09/11/2014,Steel Soul Sake,109.8
+09/11/2014,Gold Dust,58.78
+09/11/2014,Mermaid Coins,79.8
+09/11/2014,Golden Peaches,323.98
+09/11/2014,Elven Boots,7.98
+09/11/2014,Fumble Boots,60.46
+09/11/2014,Jumping Boots,69.35
+09/11/2014,Kicking Boots,74.35
+09/11/2014,Levitation Boots,84.44
+09/11/2014,Speed Boots,208.12
+09/11/2014,Water Walking Boots,220.86
+09/11/2014,Alchemy Smocks,352.18
+09/11/2014,Cloaks of Displacement,74.77
+09/11/2014,Cloaks of Invisibility,32.1
+09/11/2014,Cloaks of Magic Resistance,77.89
+09/11/2014,Cloaks of Protection,163.44
+09/11/2014,Elven Cloaks,219.4
+09/11/2014,Gauntlets of Dexterity,224.3
+09/11/2014,Gauntlets of FUmbling,114.45
+09/11/2014,Gauntlets of Power,450.89
+09/11/2014,Cornuthaums,112.68
+09/11/2014,Dunce Caps,152.04
+09/11/2014,Helms of Brilliance,408.6
+09/11/2014,Helms of Opposite Alignment,221.94
+09/11/2014,Helms of Telepathy,17.64
+09/11/2014,Shields of Reflection,104.2
+09/11/2014,Bags of Tricks,188.99
+09/11/2014,Crystal Balls,190.09
+09/11/2014,Drums of Earthquake,121.46
+09/11/2014,Fire Horns,397.85
+09/11/2014,Frost Horns,201.57
+09/11/2014,Horns of Plenty,325.52
+09/11/2014,Magic Harps,89.15
+09/11/2014,Magic Lamps,33.26
+09/11/2014,Magic Markers,112.2
+09/11/2014,Magic Flute,201.49
+09/11/2014,Magic Whistles,210.92
+09/11/2014,Unicorn Horns,192.55
+09/11/2014,Loadstones,90.66
+09/11/2014,Luckstones,189.92
+09/11/2014,Touchstones,156.67
+09/11/2014,Potions of Acid,268.01
+09/11/2014,Potions of Booze,53.55
+09/11/2014,Potions of Fruit Juice,145.81
+09/11/2014,Potions of Oil,25.83
+09/11/2014,Potions of Sickness,310.92
+09/11/2014,Potions of Water,223.96
+09/11/2014,Scrolls of Blank Paper,299.44
+09/11/2014,Scrolls of Mail,25.66
+09/11/2014,Blank Spellbooks,229.44
+09/11/2014,Wands of Nothing,414.91
+09/11/2014,Meat Sticks,279.48
+09/11/2014,Meat Rings,62.55
+09/11/2014,Amulets of Yendor,226.36
+09/11/2014,Amulets of Change,217.69
+09/11/2014,Amulets of ESP,9.89
+09/11/2014,Amulets of Life Saving,158.94
+09/11/2014,Amulets of Reflection,158.68
+09/11/2014,Amulets of Restful Sleep,10.13
+09/11/2014,Amulets of Strangulation,84.68
+09/11/2014,Amulets of Unchanging,140.47
+09/11/2014,Amulets Versus Poison,85.45
+09/11/2014,Orcish Ring Mail,62.49
+09/11/2014,Elven Mithril Coats,81.86
+09/11/2014,Dragon Scale Mail,465.5
+09/11/2014,Rings of Adornment,156.22
+09/11/2014,Rings of Hunger,289.84
+09/11/2014,Rings of Protection,456.35
+09/11/2014,Rings of Protection from Shape Changers,248.85
+09/11/2014,Rings of Stealth,202.06
+09/11/2014,Rings of Sustain Ability,129.06
+09/11/2014,Rings of Warning,166.51
+09/11/2014,Rings of Aggravate Monster,281.95
+09/11/2014,Rings of Cold Resistance,349.64
+09/11/2014,Rings of Gain Constitution,116.1
+09/11/2014,Rings of Gain Strength,83.85
+09/11/2014,Rings of Increase Accuracy,155.49
+09/11/2014,Rings of Increase Damage,791.29
+09/11/2014,Rings of Invisibility,143.82
+09/11/2014,Rings of Poison Resistance,214.13
+09/11/2014,Rings of See Invisible,330.11
+09/11/2014,Rings of Shock Resistance,76.71
+09/11/2014,Rings of Fire Resistance,324.41
+09/11/2014,Rings of Free Action,158.81
+09/11/2014,Rings of Levitation,174.34
+09/11/2014,Rings of Regeneration,192.59
+09/11/2014,Rings of Searching,39.22
+09/11/2014,Rings of Slow Digestion,160.73
+09/11/2014,Rings of Teleportation,219.75
+09/11/2014,Rings of Conflict,263.41
+09/11/2014,Rings of Polymorph,833.7
+09/11/2014,Rings of Polymorph Control,199.59
+09/11/2014,Rings of Teleport Control,452.65
+09/11/2014,Wumpa Fruits,442.69
+09/11/2014,Blue Flutes,229.04
+09/11/2014,Digi-eggs,124.33
+09/11/2014,Crests,405.28
+09/11/2014,X-Antibodies,374.22
+09/11/2014,Holy Rings,15.61
+09/11/2014,Fusion Loaders,259.44
+09/11/2014,Gantz Balls,267.19
+09/11/2014,L Coffees,174.32
+09/11/2014,L-Viruses,99.42
+09/11/2014,Blue Digizoids,619.23
+09/11/2014,DigiBytes,218.43
+09/11/2014,V-Tamer Taags,178.34
+09/11/2014,Mocchi Disks,71.47
+09/11/2014,Monol Disks,146.01
+09/11/2014,Arrowhead Disks,184.97
+09/11/2014,Baku Disks,17.86
+09/11/2014,Beatas Disks,190.8
+09/11/2014,Ogyo Disks,398.59
+09/11/2014,Dragon Disks,477.56
+09/11/2014,Dino Disks,25.85
+09/11/2014,Doodle Disks,134.31
+09/11/2014,Falco Disks,218.17
+09/11/2014,Pixie Disks,387.68
+09/11/2014,Pokeballs,108.37
+09/11/2014,Pokedexes,139.4
+09/11/2014,Blue Shells,583.64
+09/11/2014,Red Shells,133.97
+09/11/2014,Stars,483.02
+09/11/2014,Piranha Plants,670.8
+09/11/2014,Garu Disks,12.72
+09/11/2014,Ghost Disks,50.97
+09/11/2014,Golem Disks,144.8
+09/11/2014,Hare Disks,153.79
+09/11/2014,Raiden Disks,57.37
+09/11/2014,Saibamen Seeds,406.83
+09/11/2014,Cell Cells,98.03
+09/11/2014,Phials of Galadriel,137.52
+09/11/2014,Angainors,305.06
+09/11/2014,Elven Ropes,41.06
+09/11/2014,Keys of Orthanc,128.49
+09/11/2014,Leaves of Lorien,92.17
+09/11/2014,Palantiris,684.71
+09/11/2014,Vilyas,303.37
+09/11/2014,Nenyas,119.3
+09/11/2014,Simarils,106.75
+09/11/2014,Doors of Durin,83.27
+09/11/2014,Naryas,217.91
+09/11/2014,Ithildins,293.77
+09/11/2014,Valars,241.61
+09/11/2014,Samehadas,225.05
+09/11/2014,Chakra Puppets,352.4
+09/11/2014,Absorbing Eyes,34.21
+09/11/2014,Kunais,331.61
+09/11/2014,Barrier Tags,334.79
+09/11/2014,Blue Fire Powder,88.34
+09/11/2014,Lightning Barrels,45.6
+09/11/2014,Chain Wind Staffs,445.87
+09/11/2014,Curries of Life,265.42
+09/11/2014,Curse Masks,25.4
+09/11/2014,Ninja Info Cards,380.22
+09/11/2014,Mirrors of Hope,602.08
+09/11/2014,Scrolls of Seals,198.31
+09/11/2014,Hexagonal Crystals,205.21
+09/11/2014,Iron Sands,452.16
+09/11/2014,Arc Reactors,913.51
+09/11/2014,Iron Spiders,259.31
+09/11/2014,Eyes of Agamotto,260.44
+09/11/2014,Books of Vishanti,144.1
+09/11/2014,Orbs of Agamotto,98.33
+09/11/2014,Cloaks of Levitation,351.52
+09/11/2014,Wands of Watoomb,417.16
+09/11/2014,Books of Cagliostro,128.93
+09/11/2014,X-genes,102.44
+09/11/2014,X-12s,911.48
+09/11/2014,Joy Cans,273.67
+09/11/2014,Learning Beds,73.73
+09/11/2014,PROBLEMs,361.03
+09/11/2014,Gargantua Space Stations,17.2
+09/11/2014,Boom Brooms,108.78
+09/11/2014,Futuros,289.14
+09/11/2014,Goliath Serum,150.48
+09/11/2014,I-Suits,451.82
+09/11/2014,Thermal Regulation Suppositories,252.19
+09/11/2014,Oo-Rays,230.59
+09/11/2014,Go-Pods,187.75
+09/11/2014,Monster Cells,242.1
+09/11/2014,Metal Knight Units,9.2
+09/11/2014,Tickle-tickle Bugs,212.24
+09/11/2014,Hero Association Mugs,41.36
+09/11/2014,Hero Association Catalogs,154.35
+09/11/2014,Kamidogus,117.71
+09/11/2014,Amulets of Shinnok,37.01
+09/11/2014,Naknadan Shrines,257.96
+09/11/2014,Wrath Hammers,25.71
+09/11/2014,Tarkartan Blades,92.45
+09/11/2014,Koins,120.67
+09/11/2014,Capes of Fujin,192.23
+09/11/2014,Dragon Medallions,236.17
+09/11/2014,Hearts of Onaga,729.59
+09/11/2014,Portal Guns,401.11
+09/11/2014,Gravity Guns,106.51
+09/11/2014,Companion Cubes,87.52
+09/11/2014,Razor-rimmed Hats,276.9
+09/11/2014,Bablefish,170.24
+09/11/2014,Hi-Potions,228.07
+09/11/2014,X-Potions,185.03
+09/11/2014,Ethers,125.62
+09/11/2014,Turbo Ethers,29.64
+09/11/2014,Dry Ethers,227.53
+09/11/2014,Gold Needles,610.64
+09/11/2014,Golden Apples,113.47
+09/11/2014,Silver Apples,334.89
+09/11/2014,Stamina Pluses,37.23
+09/11/2014,Power Pluses,270.34
+09/11/2014,Soma Drops,119.74
+09/11/2014,Mind Pluses,111.43
+09/11/2014,Light Curtains,236.49
+09/11/2014,Red Curtains,417.35
+09/11/2014,Lunar Curtains,400.93
+09/11/2014,Protect Drinks,194.25
+09/11/2014,Faerie Tonics,351.49
+09/11/2014,Spider Silks,102.17
+09/11/2014,White Fangs,55.98
+09/11/2014,Red Fangs,6.76
+09/11/2014,Cockatrice Claws,7.46
+09/11/2014,Vampire Fangs,143.98
+09/11/2014,Dire Rat Tails,478.25
+09/11/2014,Star Rubies,413.97
+09/11/2014,Nitro Powder Blocks,185.5
+09/11/2014,Mystic Keys,67.32
+09/11/2014,Bottled Faeries,175.48
+09/11/2014,Dazers,272.36
+09/11/2014,Dream Powder,122.75
+09/11/2014,War Gongs,158.19
+09/11/2014,Vagyrisk Claws,60.4
+09/11/2014,Mimett Greens,98.84
+09/11/2014,Sylkis Greens,650.72
+09/11/2014,Curiel Greens,700.68
+09/11/2014,Daenarians,79.02
+09/11/2014,Zelo Nuts,69.59
+09/11/2014,Lasan Nuts,99.55
+09/11/2014,Limit Break Manuals,95.03
+09/11/2014,Earth Harps,183.57
+09/11/2014,Black Materia Orbs,4.78
+09/11/2014,Gonnes,69.9
+09/11/2014,Blades of Chaos,237.92
+09/11/2014,Orcarinas of Time,234.19
+09/11/2014,Master Swords,27.65
+09/11/2014,Triforces,86.63
+09/11/2014,Fire Flowers,375.09
+09/11/2014,Rupees,285.71
+09/11/2014,Heart Containers,521.55
+09/11/2014,Azath Houses,95.07
+09/11/2014,Bombchus,448.0
+09/11/2014,Deku Sticks,334.93
+09/11/2014,Magic Beans,204.65
+09/11/2014,Moon Tears,206.32
+09/11/2014,Don Gero Masks,143.69
+09/11/2014,Kafel Masks,9.13

@@ -1,0 +1,606 @@
+date,product,marketPrice
+08/04/2016,Moloko Plus,50.45
+08/04/2016,Pan-Galactic Gargle Blaster,865.23
+08/04/2016,Victory Gin,49.36
+08/04/2016,Vesper,264.78
+08/04/2016,Duff,360.39
+08/04/2016,Dark Planet Cola,99.21
+08/04/2016,Slurm,130.97
+08/04/2016,Nuka-cola,29.73
+08/04/2016,Ent-draught,26.24
+08/04/2016,Ambrosia,57.92
+08/04/2016,Romulan Ale,98.65
+08/04/2016,Astro Boys,2307.51
+08/04/2016,Marvins,68.94
+08/04/2016,K-9s,58.17
+08/04/2016,Autobots,51.37
+08/04/2016,Decepticons,39.58
+08/04/2016,Golems,10.31
+08/04/2016,Master Balls,61.08
+08/04/2016,Ultra Balls,47.79
+08/04/2016,T-800s,241.45
+08/04/2016,T-1000s,54.27
+08/04/2016,Flubbers,304.8
+08/04/2016,Spyders,159.44
+08/04/2016,B-4s,44.2
+08/04/2016,Ultrons,242.94
+08/04/2016,Ruby Slippers,48.53
+08/04/2016,Catbuses,867.13
+08/04/2016,Evangelions,484.44
+08/04/2016,Behelits,606.57
+08/04/2016,Lightsabres,12.19
+08/04/2016,Devil Fruits,192.63
+08/04/2016,SMILEs,236.03
+08/04/2016,Cornballers,266.82
+08/04/2016,Sabor de Soledad Chips,164.97
+08/04/2016,Red Apple Cigarettes,307.84
+08/04/2016,Wonka Bars,296.03
+08/04/2016,Bags of Holding,203.01
+08/04/2016,Sending Stones,1011.73
+08/04/2016,Elder Wands,173.33
+08/04/2016,Dornish Red,201.77
+08/04/2016,Valaryian Steel Bars,195.46
+08/04/2016,Dragon Eggs,401.52
+08/04/2016,Cranium Inflolinks,79.8
+08/04/2016,LiDAR Mark-Trackers,235.42
+08/04/2016,Arm Nanoblades,546.63
+08/04/2016,Replicants,5.71
+08/04/2016,Venom Canisters,166.28
+08/04/2016,Atium Bars,193.5
+08/04/2016,Otataral Bars,21.82
+08/04/2016,Night Dust,190.38
+08/04/2016,Dragon Scales,238.16
+08/04/2016,Teeth of the Dragon,303.12
+08/04/2016,Chunin Headband,197.01
+08/04/2016,Djinns,201.93
+08/04/2016,Flying Brooms,10.07
+08/04/2016,Flying Carpets,141.5
+08/04/2016,Mjolnirs,481.66
+08/04/2016,Infinity Stones,123.15
+08/04/2016,Infinity Gauntlets,14.84
+08/04/2016,Repulsor Beams,687.58
+08/04/2016,Super Soldier Serums,106.56
+08/04/2016,Vibranium Bars,539.62
+08/04/2016,Adamantium Bars,269.63
+08/04/2016,Mithril Bars,3.12
+08/04/2016,Rune Bars,266.81
+08/04/2016,True Names,78.8
+08/04/2016,Sigils,125.02
+08/04/2016,Strongest Potions,85.81
+08/04/2016,Knightmare Frames,622.82
+08/04/2016,Mirrors of Erised,308.63
+08/04/2016,Pensieves,103.13
+08/04/2016,Veritaserums,290.7
+08/04/2016,Felix Felicis,276.41
+08/04/2016,Horcuxes,134.37
+08/04/2016,Philosopher Stones,142.8
+08/04/2016,Sorceror Stones,18.8
+08/04/2016,Dragon Balls,92.39
+08/04/2016,Wind Shurikens,116.54
+08/04/2016,Time Turners,334.51
+08/04/2016,Moranth Burners,393.14
+08/04/2016,Moranth Crackers,144.57
+08/04/2016,Moranth Cussers,222.11
+08/04/2016,Moranth Flamers,195.73
+08/04/2016,Moranth Melters,144.71
+08/04/2016,Moranth Shapers,78.29
+08/04/2016,Moranth Smokers,93.55
+08/04/2016,Finnests,120.99
+08/04/2016,Terondais,172.77
+08/04/2016,White Gold Rings,95.22
+08/04/2016,Hurtloam,302.62
+08/04/2016,Rare Candies,153.21
+08/04/2016,PP Ups,402.14
+08/04/2016,Phoenix Downs,17.44
+08/04/2016,Zanpakutos,15.95
+08/04/2016,Sensu Beans,206.05
+08/04/2016,Namekian Spring Water,11.37
+08/04/2016,Australium Bars,93.96
+08/04/2016,Aether Tanks,28.64
+08/04/2016,Mana Ore,73.53
+08/04/2016,Dilithium Crystals,212.78
+08/04/2016,Dust Cannisters,406.19
+08/04/2016,Energon Cubes,775.97
+08/04/2016,Jumbonium Atoms,189.77
+08/04/2016,Katchin Bars,17.08
+08/04/2016,Krytonite Ore,322.6
+08/04/2016,Nanomachines,273.63
+08/04/2016,Octiron Bars,181.16
+08/04/2016,Redstone Blocks,485.58
+08/04/2016,Seastone Cuffs,77.24
+08/04/2016,Z-crystals,187.58
+08/04/2016,Digivices,98.69
+08/04/2016,Pym Particles,13.85
+08/04/2016,Wild Card Virus Vials,80.59
+08/04/2016,Tachyons,242.1
+08/04/2016,Hope,277.16
+08/04/2016,Decks of Many Things,296.2
+08/04/2016,Golden Fleeces,127.32
+08/04/2016,Argonaughts,448.57
+08/04/2016,Vestiges,716.19
+08/04/2016,Tricorders,128.54
+08/04/2016,Replicators,76.91
+08/04/2016,Transporters,222.65
+08/04/2016,Sonic Screwdrivers,369.14
+08/04/2016,Holy Grails,447.89
+08/04/2016,Nails of Helena,308.59
+08/04/2016,Shrouds of Turin,226.94
+08/04/2016,Hoverboards,32.95
+08/04/2016,Holodecks,218.43
+08/04/2016,Neuralizers,137.76
+08/04/2016,Symbiotes,317.91
+08/04/2016,Meow Meow Beans,355.4
+08/04/2016,6IV Shiny Dittos,557.79
+08/04/2016,Holy Hand Grenades,212.85
+08/04/2016,Alpha-Omega Bombs,949.17
+08/04/2016,Fatmans,73.69
+08/04/2016,BFG 9000s,91.92
+08/04/2016,Noisy Crickets,97.1
+08/04/2016,Lawgivers,67.92
+08/04/2016,Phasers,298.08
+08/04/2016,Pulse Rifles,19.84
+08/04/2016,Vorpal Swords,340.26
+08/04/2016,Sausages inna bun,17.37
+08/04/2016,Gundams,456.3
+08/04/2016,HALs,486.23
+08/04/2016,Agents,176.22
+08/04/2016,Pipboys,245.76
+08/04/2016,Scouters,47.45
+08/04/2016,Daemons,169.66
+08/04/2016,Pacts,90.43
+08/04/2016,Souls,73.89
+08/04/2016,Key of Kings,136.92
+08/04/2016,Horns of Gondor,453.25
+08/04/2016,Excalibers,19.71
+08/04/2016,Thousand Sunnys,204.74
+08/04/2016,Ampules,141.27
+08/04/2016,Badgers,422.55
+08/04/2016,Blinds,151.17
+08/04/2016,Butterflys,111.41
+08/04/2016,Cancellers,171.07
+08/04/2016,Carpenters,239.72
+08/04/2016,Centipedes,146.32
+08/04/2016,Chainsaws,60.14
+08/04/2016,Cocoons,127.8
+08/04/2016,Drops,278.79
+08/04/2016,Diverseys,107.01
+08/04/2016,Fridays,110.76
+08/04/2016,Full Faces,495.56
+08/04/2016,Fumbles,255.29
+08/04/2016,Gauntlets,409.94
+08/04/2016,Javelins,307.4
+08/04/2016,Lavenders,281.31
+08/04/2016,Beams,18.2
+08/04/2016,Pressures,365.01
+08/04/2016,Rapids,139.8
+08/04/2016,Reflectors,451.49
+08/04/2016,Scripts,69.12
+08/04/2016,Shooters,17.31
+08/04/2016,Stalkers,145.58
+08/04/2016,Stations,217.67
+08/04/2016,Stickers,166.93
+08/04/2016,Stoles,391.41
+08/04/2016,Stringers,468.88
+08/04/2016,Surfacers,71.45
+08/04/2016,Surrounders,65.83
+08/04/2016,Tasters,304.8
+08/04/2016,Tortures,37.8
+08/04/2016,3D Maneuver Gears,3.01
+08/04/2016,Red Orbs,572.0
+08/04/2016,Blue Orbs,259.41
+08/04/2016,Choice Bands,81.5
+08/04/2016,Choice Scarfs,31.91
+08/04/2016,Choice Specs,105.99
+08/04/2016,Binding Bands,119.29
+08/04/2016,Damp Rocks,48.27
+08/04/2016,Grip Claws,345.4
+08/04/2016,Heat Rocks,11.55
+08/04/2016,Icy Rocks,314.55
+08/04/2016,Light Clays,51.96
+08/04/2016,Smooth Rocks,398.07
+08/04/2016,Terrain Extenders,247.93
+08/04/2016,Mental Herbs,202.67
+08/04/2016,Power Herbs,147.92
+08/04/2016,White Herbs,297.35
+08/04/2016,Big Roots,235.43
+08/04/2016,Leftovers,230.18
+08/04/2016,Shell Bells,521.44
+08/04/2016,Absorb Bulbs,223.69
+08/04/2016,Assault Vests,213.74
+08/04/2016,Berserk Genes,66.58
+08/04/2016,Cell Batteries,29.86
+08/04/2016,Electric Seeds,332.4
+08/04/2016,Expert Belts,411.48
+08/04/2016,Grassy Seeds,16.79
+08/04/2016,Life Orbs,17.59
+08/04/2016,Metronomes,125.82
+08/04/2016,Misty Seeds,230.57
+08/04/2016,Muscle Bands,237.3
+08/04/2016,Psychic Seeds,201.76
+08/04/2016,Scope Lens,9.15
+08/04/2016,Snowballs,66.69
+08/04/2016,Weakness Policies,235.23
+08/04/2016,Wide Lenses,58.19
+08/04/2016,Wise Glasses,333.97
+08/04/2016,Zoom Lens,172.95
+08/04/2016,Lagging Tails,128.98
+08/04/2016,Quick Claws,61.2
+08/04/2016,Focus Bands,532.11
+08/04/2016,Focus Sashes,22.59
+08/04/2016,Flame Orbs,125.82
+08/04/2016,Toxic Orbs,32.81
+08/04/2016,Sticky Barbs,184.73
+08/04/2016,Iron Balls,143.5
+08/04/2016,Black Sludges,329.88
+08/04/2016,Ring Targets,239.86
+08/04/2016,Adrenaline Orbs,105.98
+08/04/2016,Air Balloons,42.31
+08/04/2016,Amulet Coins,305.66
+08/04/2016,Bright Powders,276.13
+08/04/2016,Destiny Knots,23.18
+08/04/2016,Eject Buttons,52.36
+08/04/2016,Float Stones,262.69
+08/04/2016,King Rocks,188.8
+08/04/2016,Protective Pads,132.42
+08/04/2016,Razor Claws,31.9
+08/04/2016,Razor Fangs,14.04
+08/04/2016,Red Cards,395.97
+08/04/2016,Rocky Helmets,285.21
+08/04/2016,Safety Goggles,307.01
+08/04/2016,Shed Shells,47.96
+08/04/2016,Smoke Balls,377.19
+08/04/2016,Cainhurst Badges,359.92
+08/04/2016,Blood Dregs,275.26
+08/04/2016,Blue Elixirs,326.65
+08/04/2016,Bold Hunter's Marks,161.3
+08/04/2016,Bolt Papers,252.88
+08/04/2016,Bone Marrow Ashes,38.51
+08/04/2016,Coldblood Dews,283.36
+08/04/2016,Fire Papers,141.84
+08/04/2016,Frenzied Coldbloods,443.11
+08/04/2016,Gold Pendants,533.31
+08/04/2016,Great One's Wisdoms,370.1
+08/04/2016,Hand Lanterns,760.79
+08/04/2016,Lead Elixirs,95.38
+08/04/2016,Madman's Knowledges,421.92
+08/04/2016,Quicksilver Bullets,174.06
+08/04/2016,Red Jewelled Brooches,126.54
+08/04/2016,Shaman Bone Blades,204.26
+08/04/2016,Deck of Dragons,220.11
+08/04/2016,Shining Coins,251.53
+08/04/2016,Tear Stones,295.45
+08/04/2016,Cainhurt Summons,294.35
+08/04/2016,Celestial Dials,95.48
+08/04/2016,Old Hunter Bells,439.19
+08/04/2016,Tonsil Stones,297.74
+08/04/2016,Gorgon Heads,142.67
+08/04/2016,Niflheim Alloy Bars,13.61
+08/04/2016,Pandora Boxes,230.23
+08/04/2016,Wings of Icarus,133.22
+08/04/2016,Flames of Apollo,227.19
+08/04/2016,Keys of the Ram,291.62
+08/04/2016,Owls of Athena,270.34
+08/04/2016,Nemean Cestuses,501.06
+08/04/2016,Nemesis Whips,50.04
+08/04/2016,Primordial Flames,18.61
+08/04/2016,Spears of Destiny,26.62
+08/04/2016,Gauntlets of Zeus,145.33
+08/04/2016,Titan Horns,107.08
+08/04/2016,Hades Helms,380.22
+08/04/2016,Urns of Power,257.96
+08/04/2016,Unity Stones,248.69
+08/04/2016,Cerebros,407.57
+08/04/2016,Radioactive Spiders,409.02
+08/04/2016,Potora Earrings,9.34
+08/04/2016,Rejuvenation Tanks,383.8
+08/04/2016,Death Notes,480.65
+08/04/2016,Shinigami Eyes,158.02
+08/04/2016,Protopacks,418.07
+08/04/2016,Scooby Snacks,62.22
+08/04/2016,Blasting Rods,150.44
+08/04/2016,Millennium Puzzles,10.69
+08/04/2016,Millennium Eyes,204.15
+08/04/2016,Millennium Rings,10.45
+08/04/2016,Millennium Keys,500.02
+08/04/2016,Millennium Rods,285.27
+08/04/2016,Millennium Necklaces,366.38
+08/04/2016,Millennium Scales,78.82
+08/04/2016,Bolts,544.32
+08/04/2016,Gadgetrons,24.48
+08/04/2016,Raritanium Ore,326.22
+08/04/2016,Nanotech Crates,262.37
+08/04/2016,Armour Magnetizers,326.18
+08/04/2016,Zoni Vessels,142.5
+08/04/2016,Box Basher 2000s,211.98
+08/04/2016,Nefarious Security Cards,221.87
+08/04/2016,Omnigaskets,342.04
+08/04/2016,Treasure Mappers,149.7
+08/04/2016,Gold Bolts,253.01
+08/04/2016,Qwark Statuettes,46.09
+08/04/2016,Electrolyzers,549.03
+08/04/2016,Levitators,109.38
+08/04/2016,Infiltrators,543.95
+08/04/2016,Megacorp Helmets,115.16
+08/04/2016,Momentum Gliders,485.88
+08/04/2016,Platinum Bolts,183.27
+08/04/2016,Infobots,330.53
+08/04/2016,Rift Crackers,81.1
+08/04/2016,Clank Model Robots,134.43
+08/04/2016,CodeBots,28.97
+08/04/2016,Persuaders,663.95
+08/04/2016,Map-o-matics,354.23
+08/04/2016,Ultra Nanotech,76.87
+08/04/2016,Premium Nanotech,181.64
+08/04/2016,Gadgebot Upgrade Chips,109.31
+08/04/2016,Nano-paks,728.97
+08/04/2016,Mr. Zerkons,123.02
+08/04/2016,Golden Lucky Cats,219.75
+08/04/2016,Peace Bells,160.94
+08/04/2016,Wood Mats,350.93
+08/04/2016,Fog Pots,241.1
+08/04/2016,Golden Ink Pots,556.15
+08/04/2016,Thief Gloves,1207.3
+08/04/2016,Fire Tablets,148.07
+08/04/2016,Water Tablets,43.02
+08/04/2016,Lucky Cat Paws,195.93
+08/04/2016,Scent Charms,14.77
+08/04/2016,String of Beads,5.22
+08/04/2016,Feedbags,111.8
+08/04/2016,Holy Bones,196.08
+08/04/2016,Exorcism Slips,180.37
+08/04/2016,Inkfinity Stones,127.03
+08/04/2016,Traveler Charms,153.18
+08/04/2016,Goldy Charms,16.71
+08/04/2016,Steel Soul Sake,143.99
+08/04/2016,Gold Dust,57.76
+08/04/2016,Mermaid Coins,70.25
+08/04/2016,Golden Peaches,293.24
+08/04/2016,Elven Boots,7.36
+08/04/2016,Fumble Boots,58.12
+08/04/2016,Jumping Boots,51.36
+08/04/2016,Kicking Boots,96.79
+08/04/2016,Levitation Boots,72.55
+08/04/2016,Speed Boots,124.65
+08/04/2016,Water Walking Boots,184.4
+08/04/2016,Alchemy Smocks,382.18
+08/04/2016,Cloaks of Displacement,70.9
+08/04/2016,Cloaks of Invisibility,43.7
+08/04/2016,Cloaks of Magic Resistance,51.06
+08/04/2016,Cloaks of Protection,121.27
+08/04/2016,Elven Cloaks,267.75
+08/04/2016,Gauntlets of Dexterity,120.54
+08/04/2016,Gauntlets of FUmbling,95.48
+08/04/2016,Gauntlets of Power,564.47
+08/04/2016,Cornuthaums,115.32
+08/04/2016,Dunce Caps,180.15
+08/04/2016,Helms of Brilliance,288.76
+08/04/2016,Helms of Opposite Alignment,155.47
+08/04/2016,Helms of Telepathy,20.92
+08/04/2016,Shields of Reflection,83.91
+08/04/2016,Bags of Tricks,217.81
+08/04/2016,Crystal Balls,282.08
+08/04/2016,Drums of Earthquake,117.7
+08/04/2016,Fire Horns,409.16
+08/04/2016,Frost Horns,169.08
+08/04/2016,Horns of Plenty,395.53
+08/04/2016,Magic Harps,77.97
+08/04/2016,Magic Lamps,40.8
+08/04/2016,Magic Markers,86.18
+08/04/2016,Magic Flute,278.87
+08/04/2016,Magic Whistles,184.0
+08/04/2016,Unicorn Horns,155.4
+08/04/2016,Loadstones,101.74
+08/04/2016,Luckstones,208.04
+08/04/2016,Touchstones,145.53
+08/04/2016,Potions of Acid,217.49
+08/04/2016,Potions of Booze,52.24
+08/04/2016,Potions of Fruit Juice,170.78
+08/04/2016,Potions of Oil,29.27
+08/04/2016,Potions of Sickness,489.64
+08/04/2016,Potions of Water,293.95
+08/04/2016,Scrolls of Blank Paper,419.46
+08/04/2016,Scrolls of Mail,23.09
+08/04/2016,Blank Spellbooks,138.8
+08/04/2016,Wands of Nothing,578.75
+08/04/2016,Meat Sticks,313.63
+08/04/2016,Meat Rings,73.42
+08/04/2016,Amulets of Yendor,211.03
+08/04/2016,Amulets of Change,311.8
+08/04/2016,Amulets of ESP,9.74
+08/04/2016,Amulets of Life Saving,118.71
+08/04/2016,Amulets of Reflection,163.28
+08/04/2016,Amulets of Restful Sleep,12.52
+08/04/2016,Amulets of Strangulation,93.46
+08/04/2016,Amulets of Unchanging,156.49
+08/04/2016,Amulets Versus Poison,101.91
+08/04/2016,Orcish Ring Mail,55.07
+08/04/2016,Elven Mithril Coats,69.32
+08/04/2016,Dragon Scale Mail,435.51
+08/04/2016,Rings of Adornment,162.7
+08/04/2016,Rings of Hunger,220.69
+08/04/2016,Rings of Protection,743.93
+08/04/2016,Rings of Protection from Shape Changers,257.48
+08/04/2016,Rings of Stealth,172.68
+08/04/2016,Rings of Sustain Ability,133.48
+08/04/2016,Rings of Warning,148.31
+08/04/2016,Rings of Aggravate Monster,227.72
+08/04/2016,Rings of Cold Resistance,301.67
+08/04/2016,Rings of Gain Constitution,93.47
+08/04/2016,Rings of Gain Strength,60.5
+08/04/2016,Rings of Increase Accuracy,131.24
+08/04/2016,Rings of Increase Damage,626.0
+08/04/2016,Rings of Invisibility,231.59
+08/04/2016,Rings of Poison Resistance,302.59
+08/04/2016,Rings of See Invisible,437.17
+08/04/2016,Rings of Shock Resistance,77.01
+08/04/2016,Rings of Fire Resistance,239.0
+08/04/2016,Rings of Free Action,96.47
+08/04/2016,Rings of Levitation,136.1
+08/04/2016,Rings of Regeneration,119.47
+08/04/2016,Rings of Searching,29.61
+08/04/2016,Rings of Slow Digestion,132.06
+08/04/2016,Rings of Teleportation,204.89
+08/04/2016,Rings of Conflict,224.56
+08/04/2016,Rings of Polymorph,1052.11
+08/04/2016,Rings of Polymorph Control,202.69
+08/04/2016,Rings of Teleport Control,404.36
+08/04/2016,Wumpa Fruits,621.19
+08/04/2016,Blue Flutes,149.33
+08/04/2016,Digi-eggs,160.13
+08/04/2016,Crests,440.66
+08/04/2016,X-Antibodies,353.16
+08/04/2016,Holy Rings,15.49
+08/04/2016,Fusion Loaders,351.17
+08/04/2016,Gantz Balls,198.77
+08/04/2016,L Coffees,171.66
+08/04/2016,L-Viruses,117.11
+08/04/2016,Blue Digizoids,654.72
+08/04/2016,DigiBytes,229.97
+08/04/2016,V-Tamer Taags,165.96
+08/04/2016,Mocchi Disks,54.5
+08/04/2016,Monol Disks,157.67
+08/04/2016,Arrowhead Disks,175.76
+08/04/2016,Baku Disks,32.59
+08/04/2016,Beatas Disks,160.42
+08/04/2016,Ogyo Disks,519.28
+08/04/2016,Dragon Disks,348.47
+08/04/2016,Dino Disks,31.52
+08/04/2016,Doodle Disks,132.0
+08/04/2016,Falco Disks,131.63
+08/04/2016,Pixie Disks,312.2
+08/04/2016,Pokeballs,122.01
+08/04/2016,Pokedexes,189.72
+08/04/2016,Blue Shells,503.95
+08/04/2016,Red Shells,91.94
+08/04/2016,Stars,318.67
+08/04/2016,Piranha Plants,1010.73
+08/04/2016,Garu Disks,10.27
+08/04/2016,Ghost Disks,36.04
+08/04/2016,Golem Disks,170.83
+08/04/2016,Hare Disks,117.09
+08/04/2016,Raiden Disks,65.56
+08/04/2016,Saibamen Seeds,462.42
+08/04/2016,Cell Cells,71.07
+08/04/2016,Phials of Galadriel,126.47
+08/04/2016,Angainors,285.61
+08/04/2016,Elven Ropes,59.69
+08/04/2016,Keys of Orthanc,140.17
+08/04/2016,Leaves of Lorien,121.04
+08/04/2016,Palantiris,489.15
+08/04/2016,Vilyas,217.48
+08/04/2016,Nenyas,125.19
+08/04/2016,Simarils,155.1
+08/04/2016,Doors of Durin,110.86
+08/04/2016,Naryas,231.56
+08/04/2016,Ithildins,175.54
+08/04/2016,Valars,244.6
+08/04/2016,Samehadas,166.96
+08/04/2016,Chakra Puppets,326.18
+08/04/2016,Absorbing Eyes,27.59
+08/04/2016,Kunais,306.97
+08/04/2016,Barrier Tags,365.59
+08/04/2016,Blue Fire Powder,103.44
+08/04/2016,Lightning Barrels,31.92
+08/04/2016,Chain Wind Staffs,417.16
+08/04/2016,Curries of Life,390.71
+08/04/2016,Curse Masks,32.07
+08/04/2016,Ninja Info Cards,237.04
+08/04/2016,Mirrors of Hope,446.13
+08/04/2016,Scrolls of Seals,144.59
+08/04/2016,Hexagonal Crystals,129.93
+08/04/2016,Iron Sands,697.63
+08/04/2016,Arc Reactors,918.97
+08/04/2016,Iron Spiders,227.88
+08/04/2016,Eyes of Agamotto,292.35
+08/04/2016,Books of Vishanti,142.28
+08/04/2016,Orbs of Agamotto,96.75
+08/04/2016,Cloaks of Levitation,383.9
+08/04/2016,Wands of Watoomb,502.43
+08/04/2016,Books of Cagliostro,117.28
+08/04/2016,X-genes,144.15
+08/04/2016,X-12s,836.34
+08/04/2016,Joy Cans,191.01
+08/04/2016,Learning Beds,71.41
+08/04/2016,PROBLEMs,254.67
+08/04/2016,Gargantua Space Stations,20.43
+08/04/2016,Boom Brooms,152.85
+08/04/2016,Futuros,271.92
+08/04/2016,Goliath Serum,141.41
+08/04/2016,I-Suits,531.61
+08/04/2016,Thermal Regulation Suppositories,309.74
+08/04/2016,Oo-Rays,187.6
+08/04/2016,Go-Pods,115.75
+08/04/2016,Monster Cells,158.39
+08/04/2016,Metal Knight Units,9.26
+08/04/2016,Tickle-tickle Bugs,329.2
+08/04/2016,Hero Association Mugs,37.56
+08/04/2016,Hero Association Catalogs,186.03
+08/04/2016,Kamidogus,80.55
+08/04/2016,Amulets of Shinnok,42.91
+08/04/2016,Naknadan Shrines,224.7
+08/04/2016,Wrath Hammers,15.31
+08/04/2016,Tarkartan Blades,110.99
+08/04/2016,Koins,108.2
+08/04/2016,Capes of Fujin,199.4
+08/04/2016,Dragon Medallions,206.31
+08/04/2016,Hearts of Onaga,673.76
+08/04/2016,Portal Guns,459.4
+08/04/2016,Gravity Guns,141.41
+08/04/2016,Companion Cubes,101.63
+08/04/2016,Razor-rimmed Hats,336.62
+08/04/2016,Bablefish,195.96
+08/04/2016,Hi-Potions,192.28
+08/04/2016,X-Potions,94.61
+08/04/2016,Ethers,131.42
+08/04/2016,Turbo Ethers,23.42
+08/04/2016,Dry Ethers,236.45
+08/04/2016,Gold Needles,523.73
+08/04/2016,Golden Apples,69.82
+08/04/2016,Silver Apples,391.03
+08/04/2016,Stamina Pluses,17.99
+08/04/2016,Power Pluses,237.01
+08/04/2016,Soma Drops,111.64
+08/04/2016,Mind Pluses,77.73
+08/04/2016,Light Curtains,284.57
+08/04/2016,Red Curtains,362.88
+08/04/2016,Lunar Curtains,378.66
+08/04/2016,Protect Drinks,192.84
+08/04/2016,Faerie Tonics,294.22
+08/04/2016,Spider Silks,120.93
+08/04/2016,White Fangs,37.48
+08/04/2016,Red Fangs,5.41
+08/04/2016,Cockatrice Claws,8.82
+08/04/2016,Vampire Fangs,174.21
+08/04/2016,Dire Rat Tails,570.98
+08/04/2016,Star Rubies,433.48
+08/04/2016,Nitro Powder Blocks,195.76
+08/04/2016,Mystic Keys,56.32
+08/04/2016,Bottled Faeries,232.48
+08/04/2016,Dazers,275.71
+08/04/2016,Dream Powder,178.8
+08/04/2016,War Gongs,189.79
+08/04/2016,Vagyrisk Claws,57.82
+08/04/2016,Mimett Greens,111.04
+08/04/2016,Sylkis Greens,665.87
+08/04/2016,Curiel Greens,531.35
+08/04/2016,Daenarians,61.47
+08/04/2016,Zelo Nuts,62.57
+08/04/2016,Lasan Nuts,148.69
+08/04/2016,Limit Break Manuals,120.37
+08/04/2016,Earth Harps,189.81
+08/04/2016,Black Materia Orbs,6.56
+08/04/2016,Gonnes,67.71
+08/04/2016,Blades of Chaos,273.42
+08/04/2016,Orcarinas of Time,193.46
+08/04/2016,Master Swords,24.92
+08/04/2016,Triforces,67.41
+08/04/2016,Fire Flowers,406.35
+08/04/2016,Rupees,274.07
+08/04/2016,Heart Containers,506.24
+08/04/2016,Azath Houses,49.72
+08/04/2016,Bombchus,366.27
+08/04/2016,Deku Sticks,282.9
+08/04/2016,Magic Beans,232.04
+08/04/2016,Moon Tears,256.82
+08/04/2016,Don Gero Masks,172.7
+08/04/2016,Kafel Masks,7.38

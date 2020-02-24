@@ -1,0 +1,606 @@
+date,product,marketPrice
+05/09/2015,Moloko Plus,45.59
+05/09/2015,Pan-Galactic Gargle Blaster,739.4
+05/09/2015,Victory Gin,71.55
+05/09/2015,Vesper,291.61
+05/09/2015,Duff,335.14
+05/09/2015,Dark Planet Cola,93.89
+05/09/2015,Slurm,136.77
+05/09/2015,Nuka-cola,25.87
+05/09/2015,Ent-draught,32.79
+05/09/2015,Ambrosia,54.96
+05/09/2015,Romulan Ale,99.69
+05/09/2015,Astro Boys,1918.13
+05/09/2015,Marvins,70.34
+05/09/2015,K-9s,77.97
+05/09/2015,Autobots,51.56
+05/09/2015,Decepticons,58.72
+05/09/2015,Golems,14.64
+05/09/2015,Master Balls,79.45
+05/09/2015,Ultra Balls,55.64
+05/09/2015,T-800s,262.27
+05/09/2015,T-1000s,74.21
+05/09/2015,Flubbers,374.16
+05/09/2015,Spyders,157.39
+05/09/2015,B-4s,58.05
+05/09/2015,Ultrons,215.85
+05/09/2015,Ruby Slippers,56.47
+05/09/2015,Catbuses,1066.64
+05/09/2015,Evangelions,558.05
+05/09/2015,Behelits,908.67
+05/09/2015,Lightsabres,12.59
+05/09/2015,Devil Fruits,174.19
+05/09/2015,SMILEs,266.86
+05/09/2015,Cornballers,231.13
+05/09/2015,Sabor de Soledad Chips,167.49
+05/09/2015,Red Apple Cigarettes,259.18
+05/09/2015,Wonka Bars,301.21
+05/09/2015,Bags of Holding,315.04
+05/09/2015,Sending Stones,1259.68
+05/09/2015,Elder Wands,194.6
+05/09/2015,Dornish Red,280.11
+05/09/2015,Valaryian Steel Bars,147.53
+05/09/2015,Dragon Eggs,444.96
+05/09/2015,Cranium Inflolinks,97.6
+05/09/2015,LiDAR Mark-Trackers,284.72
+05/09/2015,Arm Nanoblades,505.86
+05/09/2015,Replicants,6.59
+05/09/2015,Venom Canisters,163.19
+05/09/2015,Atium Bars,178.32
+05/09/2015,Otataral Bars,21.62
+05/09/2015,Night Dust,233.45
+05/09/2015,Dragon Scales,228.07
+05/09/2015,Teeth of the Dragon,325.69
+05/09/2015,Chunin Headband,163.86
+05/09/2015,Djinns,235.98
+05/09/2015,Flying Brooms,9.92
+05/09/2015,Flying Carpets,108.74
+05/09/2015,Mjolnirs,664.11
+05/09/2015,Infinity Stones,126.77
+05/09/2015,Infinity Gauntlets,13.38
+05/09/2015,Repulsor Beams,749.69
+05/09/2015,Super Soldier Serums,128.28
+05/09/2015,Vibranium Bars,443.89
+05/09/2015,Adamantium Bars,204.16
+05/09/2015,Mithril Bars,2.56
+05/09/2015,Rune Bars,306.0
+05/09/2015,True Names,94.68
+05/09/2015,Sigils,98.28
+05/09/2015,Strongest Potions,83.78
+05/09/2015,Knightmare Frames,723.58
+05/09/2015,Mirrors of Erised,324.98
+05/09/2015,Pensieves,86.21
+05/09/2015,Veritaserums,366.93
+05/09/2015,Felix Felicis,295.7
+05/09/2015,Horcuxes,148.0
+05/09/2015,Philosopher Stones,112.74
+05/09/2015,Sorceror Stones,23.98
+05/09/2015,Dragon Balls,78.64
+05/09/2015,Wind Shurikens,88.34
+05/09/2015,Time Turners,317.49
+05/09/2015,Moranth Burners,351.15
+05/09/2015,Moranth Crackers,108.97
+05/09/2015,Moranth Cussers,212.02
+05/09/2015,Moranth Flamers,199.29
+05/09/2015,Moranth Melters,122.23
+05/09/2015,Moranth Shapers,113.88
+05/09/2015,Moranth Smokers,81.68
+05/09/2015,Finnests,167.45
+05/09/2015,Terondais,176.69
+05/09/2015,White Gold Rings,87.5
+05/09/2015,Hurtloam,246.91
+05/09/2015,Rare Candies,113.23
+05/09/2015,PP Ups,428.62
+05/09/2015,Phoenix Downs,17.6
+05/09/2015,Zanpakutos,14.49
+05/09/2015,Sensu Beans,218.88
+05/09/2015,Namekian Spring Water,14.18
+05/09/2015,Australium Bars,100.86
+05/09/2015,Aether Tanks,20.51
+05/09/2015,Mana Ore,85.85
+05/09/2015,Dilithium Crystals,248.78
+05/09/2015,Dust Cannisters,449.84
+05/09/2015,Energon Cubes,647.4
+05/09/2015,Jumbonium Atoms,164.42
+05/09/2015,Katchin Bars,20.82
+05/09/2015,Krytonite Ore,311.39
+05/09/2015,Nanomachines,249.23
+05/09/2015,Octiron Bars,187.72
+05/09/2015,Redstone Blocks,487.5
+05/09/2015,Seastone Cuffs,89.07
+05/09/2015,Z-crystals,184.05
+05/09/2015,Digivices,77.8
+05/09/2015,Pym Particles,16.75
+05/09/2015,Wild Card Virus Vials,63.09
+05/09/2015,Tachyons,299.6
+05/09/2015,Hope,248.53
+05/09/2015,Decks of Many Things,349.43
+05/09/2015,Golden Fleeces,145.66
+05/09/2015,Argonaughts,499.79
+05/09/2015,Vestiges,570.59
+05/09/2015,Tricorders,174.56
+05/09/2015,Replicators,83.19
+05/09/2015,Transporters,265.37
+05/09/2015,Sonic Screwdrivers,307.55
+05/09/2015,Holy Grails,382.24
+05/09/2015,Nails of Helena,385.12
+05/09/2015,Shrouds of Turin,222.71
+05/09/2015,Hoverboards,28.36
+05/09/2015,Holodecks,231.32
+05/09/2015,Neuralizers,154.22
+05/09/2015,Symbiotes,222.21
+05/09/2015,Meow Meow Beans,311.82
+05/09/2015,6IV Shiny Dittos,705.14
+05/09/2015,Holy Hand Grenades,220.56
+05/09/2015,Alpha-Omega Bombs,866.99
+05/09/2015,Fatmans,81.0
+05/09/2015,BFG 9000s,109.1
+05/09/2015,Noisy Crickets,102.56
+05/09/2015,Lawgivers,74.6
+05/09/2015,Phasers,357.52
+05/09/2015,Pulse Rifles,14.45
+05/09/2015,Vorpal Swords,294.16
+05/09/2015,Sausages inna bun,14.87
+05/09/2015,Gundams,454.93
+05/09/2015,HALs,401.03
+05/09/2015,Agents,176.94
+05/09/2015,Pipboys,208.4
+05/09/2015,Scouters,54.67
+05/09/2015,Daemons,171.04
+05/09/2015,Pacts,100.19
+05/09/2015,Souls,79.45
+05/09/2015,Key of Kings,181.37
+05/09/2015,Horns of Gondor,345.78
+05/09/2015,Excalibers,27.21
+05/09/2015,Thousand Sunnys,211.78
+05/09/2015,Ampules,134.99
+05/09/2015,Badgers,403.57
+05/09/2015,Blinds,199.15
+05/09/2015,Butterflys,128.38
+05/09/2015,Cancellers,177.9
+05/09/2015,Carpenters,233.84
+05/09/2015,Centipedes,116.48
+05/09/2015,Chainsaws,58.47
+05/09/2015,Cocoons,169.84
+05/09/2015,Drops,260.23
+05/09/2015,Diverseys,105.73
+05/09/2015,Fridays,105.25
+05/09/2015,Full Faces,488.84
+05/09/2015,Fumbles,250.64
+05/09/2015,Gauntlets,372.38
+05/09/2015,Javelins,256.69
+05/09/2015,Lavenders,290.4
+05/09/2015,Beams,16.52
+05/09/2015,Pressures,481.34
+05/09/2015,Rapids,143.74
+05/09/2015,Reflectors,495.05
+05/09/2015,Scripts,64.06
+05/09/2015,Shooters,22.5
+05/09/2015,Stalkers,198.26
+05/09/2015,Stations,250.36
+05/09/2015,Stickers,157.98
+05/09/2015,Stoles,377.03
+05/09/2015,Stringers,601.21
+05/09/2015,Surfacers,62.63
+05/09/2015,Surrounders,64.11
+05/09/2015,Tasters,274.0
+05/09/2015,Tortures,41.78
+05/09/2015,3D Maneuver Gears,3.01
+05/09/2015,Red Orbs,529.24
+05/09/2015,Blue Orbs,286.53
+05/09/2015,Choice Bands,94.45
+05/09/2015,Choice Scarfs,34.8
+05/09/2015,Choice Specs,128.47
+05/09/2015,Binding Bands,138.71
+05/09/2015,Damp Rocks,38.96
+05/09/2015,Grip Claws,307.31
+05/09/2015,Heat Rocks,9.32
+05/09/2015,Icy Rocks,297.92
+05/09/2015,Light Clays,50.74
+05/09/2015,Smooth Rocks,390.62
+05/09/2015,Terrain Extenders,236.51
+05/09/2015,Mental Herbs,195.11
+05/09/2015,Power Herbs,117.31
+05/09/2015,White Herbs,367.13
+05/09/2015,Big Roots,266.91
+05/09/2015,Leftovers,279.63
+05/09/2015,Shell Bells,569.04
+05/09/2015,Absorb Bulbs,227.18
+05/09/2015,Assault Vests,263.61
+05/09/2015,Berserk Genes,80.51
+05/09/2015,Cell Batteries,29.63
+05/09/2015,Electric Seeds,279.86
+05/09/2015,Expert Belts,455.04
+05/09/2015,Grassy Seeds,11.87
+05/09/2015,Life Orbs,16.28
+05/09/2015,Metronomes,164.3
+05/09/2015,Misty Seeds,255.92
+05/09/2015,Muscle Bands,241.71
+05/09/2015,Psychic Seeds,208.01
+05/09/2015,Scope Lens,11.24
+05/09/2015,Snowballs,69.86
+05/09/2015,Weakness Policies,233.6
+05/09/2015,Wide Lenses,52.68
+05/09/2015,Wise Glasses,254.77
+05/09/2015,Zoom Lens,191.94
+05/09/2015,Lagging Tails,138.65
+05/09/2015,Quick Claws,57.89
+05/09/2015,Focus Bands,703.34
+05/09/2015,Focus Sashes,22.14
+05/09/2015,Flame Orbs,148.3
+05/09/2015,Toxic Orbs,33.46
+05/09/2015,Sticky Barbs,186.51
+05/09/2015,Iron Balls,133.31
+05/09/2015,Black Sludges,305.31
+05/09/2015,Ring Targets,302.79
+05/09/2015,Adrenaline Orbs,148.23
+05/09/2015,Air Balloons,42.54
+05/09/2015,Amulet Coins,256.32
+05/09/2015,Bright Powders,232.35
+05/09/2015,Destiny Knots,25.19
+05/09/2015,Eject Buttons,54.8
+05/09/2015,Float Stones,290.71
+05/09/2015,King Rocks,208.2
+05/09/2015,Protective Pads,137.96
+05/09/2015,Razor Claws,34.81
+05/09/2015,Razor Fangs,17.79
+05/09/2015,Red Cards,405.28
+05/09/2015,Rocky Helmets,295.69
+05/09/2015,Safety Goggles,398.25
+05/09/2015,Shed Shells,43.79
+05/09/2015,Smoke Balls,454.31
+05/09/2015,Cainhurst Badges,363.5
+05/09/2015,Blood Dregs,198.08
+05/09/2015,Blue Elixirs,325.29
+05/09/2015,Bold Hunter's Marks,200.35
+05/09/2015,Bolt Papers,184.4
+05/09/2015,Bone Marrow Ashes,34.24
+05/09/2015,Coldblood Dews,237.07
+05/09/2015,Fire Papers,128.19
+05/09/2015,Frenzied Coldbloods,332.72
+05/09/2015,Gold Pendants,606.06
+05/09/2015,Great One's Wisdoms,436.83
+05/09/2015,Hand Lanterns,699.21
+05/09/2015,Lead Elixirs,125.31
+05/09/2015,Madman's Knowledges,326.79
+05/09/2015,Quicksilver Bullets,148.96
+05/09/2015,Red Jewelled Brooches,110.35
+05/09/2015,Shaman Bone Blades,223.5
+05/09/2015,Deck of Dragons,265.46
+05/09/2015,Shining Coins,305.27
+05/09/2015,Tear Stones,228.92
+05/09/2015,Cainhurt Summons,313.77
+05/09/2015,Celestial Dials,113.26
+05/09/2015,Old Hunter Bells,368.52
+05/09/2015,Tonsil Stones,267.88
+05/09/2015,Gorgon Heads,119.92
+05/09/2015,Niflheim Alloy Bars,14.96
+05/09/2015,Pandora Boxes,233.77
+05/09/2015,Wings of Icarus,111.65
+05/09/2015,Flames of Apollo,227.8
+05/09/2015,Keys of the Ram,268.64
+05/09/2015,Owls of Athena,275.07
+05/09/2015,Nemean Cestuses,514.94
+05/09/2015,Nemesis Whips,33.18
+05/09/2015,Primordial Flames,21.35
+05/09/2015,Spears of Destiny,25.86
+05/09/2015,Gauntlets of Zeus,136.2
+05/09/2015,Titan Horns,101.97
+05/09/2015,Hades Helms,406.58
+05/09/2015,Urns of Power,195.49
+05/09/2015,Unity Stones,196.74
+05/09/2015,Cerebros,359.14
+05/09/2015,Radioactive Spiders,319.64
+05/09/2015,Potora Earrings,8.95
+05/09/2015,Rejuvenation Tanks,406.53
+05/09/2015,Death Notes,472.19
+05/09/2015,Shinigami Eyes,145.12
+05/09/2015,Protopacks,403.9
+05/09/2015,Scooby Snacks,91.04
+05/09/2015,Blasting Rods,190.98
+05/09/2015,Millennium Puzzles,11.08
+05/09/2015,Millennium Eyes,303.39
+05/09/2015,Millennium Rings,15.24
+05/09/2015,Millennium Keys,622.62
+05/09/2015,Millennium Rods,351.44
+05/09/2015,Millennium Necklaces,350.88
+05/09/2015,Millennium Scales,60.99
+05/09/2015,Bolts,415.08
+05/09/2015,Gadgetrons,22.8
+05/09/2015,Raritanium Ore,326.01
+05/09/2015,Nanotech Crates,285.44
+05/09/2015,Armour Magnetizers,243.92
+05/09/2015,Zoni Vessels,164.97
+05/09/2015,Box Basher 2000s,249.56
+05/09/2015,Nefarious Security Cards,266.1
+05/09/2015,Omnigaskets,402.23
+05/09/2015,Treasure Mappers,126.31
+05/09/2015,Gold Bolts,325.91
+05/09/2015,Qwark Statuettes,47.65
+05/09/2015,Electrolyzers,589.45
+05/09/2015,Levitators,83.97
+05/09/2015,Infiltrators,564.61
+05/09/2015,Megacorp Helmets,99.09
+05/09/2015,Momentum Gliders,478.74
+05/09/2015,Platinum Bolts,209.81
+05/09/2015,Infobots,322.93
+05/09/2015,Rift Crackers,89.04
+05/09/2015,Clank Model Robots,122.13
+05/09/2015,CodeBots,27.91
+05/09/2015,Persuaders,629.58
+05/09/2015,Map-o-matics,433.77
+05/09/2015,Ultra Nanotech,66.84
+05/09/2015,Premium Nanotech,218.74
+05/09/2015,Gadgebot Upgrade Chips,111.53
+05/09/2015,Nano-paks,769.94
+05/09/2015,Mr. Zerkons,133.18
+05/09/2015,Golden Lucky Cats,213.74
+05/09/2015,Peace Bells,136.45
+05/09/2015,Wood Mats,298.08
+05/09/2015,Fog Pots,185.86
+05/09/2015,Golden Ink Pots,594.23
+05/09/2015,Thief Gloves,892.98
+05/09/2015,Fire Tablets,142.23
+05/09/2015,Water Tablets,57.46
+05/09/2015,Lucky Cat Paws,206.12
+05/09/2015,Scent Charms,18.91
+05/09/2015,String of Beads,5.5
+05/09/2015,Feedbags,118.75
+05/09/2015,Holy Bones,219.1
+05/09/2015,Exorcism Slips,160.13
+05/09/2015,Inkfinity Stones,138.29
+05/09/2015,Traveler Charms,170.82
+05/09/2015,Goldy Charms,19.66
+05/09/2015,Steel Soul Sake,133.26
+05/09/2015,Gold Dust,48.63
+05/09/2015,Mermaid Coins,65.1
+05/09/2015,Golden Peaches,280.07
+05/09/2015,Elven Boots,7.13
+05/09/2015,Fumble Boots,50.78
+05/09/2015,Jumping Boots,41.66
+05/09/2015,Kicking Boots,81.88
+05/09/2015,Levitation Boots,81.91
+05/09/2015,Speed Boots,187.21
+05/09/2015,Water Walking Boots,173.24
+05/09/2015,Alchemy Smocks,373.2
+05/09/2015,Cloaks of Displacement,72.82
+05/09/2015,Cloaks of Invisibility,37.02
+05/09/2015,Cloaks of Magic Resistance,53.64
+05/09/2015,Cloaks of Protection,122.76
+05/09/2015,Elven Cloaks,249.22
+05/09/2015,Gauntlets of Dexterity,152.22
+05/09/2015,Gauntlets of FUmbling,106.99
+05/09/2015,Gauntlets of Power,574.19
+05/09/2015,Cornuthaums,95.49
+05/09/2015,Dunce Caps,164.55
+05/09/2015,Helms of Brilliance,414.42
+05/09/2015,Helms of Opposite Alignment,165.42
+05/09/2015,Helms of Telepathy,17.0
+05/09/2015,Shields of Reflection,97.23
+05/09/2015,Bags of Tricks,234.84
+05/09/2015,Crystal Balls,239.31
+05/09/2015,Drums of Earthquake,120.37
+05/09/2015,Fire Horns,461.85
+05/09/2015,Frost Horns,185.09
+05/09/2015,Horns of Plenty,333.06
+05/09/2015,Magic Harps,75.33
+05/09/2015,Magic Lamps,37.4
+05/09/2015,Magic Markers,102.23
+05/09/2015,Magic Flute,221.34
+05/09/2015,Magic Whistles,175.1
+05/09/2015,Unicorn Horns,163.89
+05/09/2015,Loadstones,93.2
+05/09/2015,Luckstones,225.14
+05/09/2015,Touchstones,142.05
+05/09/2015,Potions of Acid,222.67
+05/09/2015,Potions of Booze,56.76
+05/09/2015,Potions of Fruit Juice,164.26
+05/09/2015,Potions of Oil,30.16
+05/09/2015,Potions of Sickness,445.47
+05/09/2015,Potions of Water,236.49
+05/09/2015,Scrolls of Blank Paper,395.11
+05/09/2015,Scrolls of Mail,25.56
+05/09/2015,Blank Spellbooks,180.65
+05/09/2015,Wands of Nothing,627.05
+05/09/2015,Meat Sticks,321.73
+05/09/2015,Meat Rings,82.85
+05/09/2015,Amulets of Yendor,185.21
+05/09/2015,Amulets of Change,203.08
+05/09/2015,Amulets of ESP,9.36
+05/09/2015,Amulets of Life Saving,126.76
+05/09/2015,Amulets of Reflection,179.27
+05/09/2015,Amulets of Restful Sleep,13.5
+05/09/2015,Amulets of Strangulation,91.41
+05/09/2015,Amulets of Unchanging,161.86
+05/09/2015,Amulets Versus Poison,117.76
+05/09/2015,Orcish Ring Mail,54.3
+05/09/2015,Elven Mithril Coats,85.46
+05/09/2015,Dragon Scale Mail,414.48
+05/09/2015,Rings of Adornment,169.41
+05/09/2015,Rings of Hunger,243.52
+05/09/2015,Rings of Protection,551.17
+05/09/2015,Rings of Protection from Shape Changers,259.52
+05/09/2015,Rings of Stealth,183.08
+05/09/2015,Rings of Sustain Ability,158.24
+05/09/2015,Rings of Warning,132.97
+05/09/2015,Rings of Aggravate Monster,229.31
+05/09/2015,Rings of Cold Resistance,343.22
+05/09/2015,Rings of Gain Constitution,94.13
+05/09/2015,Rings of Gain Strength,72.3
+05/09/2015,Rings of Increase Accuracy,127.09
+05/09/2015,Rings of Increase Damage,737.33
+05/09/2015,Rings of Invisibility,173.44
+05/09/2015,Rings of Poison Resistance,196.13
+05/09/2015,Rings of See Invisible,366.72
+05/09/2015,Rings of Shock Resistance,81.04
+05/09/2015,Rings of Fire Resistance,282.4
+05/09/2015,Rings of Free Action,117.29
+05/09/2015,Rings of Levitation,133.8
+05/09/2015,Rings of Regeneration,139.77
+05/09/2015,Rings of Searching,35.69
+05/09/2015,Rings of Slow Digestion,133.66
+05/09/2015,Rings of Teleportation,205.95
+05/09/2015,Rings of Conflict,275.27
+05/09/2015,Rings of Polymorph,952.06
+05/09/2015,Rings of Polymorph Control,218.15
+05/09/2015,Rings of Teleport Control,438.42
+05/09/2015,Wumpa Fruits,471.69
+05/09/2015,Blue Flutes,178.53
+05/09/2015,Digi-eggs,149.54
+05/09/2015,Crests,459.12
+05/09/2015,X-Antibodies,313.59
+05/09/2015,Holy Rings,15.45
+05/09/2015,Fusion Loaders,315.51
+05/09/2015,Gantz Balls,235.99
+05/09/2015,L Coffees,145.06
+05/09/2015,L-Viruses,99.59
+05/09/2015,Blue Digizoids,626.99
+05/09/2015,DigiBytes,244.22
+05/09/2015,V-Tamer Taags,182.24
+05/09/2015,Mocchi Disks,48.73
+05/09/2015,Monol Disks,126.92
+05/09/2015,Arrowhead Disks,163.65
+05/09/2015,Baku Disks,26.48
+05/09/2015,Beatas Disks,121.84
+05/09/2015,Ogyo Disks,527.55
+05/09/2015,Dragon Disks,485.66
+05/09/2015,Dino Disks,31.48
+05/09/2015,Doodle Disks,139.9
+05/09/2015,Falco Disks,202.44
+05/09/2015,Pixie Disks,378.91
+05/09/2015,Pokeballs,126.21
+05/09/2015,Pokedexes,138.65
+05/09/2015,Blue Shells,571.89
+05/09/2015,Red Shells,97.76
+05/09/2015,Stars,361.09
+05/09/2015,Piranha Plants,732.64
+05/09/2015,Garu Disks,8.56
+05/09/2015,Ghost Disks,42.57
+05/09/2015,Golem Disks,155.58
+05/09/2015,Hare Disks,134.62
+05/09/2015,Raiden Disks,66.05
+05/09/2015,Saibamen Seeds,404.08
+05/09/2015,Cell Cells,79.5
+05/09/2015,Phials of Galadriel,119.03
+05/09/2015,Angainors,253.4
+05/09/2015,Elven Ropes,42.9
+05/09/2015,Keys of Orthanc,165.93
+05/09/2015,Leaves of Lorien,109.33
+05/09/2015,Palantiris,516.95
+05/09/2015,Vilyas,310.94
+05/09/2015,Nenyas,108.35
+05/09/2015,Simarils,137.24
+05/09/2015,Doors of Durin,111.71
+05/09/2015,Naryas,192.26
+05/09/2015,Ithildins,259.45
+05/09/2015,Valars,246.54
+05/09/2015,Samehadas,180.68
+05/09/2015,Chakra Puppets,350.53
+05/09/2015,Absorbing Eyes,28.8
+05/09/2015,Kunais,335.11
+05/09/2015,Barrier Tags,333.48
+05/09/2015,Blue Fire Powder,92.72
+05/09/2015,Lightning Barrels,30.39
+05/09/2015,Chain Wind Staffs,486.46
+05/09/2015,Curries of Life,412.82
+05/09/2015,Curse Masks,33.08
+05/09/2015,Ninja Info Cards,280.04
+05/09/2015,Mirrors of Hope,498.12
+05/09/2015,Scrolls of Seals,144.94
+05/09/2015,Hexagonal Crystals,154.63
+05/09/2015,Iron Sands,524.06
+05/09/2015,Arc Reactors,1049.56
+05/09/2015,Iron Spiders,230.2
+05/09/2015,Eyes of Agamotto,323.56
+05/09/2015,Books of Vishanti,131.89
+05/09/2015,Orbs of Agamotto,105.71
+05/09/2015,Cloaks of Levitation,311.91
+05/09/2015,Wands of Watoomb,419.01
+05/09/2015,Books of Cagliostro,141.8
+05/09/2015,X-genes,151.52
+05/09/2015,X-12s,997.67
+05/09/2015,Joy Cans,213.15
+05/09/2015,Learning Beds,72.13
+05/09/2015,PROBLEMs,276.59
+05/09/2015,Gargantua Space Stations,22.23
+05/09/2015,Boom Brooms,131.53
+05/09/2015,Futuros,290.43
+05/09/2015,Goliath Serum,153.19
+05/09/2015,I-Suits,485.04
+05/09/2015,Thermal Regulation Suppositories,278.73
+05/09/2015,Oo-Rays,240.71
+05/09/2015,Go-Pods,156.02
+05/09/2015,Monster Cells,204.97
+05/09/2015,Metal Knight Units,9.57
+05/09/2015,Tickle-tickle Bugs,228.44
+05/09/2015,Hero Association Mugs,47.33
+05/09/2015,Hero Association Catalogs,200.52
+05/09/2015,Kamidogus,85.9
+05/09/2015,Amulets of Shinnok,34.88
+05/09/2015,Naknadan Shrines,239.69
+05/09/2015,Wrath Hammers,21.12
+05/09/2015,Tarkartan Blades,119.93
+05/09/2015,Koins,142.97
+05/09/2015,Capes of Fujin,200.97
+05/09/2015,Dragon Medallions,244.48
+05/09/2015,Hearts of Onaga,752.4
+05/09/2015,Portal Guns,430.2
+05/09/2015,Gravity Guns,111.43
+05/09/2015,Companion Cubes,98.02
+05/09/2015,Razor-rimmed Hats,333.17
+05/09/2015,Bablefish,205.68
+05/09/2015,Hi-Potions,226.49
+05/09/2015,X-Potions,142.99
+05/09/2015,Ethers,130.04
+05/09/2015,Turbo Ethers,26.59
+05/09/2015,Dry Ethers,245.17
+05/09/2015,Gold Needles,576.26
+05/09/2015,Golden Apples,80.99
+05/09/2015,Silver Apples,346.16
+05/09/2015,Stamina Pluses,26.94
+05/09/2015,Power Pluses,265.19
+05/09/2015,Soma Drops,87.68
+05/09/2015,Mind Pluses,100.44
+05/09/2015,Light Curtains,253.83
+05/09/2015,Red Curtains,351.68
+05/09/2015,Lunar Curtains,428.56
+05/09/2015,Protect Drinks,193.11
+05/09/2015,Faerie Tonics,317.12
+05/09/2015,Spider Silks,117.85
+05/09/2015,White Fangs,45.35
+05/09/2015,Red Fangs,5.61
+05/09/2015,Cockatrice Claws,7.98
+05/09/2015,Vampire Fangs,167.88
+05/09/2015,Dire Rat Tails,433.22
+05/09/2015,Star Rubies,340.08
+05/09/2015,Nitro Powder Blocks,153.61
+05/09/2015,Mystic Keys,67.5
+05/09/2015,Bottled Faeries,228.71
+05/09/2015,Dazers,277.64
+05/09/2015,Dream Powder,176.53
+05/09/2015,War Gongs,153.85
+05/09/2015,Vagyrisk Claws,61.52
+05/09/2015,Mimett Greens,109.46
+05/09/2015,Sylkis Greens,668.58
+05/09/2015,Curiel Greens,537.8
+05/09/2015,Daenarians,57.07
+05/09/2015,Zelo Nuts,64.23
+05/09/2015,Lasan Nuts,149.95
+05/09/2015,Limit Break Manuals,118.18
+05/09/2015,Earth Harps,227.75
+05/09/2015,Black Materia Orbs,5.25
+05/09/2015,Gonnes,78.77
+05/09/2015,Blades of Chaos,309.11
+05/09/2015,Orcarinas of Time,238.72
+05/09/2015,Master Swords,26.3
+05/09/2015,Triforces,72.5
+05/09/2015,Fire Flowers,311.47
+05/09/2015,Rupees,334.37
+05/09/2015,Heart Containers,427.88
+05/09/2015,Azath Houses,70.85
+05/09/2015,Bombchus,393.75
+05/09/2015,Deku Sticks,334.27
+05/09/2015,Magic Beans,235.97
+05/09/2015,Moon Tears,214.99
+05/09/2015,Don Gero Masks,121.55
+05/09/2015,Kafel Masks,6.98

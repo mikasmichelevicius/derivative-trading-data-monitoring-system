@@ -1,0 +1,606 @@
+date,product,marketPrice
+01/02/2017,Moloko Plus,57.96
+01/02/2017,Pan-Galactic Gargle Blaster,1239.38
+01/02/2017,Victory Gin,33.98
+01/02/2017,Vesper,273.86
+01/02/2017,Duff,342.73
+01/02/2017,Dark Planet Cola,86.83
+01/02/2017,Slurm,128.64
+01/02/2017,Nuka-cola,34.37
+01/02/2017,Ent-draught,26.85
+01/02/2017,Ambrosia,73.03
+01/02/2017,Romulan Ale,114.16
+01/02/2017,Astro Boys,2079.46
+01/02/2017,Marvins,70.62
+01/02/2017,K-9s,55.13
+01/02/2017,Autobots,37.72
+01/02/2017,Decepticons,42.68
+01/02/2017,Golems,8.64
+01/02/2017,Master Balls,65.18
+01/02/2017,Ultra Balls,48.5
+01/02/2017,T-800s,241.62
+01/02/2017,T-1000s,29.36
+01/02/2017,Flubbers,252.18
+01/02/2017,Spyders,193.91
+01/02/2017,B-4s,57.94
+01/02/2017,Ultrons,177.16
+01/02/2017,Ruby Slippers,42.25
+01/02/2017,Catbuses,823.08
+01/02/2017,Evangelions,546.41
+01/02/2017,Behelits,563.21
+01/02/2017,Lightsabres,7.45
+01/02/2017,Devil Fruits,193.32
+01/02/2017,SMILEs,188.41
+01/02/2017,Cornballers,264.94
+01/02/2017,Sabor de Soledad Chips,201.64
+01/02/2017,Red Apple Cigarettes,315.69
+01/02/2017,Wonka Bars,398.55
+01/02/2017,Bags of Holding,165.14
+01/02/2017,Sending Stones,922.88
+01/02/2017,Elder Wands,144.06
+01/02/2017,Dornish Red,145.43
+01/02/2017,Valaryian Steel Bars,276.13
+01/02/2017,Dragon Eggs,365.02
+01/02/2017,Cranium Inflolinks,93.27
+01/02/2017,LiDAR Mark-Trackers,188.7
+01/02/2017,Arm Nanoblades,441.87
+01/02/2017,Replicants,6.52
+01/02/2017,Venom Canisters,156.31
+01/02/2017,Atium Bars,128.99
+01/02/2017,Otataral Bars,17.97
+01/02/2017,Night Dust,127.2
+01/02/2017,Dragon Scales,248.9
+01/02/2017,Teeth of the Dragon,485.71
+01/02/2017,Chunin Headband,197.76
+01/02/2017,Djinns,170.31
+01/02/2017,Flying Brooms,8.01
+01/02/2017,Flying Carpets,121.0
+01/02/2017,Mjolnirs,351.78
+01/02/2017,Infinity Stones,114.04
+01/02/2017,Infinity Gauntlets,13.58
+01/02/2017,Repulsor Beams,566.35
+01/02/2017,Super Soldier Serums,91.48
+01/02/2017,Vibranium Bars,707.12
+01/02/2017,Adamantium Bars,414.46
+01/02/2017,Mithril Bars,3.44
+01/02/2017,Rune Bars,253.19
+01/02/2017,True Names,89.52
+01/02/2017,Sigils,124.51
+01/02/2017,Strongest Potions,81.61
+01/02/2017,Knightmare Frames,533.6
+01/02/2017,Mirrors of Erised,224.45
+01/02/2017,Pensieves,143.87
+01/02/2017,Veritaserums,341.51
+01/02/2017,Felix Felicis,267.17
+01/02/2017,Horcuxes,149.07
+01/02/2017,Philosopher Stones,180.22
+01/02/2017,Sorceror Stones,12.26
+01/02/2017,Dragon Balls,72.87
+01/02/2017,Wind Shurikens,128.21
+01/02/2017,Time Turners,358.0
+01/02/2017,Moranth Burners,370.7
+01/02/2017,Moranth Crackers,151.85
+01/02/2017,Moranth Cussers,187.14
+01/02/2017,Moranth Flamers,208.0
+01/02/2017,Moranth Melters,186.34
+01/02/2017,Moranth Shapers,66.6
+01/02/2017,Moranth Smokers,113.54
+01/02/2017,Finnests,123.35
+01/02/2017,Terondais,170.9
+01/02/2017,White Gold Rings,82.17
+01/02/2017,Hurtloam,294.18
+01/02/2017,Rare Candies,116.14
+01/02/2017,PP Ups,441.03
+01/02/2017,Phoenix Downs,19.4
+01/02/2017,Zanpakutos,16.25
+01/02/2017,Sensu Beans,175.92
+01/02/2017,Namekian Spring Water,15.9
+01/02/2017,Australium Bars,71.25
+01/02/2017,Aether Tanks,21.36
+01/02/2017,Mana Ore,71.02
+01/02/2017,Dilithium Crystals,176.53
+01/02/2017,Dust Cannisters,318.31
+01/02/2017,Energon Cubes,717.49
+01/02/2017,Jumbonium Atoms,208.76
+01/02/2017,Katchin Bars,13.06
+01/02/2017,Krytonite Ore,260.42
+01/02/2017,Nanomachines,172.88
+01/02/2017,Octiron Bars,191.28
+01/02/2017,Redstone Blocks,396.87
+01/02/2017,Seastone Cuffs,86.93
+01/02/2017,Z-crystals,195.31
+01/02/2017,Digivices,85.96
+01/02/2017,Pym Particles,16.64
+01/02/2017,Wild Card Virus Vials,64.19
+01/02/2017,Tachyons,191.62
+01/02/2017,Hope,209.87
+01/02/2017,Decks of Many Things,286.4
+01/02/2017,Golden Fleeces,108.96
+01/02/2017,Argonaughts,511.68
+01/02/2017,Vestiges,836.72
+01/02/2017,Tricorders,127.68
+01/02/2017,Replicators,81.53
+01/02/2017,Transporters,206.12
+01/02/2017,Sonic Screwdrivers,414.57
+01/02/2017,Holy Grails,442.3
+01/02/2017,Nails of Helena,262.65
+01/02/2017,Shrouds of Turin,234.76
+01/02/2017,Hoverboards,34.05
+01/02/2017,Holodecks,253.3
+01/02/2017,Neuralizers,102.01
+01/02/2017,Symbiotes,346.81
+01/02/2017,Meow Meow Beans,347.25
+01/02/2017,6IV Shiny Dittos,456.53
+01/02/2017,Holy Hand Grenades,229.62
+01/02/2017,Alpha-Omega Bombs,1076.38
+01/02/2017,Fatmans,89.03
+01/02/2017,BFG 9000s,63.45
+01/02/2017,Noisy Crickets,108.29
+01/02/2017,Lawgivers,44.84
+01/02/2017,Phasers,203.16
+01/02/2017,Pulse Rifles,14.38
+01/02/2017,Vorpal Swords,295.24
+01/02/2017,Sausages inna bun,17.65
+01/02/2017,Gundams,391.21
+01/02/2017,HALs,331.55
+01/02/2017,Agents,166.57
+01/02/2017,Pipboys,262.6
+01/02/2017,Scouters,41.77
+01/02/2017,Daemons,140.76
+01/02/2017,Pacts,107.29
+01/02/2017,Souls,64.04
+01/02/2017,Key of Kings,106.14
+01/02/2017,Horns of Gondor,575.4
+01/02/2017,Excalibers,13.18
+01/02/2017,Thousand Sunnys,211.97
+01/02/2017,Ampules,170.69
+01/02/2017,Badgers,683.06
+01/02/2017,Blinds,143.8
+01/02/2017,Butterflys,118.07
+01/02/2017,Cancellers,157.34
+01/02/2017,Carpenters,281.6
+01/02/2017,Centipedes,136.2
+01/02/2017,Chainsaws,76.27
+01/02/2017,Cocoons,103.28
+01/02/2017,Drops,315.16
+01/02/2017,Diverseys,125.53
+01/02/2017,Fridays,96.06
+01/02/2017,Full Faces,470.79
+01/02/2017,Fumbles,237.22
+01/02/2017,Gauntlets,431.19
+01/02/2017,Javelins,142.66
+01/02/2017,Lavenders,257.1
+01/02/2017,Beams,18.53
+01/02/2017,Pressures,324.04
+01/02/2017,Rapids,135.93
+01/02/2017,Reflectors,390.98
+01/02/2017,Scripts,77.57
+01/02/2017,Shooters,23.11
+01/02/2017,Stalkers,144.61
+01/02/2017,Stations,247.71
+01/02/2017,Stickers,117.8
+01/02/2017,Stoles,292.78
+01/02/2017,Stringers,361.03
+01/02/2017,Surfacers,68.2
+01/02/2017,Surrounders,61.19
+01/02/2017,Tasters,270.91
+01/02/2017,Tortures,32.74
+01/02/2017,3D Maneuver Gears,3.01
+01/02/2017,Red Orbs,544.56
+01/02/2017,Blue Orbs,260.69
+01/02/2017,Choice Bands,76.26
+01/02/2017,Choice Scarfs,35.97
+01/02/2017,Choice Specs,130.29
+01/02/2017,Binding Bands,185.9
+01/02/2017,Damp Rocks,49.37
+01/02/2017,Grip Claws,258.19
+01/02/2017,Heat Rocks,14.32
+01/02/2017,Icy Rocks,343.1
+01/02/2017,Light Clays,50.45
+01/02/2017,Smooth Rocks,344.41
+01/02/2017,Terrain Extenders,262.42
+01/02/2017,Mental Herbs,207.89
+01/02/2017,Power Herbs,128.08
+01/02/2017,White Herbs,291.13
+01/02/2017,Big Roots,229.83
+01/02/2017,Leftovers,237.48
+01/02/2017,Shell Bells,604.04
+01/02/2017,Absorb Bulbs,231.12
+01/02/2017,Assault Vests,250.67
+01/02/2017,Berserk Genes,66.74
+01/02/2017,Cell Batteries,28.41
+01/02/2017,Electric Seeds,297.85
+01/02/2017,Expert Belts,558.49
+01/02/2017,Grassy Seeds,19.32
+01/02/2017,Life Orbs,23.36
+01/02/2017,Metronomes,100.33
+01/02/2017,Misty Seeds,167.12
+01/02/2017,Muscle Bands,223.86
+01/02/2017,Psychic Seeds,215.03
+01/02/2017,Scope Lens,10.41
+01/02/2017,Snowballs,85.29
+01/02/2017,Weakness Policies,168.99
+01/02/2017,Wide Lenses,48.3
+01/02/2017,Wise Glasses,405.11
+01/02/2017,Zoom Lens,116.27
+01/02/2017,Lagging Tails,114.24
+01/02/2017,Quick Claws,54.94
+01/02/2017,Focus Bands,444.46
+01/02/2017,Focus Sashes,18.87
+01/02/2017,Flame Orbs,143.31
+01/02/2017,Toxic Orbs,35.53
+01/02/2017,Sticky Barbs,148.19
+01/02/2017,Iron Balls,122.59
+01/02/2017,Black Sludges,326.64
+01/02/2017,Ring Targets,237.62
+01/02/2017,Adrenaline Orbs,79.32
+01/02/2017,Air Balloons,38.69
+01/02/2017,Amulet Coins,394.85
+01/02/2017,Bright Powders,243.14
+01/02/2017,Destiny Knots,24.28
+01/02/2017,Eject Buttons,56.58
+01/02/2017,Float Stones,308.84
+01/02/2017,King Rocks,254.6
+01/02/2017,Protective Pads,106.79
+01/02/2017,Razor Claws,31.36
+01/02/2017,Razor Fangs,13.3
+01/02/2017,Red Cards,381.58
+01/02/2017,Rocky Helmets,323.08
+01/02/2017,Safety Goggles,286.21
+01/02/2017,Shed Shells,40.74
+01/02/2017,Smoke Balls,378.4
+01/02/2017,Cainhurst Badges,413.12
+01/02/2017,Blood Dregs,285.11
+01/02/2017,Blue Elixirs,425.68
+01/02/2017,Bold Hunter's Marks,175.4
+01/02/2017,Bolt Papers,196.26
+01/02/2017,Bone Marrow Ashes,49.64
+01/02/2017,Coldblood Dews,198.72
+01/02/2017,Fire Papers,108.8
+01/02/2017,Frenzied Coldbloods,434.8
+01/02/2017,Gold Pendants,338.7
+01/02/2017,Great One's Wisdoms,356.18
+01/02/2017,Hand Lanterns,639.97
+01/02/2017,Lead Elixirs,86.32
+01/02/2017,Madman's Knowledges,301.02
+01/02/2017,Quicksilver Bullets,196.19
+01/02/2017,Red Jewelled Brooches,121.44
+01/02/2017,Shaman Bone Blades,211.92
+01/02/2017,Deck of Dragons,283.91
+01/02/2017,Shining Coins,242.52
+01/02/2017,Tear Stones,325.43
+01/02/2017,Cainhurt Summons,282.18
+01/02/2017,Celestial Dials,78.73
+01/02/2017,Old Hunter Bells,407.22
+01/02/2017,Tonsil Stones,304.75
+01/02/2017,Gorgon Heads,187.5
+01/02/2017,Niflheim Alloy Bars,17.69
+01/02/2017,Pandora Boxes,248.98
+01/02/2017,Wings of Icarus,156.46
+01/02/2017,Flames of Apollo,273.11
+01/02/2017,Keys of the Ram,216.24
+01/02/2017,Owls of Athena,240.54
+01/02/2017,Nemean Cestuses,526.33
+01/02/2017,Nemesis Whips,64.58
+01/02/2017,Primordial Flames,21.64
+01/02/2017,Spears of Destiny,22.86
+01/02/2017,Gauntlets of Zeus,196.69
+01/02/2017,Titan Horns,79.79
+01/02/2017,Hades Helms,529.8
+01/02/2017,Urns of Power,212.63
+01/02/2017,Unity Stones,237.78
+01/02/2017,Cerebros,430.07
+01/02/2017,Radioactive Spiders,378.95
+01/02/2017,Potora Earrings,9.65
+01/02/2017,Rejuvenation Tanks,410.57
+01/02/2017,Death Notes,462.43
+01/02/2017,Shinigami Eyes,124.79
+01/02/2017,Protopacks,410.52
+01/02/2017,Scooby Snacks,63.85
+01/02/2017,Blasting Rods,145.8
+01/02/2017,Millennium Puzzles,12.35
+01/02/2017,Millennium Eyes,221.71
+01/02/2017,Millennium Rings,8.93
+01/02/2017,Millennium Keys,491.89
+01/02/2017,Millennium Rods,321.22
+01/02/2017,Millennium Necklaces,267.88
+01/02/2017,Millennium Scales,90.13
+01/02/2017,Bolts,836.82
+01/02/2017,Gadgetrons,25.15
+01/02/2017,Raritanium Ore,329.61
+01/02/2017,Nanotech Crates,211.65
+01/02/2017,Armour Magnetizers,304.62
+01/02/2017,Zoni Vessels,164.12
+01/02/2017,Box Basher 2000s,336.42
+01/02/2017,Nefarious Security Cards,181.6
+01/02/2017,Omnigaskets,352.06
+01/02/2017,Treasure Mappers,178.06
+01/02/2017,Gold Bolts,228.05
+01/02/2017,Qwark Statuettes,53.72
+01/02/2017,Electrolyzers,473.76
+01/02/2017,Levitators,120.58
+01/02/2017,Infiltrators,768.79
+01/02/2017,Megacorp Helmets,91.26
+01/02/2017,Momentum Gliders,412.6
+01/02/2017,Platinum Bolts,237.71
+01/02/2017,Infobots,362.67
+01/02/2017,Rift Crackers,90.95
+01/02/2017,Clank Model Robots,107.83
+01/02/2017,CodeBots,25.48
+01/02/2017,Persuaders,801.08
+01/02/2017,Map-o-matics,359.84
+01/02/2017,Ultra Nanotech,95.61
+01/02/2017,Premium Nanotech,191.46
+01/02/2017,Gadgebot Upgrade Chips,127.96
+01/02/2017,Nano-paks,696.97
+01/02/2017,Mr. Zerkons,91.44
+01/02/2017,Golden Lucky Cats,186.56
+01/02/2017,Peace Bells,178.38
+01/02/2017,Wood Mats,306.76
+01/02/2017,Fog Pots,400.22
+01/02/2017,Golden Ink Pots,477.12
+01/02/2017,Thief Gloves,1427.17
+01/02/2017,Fire Tablets,164.12
+01/02/2017,Water Tablets,42.6
+01/02/2017,Lucky Cat Paws,218.53
+01/02/2017,Scent Charms,9.86
+01/02/2017,String of Beads,4.04
+01/02/2017,Feedbags,73.14
+01/02/2017,Holy Bones,159.6
+01/02/2017,Exorcism Slips,165.33
+01/02/2017,Inkfinity Stones,165.36
+01/02/2017,Traveler Charms,102.01
+01/02/2017,Goldy Charms,18.5
+01/02/2017,Steel Soul Sake,167.02
+01/02/2017,Gold Dust,45.74
+01/02/2017,Mermaid Coins,74.93
+01/02/2017,Golden Peaches,305.35
+01/02/2017,Elven Boots,5.18
+01/02/2017,Fumble Boots,53.86
+01/02/2017,Jumping Boots,51.62
+01/02/2017,Kicking Boots,79.4
+01/02/2017,Levitation Boots,84.07
+01/02/2017,Speed Boots,160.1
+01/02/2017,Water Walking Boots,216.44
+01/02/2017,Alchemy Smocks,396.18
+01/02/2017,Cloaks of Displacement,56.5
+01/02/2017,Cloaks of Invisibility,45.32
+01/02/2017,Cloaks of Magic Resistance,70.88
+01/02/2017,Cloaks of Protection,133.54
+01/02/2017,Elven Cloaks,272.52
+01/02/2017,Gauntlets of Dexterity,141.49
+01/02/2017,Gauntlets of FUmbling,93.67
+01/02/2017,Gauntlets of Power,670.62
+01/02/2017,Cornuthaums,116.52
+01/02/2017,Dunce Caps,154.05
+01/02/2017,Helms of Brilliance,312.4
+01/02/2017,Helms of Opposite Alignment,163.33
+01/02/2017,Helms of Telepathy,24.81
+01/02/2017,Shields of Reflection,90.52
+01/02/2017,Bags of Tricks,141.85
+01/02/2017,Crystal Balls,229.89
+01/02/2017,Drums of Earthquake,91.31
+01/02/2017,Fire Horns,300.37
+01/02/2017,Frost Horns,157.13
+01/02/2017,Horns of Plenty,464.51
+01/02/2017,Magic Harps,65.97
+01/02/2017,Magic Lamps,32.58
+01/02/2017,Magic Markers,45.26
+01/02/2017,Magic Flute,302.61
+01/02/2017,Magic Whistles,186.01
+01/02/2017,Unicorn Horns,139.37
+01/02/2017,Loadstones,94.25
+01/02/2017,Luckstones,282.75
+01/02/2017,Touchstones,145.52
+01/02/2017,Potions of Acid,231.5
+01/02/2017,Potions of Booze,55.58
+01/02/2017,Potions of Fruit Juice,151.05
+01/02/2017,Potions of Oil,28.67
+01/02/2017,Potions of Sickness,468.28
+01/02/2017,Potions of Water,262.31
+01/02/2017,Scrolls of Blank Paper,416.21
+01/02/2017,Scrolls of Mail,35.07
+01/02/2017,Blank Spellbooks,110.24
+01/02/2017,Wands of Nothing,739.69
+01/02/2017,Meat Sticks,489.3
+01/02/2017,Meat Rings,58.52
+01/02/2017,Amulets of Yendor,200.13
+01/02/2017,Amulets of Change,257.1
+01/02/2017,Amulets of ESP,10.66
+01/02/2017,Amulets of Life Saving,108.22
+01/02/2017,Amulets of Reflection,168.03
+01/02/2017,Amulets of Restful Sleep,8.35
+01/02/2017,Amulets of Strangulation,110.99
+01/02/2017,Amulets of Unchanging,131.21
+01/02/2017,Amulets Versus Poison,141.69
+01/02/2017,Orcish Ring Mail,72.91
+01/02/2017,Elven Mithril Coats,63.32
+01/02/2017,Dragon Scale Mail,339.05
+01/02/2017,Rings of Adornment,131.58
+01/02/2017,Rings of Hunger,224.27
+01/02/2017,Rings of Protection,617.23
+01/02/2017,Rings of Protection from Shape Changers,199.63
+01/02/2017,Rings of Stealth,192.45
+01/02/2017,Rings of Sustain Ability,151.97
+01/02/2017,Rings of Warning,150.46
+01/02/2017,Rings of Aggravate Monster,193.26
+01/02/2017,Rings of Cold Resistance,275.22
+01/02/2017,Rings of Gain Constitution,87.09
+01/02/2017,Rings of Gain Strength,51.86
+01/02/2017,Rings of Increase Accuracy,113.44
+01/02/2017,Rings of Increase Damage,535.14
+01/02/2017,Rings of Invisibility,198.62
+01/02/2017,Rings of Poison Resistance,412.97
+01/02/2017,Rings of See Invisible,362.89
+01/02/2017,Rings of Shock Resistance,98.73
+01/02/2017,Rings of Fire Resistance,197.61
+01/02/2017,Rings of Free Action,84.16
+01/02/2017,Rings of Levitation,132.15
+01/02/2017,Rings of Regeneration,241.65
+01/02/2017,Rings of Searching,37.42
+01/02/2017,Rings of Slow Digestion,123.45
+01/02/2017,Rings of Teleportation,179.69
+01/02/2017,Rings of Conflict,222.77
+01/02/2017,Rings of Polymorph,988.0
+01/02/2017,Rings of Polymorph Control,269.4
+01/02/2017,Rings of Teleport Control,501.44
+01/02/2017,Wumpa Fruits,526.96
+01/02/2017,Blue Flutes,103.8
+01/02/2017,Digi-eggs,119.93
+01/02/2017,Crests,399.9
+01/02/2017,X-Antibodies,271.04
+01/02/2017,Holy Rings,12.2
+01/02/2017,Fusion Loaders,305.63
+01/02/2017,Gantz Balls,182.22
+01/02/2017,L Coffees,157.33
+01/02/2017,L-Viruses,109.92
+01/02/2017,Blue Digizoids,609.38
+01/02/2017,DigiBytes,293.04
+01/02/2017,V-Tamer Taags,129.68
+01/02/2017,Mocchi Disks,44.84
+01/02/2017,Monol Disks,145.38
+01/02/2017,Arrowhead Disks,173.05
+01/02/2017,Baku Disks,25.7
+01/02/2017,Beatas Disks,190.46
+01/02/2017,Ogyo Disks,470.62
+01/02/2017,Dragon Disks,644.47
+01/02/2017,Dino Disks,26.8
+01/02/2017,Doodle Disks,94.56
+01/02/2017,Falco Disks,100.21
+01/02/2017,Pixie Disks,377.39
+01/02/2017,Pokeballs,105.43
+01/02/2017,Pokedexes,261.67
+01/02/2017,Blue Shells,430.86
+01/02/2017,Red Shells,99.06
+01/02/2017,Stars,398.05
+01/02/2017,Piranha Plants,1101.54
+01/02/2017,Garu Disks,8.99
+01/02/2017,Ghost Disks,31.26
+01/02/2017,Golem Disks,148.48
+01/02/2017,Hare Disks,79.01
+01/02/2017,Raiden Disks,73.77
+01/02/2017,Saibamen Seeds,734.99
+01/02/2017,Cell Cells,64.42
+01/02/2017,Phials of Galadriel,121.42
+01/02/2017,Angainors,227.85
+01/02/2017,Elven Ropes,52.37
+01/02/2017,Keys of Orthanc,117.79
+01/02/2017,Leaves of Lorien,123.16
+01/02/2017,Palantiris,590.14
+01/02/2017,Vilyas,244.57
+01/02/2017,Nenyas,120.32
+01/02/2017,Simarils,177.54
+01/02/2017,Doors of Durin,96.16
+01/02/2017,Naryas,212.89
+01/02/2017,Ithildins,165.19
+01/02/2017,Valars,229.03
+01/02/2017,Samehadas,169.29
+01/02/2017,Chakra Puppets,299.77
+01/02/2017,Absorbing Eyes,21.3
+01/02/2017,Kunais,239.85
+01/02/2017,Barrier Tags,416.2
+01/02/2017,Blue Fire Powder,130.03
+01/02/2017,Lightning Barrels,37.92
+01/02/2017,Chain Wind Staffs,358.85
+01/02/2017,Curries of Life,390.25
+01/02/2017,Curse Masks,35.16
+01/02/2017,Ninja Info Cards,192.92
+01/02/2017,Mirrors of Hope,542.75
+01/02/2017,Scrolls of Seals,197.62
+01/02/2017,Hexagonal Crystals,117.17
+01/02/2017,Iron Sands,619.5
+01/02/2017,Arc Reactors,866.23
+01/02/2017,Iron Spiders,255.36
+01/02/2017,Eyes of Agamotto,238.06
+01/02/2017,Books of Vishanti,177.52
+01/02/2017,Orbs of Agamotto,89.82
+01/02/2017,Cloaks of Levitation,328.25
+01/02/2017,Wands of Watoomb,456.61
+01/02/2017,Books of Cagliostro,123.75
+01/02/2017,X-genes,152.04
+01/02/2017,X-12s,792.2
+01/02/2017,Joy Cans,174.37
+01/02/2017,Learning Beds,57.4
+01/02/2017,PROBLEMs,288.01
+01/02/2017,Gargantua Space Stations,18.94
+01/02/2017,Boom Brooms,196.68
+01/02/2017,Futuros,316.39
+01/02/2017,Goliath Serum,126.94
+01/02/2017,I-Suits,610.11
+01/02/2017,Thermal Regulation Suppositories,271.7
+01/02/2017,Oo-Rays,174.05
+01/02/2017,Go-Pods,81.59
+01/02/2017,Monster Cells,137.18
+01/02/2017,Metal Knight Units,9.52
+01/02/2017,Tickle-tickle Bugs,344.94
+01/02/2017,Hero Association Mugs,46.81
+01/02/2017,Hero Association Catalogs,141.0
+01/02/2017,Kamidogus,80.05
+01/02/2017,Amulets of Shinnok,40.54
+01/02/2017,Naknadan Shrines,206.71
+01/02/2017,Wrath Hammers,9.66
+01/02/2017,Tarkartan Blades,112.92
+01/02/2017,Koins,119.86
+01/02/2017,Capes of Fujin,172.04
+01/02/2017,Dragon Medallions,154.32
+01/02/2017,Hearts of Onaga,744.51
+01/02/2017,Portal Guns,441.74
+01/02/2017,Gravity Guns,159.6
+01/02/2017,Companion Cubes,80.89
+01/02/2017,Razor-rimmed Hats,290.98
+01/02/2017,Bablefish,184.71
+01/02/2017,Hi-Potions,148.81
+01/02/2017,X-Potions,113.22
+01/02/2017,Ethers,133.1
+01/02/2017,Turbo Ethers,21.41
+01/02/2017,Dry Ethers,251.42
+01/02/2017,Gold Needles,624.61
+01/02/2017,Golden Apples,78.73
+01/02/2017,Silver Apples,244.54
+01/02/2017,Stamina Pluses,15.6
+01/02/2017,Power Pluses,287.52
+01/02/2017,Soma Drops,100.6
+01/02/2017,Mind Pluses,64.83
+01/02/2017,Light Curtains,344.91
+01/02/2017,Red Curtains,263.32
+01/02/2017,Lunar Curtains,566.83
+01/02/2017,Protect Drinks,146.39
+01/02/2017,Faerie Tonics,381.47
+01/02/2017,Spider Silks,153.92
+01/02/2017,White Fangs,38.45
+01/02/2017,Red Fangs,5.19
+01/02/2017,Cockatrice Claws,7.73
+01/02/2017,Vampire Fangs,137.68
+01/02/2017,Dire Rat Tails,554.47
+01/02/2017,Star Rubies,469.38
+01/02/2017,Nitro Powder Blocks,203.93
+01/02/2017,Mystic Keys,51.55
+01/02/2017,Bottled Faeries,287.72
+01/02/2017,Dazers,289.03
+01/02/2017,Dream Powder,211.11
+01/02/2017,War Gongs,188.66
+01/02/2017,Vagyrisk Claws,69.25
+01/02/2017,Mimett Greens,98.98
+01/02/2017,Sylkis Greens,579.81
+01/02/2017,Curiel Greens,528.38
+01/02/2017,Daenarians,63.19
+01/02/2017,Zelo Nuts,54.69
+01/02/2017,Lasan Nuts,147.96
+01/02/2017,Limit Break Manuals,119.56
+01/02/2017,Earth Harps,277.56
+01/02/2017,Black Materia Orbs,5.45
+01/02/2017,Gonnes,65.08
+01/02/2017,Blades of Chaos,259.31
+01/02/2017,Orcarinas of Time,175.65
+01/02/2017,Master Swords,26.85
+01/02/2017,Triforces,59.75
+01/02/2017,Fire Flowers,442.01
+01/02/2017,Rupees,299.02
+01/02/2017,Heart Containers,685.48
+01/02/2017,Azath Houses,50.39
+01/02/2017,Bombchus,381.48
+01/02/2017,Deku Sticks,348.67
+01/02/2017,Magic Beans,191.9
+01/02/2017,Moon Tears,256.48
+01/02/2017,Don Gero Masks,141.46
+01/02/2017,Kafel Masks,8.79

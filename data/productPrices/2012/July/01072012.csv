@@ -1,0 +1,606 @@
+date,product,marketPrice
+01/07/2012,Moloko Plus,69.6
+01/07/2012,Pan-Galactic Gargle Blaster,624.82
+01/07/2012,Victory Gin,42.51
+01/07/2012,Vesper,433.15
+01/07/2012,Duff,321.23
+01/07/2012,Dark Planet Cola,98.81
+01/07/2012,Slurm,142.55
+01/07/2012,Nuka-cola,35.86
+01/07/2012,Ent-draught,36.39
+01/07/2012,Ambrosia,63.25
+01/07/2012,Romulan Ale,112.24
+01/07/2012,Astro Boys,951.34
+01/07/2012,Marvins,73.17
+01/07/2012,K-9s,165.28
+01/07/2012,Autobots,45.79
+01/07/2012,Decepticons,67.91
+01/07/2012,Golems,16.18
+01/07/2012,Master Balls,101.19
+01/07/2012,Ultra Balls,75.04
+01/07/2012,T-800s,253.23
+01/07/2012,T-1000s,88.01
+01/07/2012,Flubbers,441.38
+01/07/2012,Spyders,149.75
+01/07/2012,B-4s,35.47
+01/07/2012,Ultrons,219.6
+01/07/2012,Ruby Slippers,57.39
+01/07/2012,Catbuses,714.51
+01/07/2012,Evangelions,408.8
+01/07/2012,Behelits,720.74
+01/07/2012,Lightsabres,13.3
+01/07/2012,Devil Fruits,259.55
+01/07/2012,SMILEs,299.41
+01/07/2012,Cornballers,229.54
+01/07/2012,Sabor de Soledad Chips,104.77
+01/07/2012,Red Apple Cigarettes,327.02
+01/07/2012,Wonka Bars,268.56
+01/07/2012,Bags of Holding,298.07
+01/07/2012,Sending Stones,560.83
+01/07/2012,Elder Wands,319.78
+01/07/2012,Dornish Red,294.35
+01/07/2012,Valaryian Steel Bars,282.17
+01/07/2012,Dragon Eggs,605.95
+01/07/2012,Cranium Inflolinks,139.05
+01/07/2012,LiDAR Mark-Trackers,359.18
+01/07/2012,Arm Nanoblades,412.23
+01/07/2012,Replicants,17.14
+01/07/2012,Venom Canisters,157.22
+01/07/2012,Atium Bars,134.86
+01/07/2012,Otataral Bars,22.62
+01/07/2012,Night Dust,282.86
+01/07/2012,Dragon Scales,256.79
+01/07/2012,Teeth of the Dragon,696.96
+01/07/2012,Chunin Headband,155.08
+01/07/2012,Djinns,194.84
+01/07/2012,Flying Brooms,9.0
+01/07/2012,Flying Carpets,213.7
+01/07/2012,Mjolnirs,660.12
+01/07/2012,Infinity Stones,155.96
+01/07/2012,Infinity Gauntlets,15.44
+01/07/2012,Repulsor Beams,419.1
+01/07/2012,Super Soldier Serums,132.19
+01/07/2012,Vibranium Bars,431.48
+01/07/2012,Adamantium Bars,153.4
+01/07/2012,Mithril Bars,2.72
+01/07/2012,Rune Bars,299.16
+01/07/2012,True Names,105.23
+01/07/2012,Sigils,157.22
+01/07/2012,Strongest Potions,76.91
+01/07/2012,Knightmare Frames,418.02
+01/07/2012,Mirrors of Erised,443.06
+01/07/2012,Pensieves,61.72
+01/07/2012,Veritaserums,625.41
+01/07/2012,Felix Felicis,359.69
+01/07/2012,Horcuxes,246.84
+01/07/2012,Philosopher Stones,106.61
+01/07/2012,Sorceror Stones,20.05
+01/07/2012,Dragon Balls,98.33
+01/07/2012,Wind Shurikens,116.32
+01/07/2012,Time Turners,421.65
+01/07/2012,Moranth Burners,293.78
+01/07/2012,Moranth Crackers,145.2
+01/07/2012,Moranth Cussers,198.03
+01/07/2012,Moranth Flamers,334.71
+01/07/2012,Moranth Melters,253.92
+01/07/2012,Moranth Shapers,95.73
+01/07/2012,Moranth Smokers,102.91
+01/07/2012,Finnests,113.19
+01/07/2012,Terondais,225.05
+01/07/2012,White Gold Rings,95.76
+01/07/2012,Hurtloam,291.42
+01/07/2012,Rare Candies,141.58
+01/07/2012,PP Ups,364.96
+01/07/2012,Phoenix Downs,19.0
+01/07/2012,Zanpakutos,9.36
+01/07/2012,Sensu Beans,418.23
+01/07/2012,Namekian Spring Water,14.93
+01/07/2012,Australium Bars,167.95
+01/07/2012,Aether Tanks,28.89
+01/07/2012,Mana Ore,127.07
+01/07/2012,Dilithium Crystals,438.8
+01/07/2012,Dust Cannisters,588.74
+01/07/2012,Energon Cubes,516.54
+01/07/2012,Jumbonium Atoms,189.52
+01/07/2012,Katchin Bars,19.09
+01/07/2012,Krytonite Ore,281.4
+01/07/2012,Nanomachines,258.22
+01/07/2012,Octiron Bars,214.2
+01/07/2012,Redstone Blocks,397.58
+01/07/2012,Seastone Cuffs,64.86
+01/07/2012,Z-crystals,288.97
+01/07/2012,Digivices,89.87
+01/07/2012,Pym Particles,12.9
+01/07/2012,Wild Card Virus Vials,48.87
+01/07/2012,Tachyons,242.29
+01/07/2012,Hope,184.22
+01/07/2012,Decks of Many Things,242.49
+01/07/2012,Golden Fleeces,168.26
+01/07/2012,Argonaughts,251.87
+01/07/2012,Vestiges,417.03
+01/07/2012,Tricorders,132.58
+01/07/2012,Replicators,95.56
+01/07/2012,Transporters,318.91
+01/07/2012,Sonic Screwdrivers,203.47
+01/07/2012,Holy Grails,290.81
+01/07/2012,Nails of Helena,412.25
+01/07/2012,Shrouds of Turin,265.03
+01/07/2012,Hoverboards,29.3
+01/07/2012,Holodecks,188.26
+01/07/2012,Neuralizers,170.58
+01/07/2012,Symbiotes,179.62
+01/07/2012,Meow Meow Beans,341.65
+01/07/2012,6IV Shiny Dittos,460.87
+01/07/2012,Holy Hand Grenades,191.29
+01/07/2012,Alpha-Omega Bombs,521.72
+01/07/2012,Fatmans,80.66
+01/07/2012,BFG 9000s,107.67
+01/07/2012,Noisy Crickets,166.25
+01/07/2012,Lawgivers,75.22
+01/07/2012,Phasers,204.6
+01/07/2012,Pulse Rifles,27.69
+01/07/2012,Vorpal Swords,295.47
+01/07/2012,Sausages inna bun,10.43
+01/07/2012,Gundams,409.97
+01/07/2012,HALs,696.05
+01/07/2012,Agents,133.22
+01/07/2012,Pipboys,161.55
+01/07/2012,Scouters,64.44
+01/07/2012,Daemons,357.96
+01/07/2012,Pacts,80.58
+01/07/2012,Souls,105.2
+01/07/2012,Key of Kings,155.51
+01/07/2012,Horns of Gondor,341.66
+01/07/2012,Excalibers,25.94
+01/07/2012,Thousand Sunnys,250.5
+01/07/2012,Ampules,288.37
+01/07/2012,Badgers,533.78
+01/07/2012,Blinds,131.54
+01/07/2012,Butterflys,254.91
+01/07/2012,Cancellers,244.04
+01/07/2012,Carpenters,181.2
+01/07/2012,Centipedes,377.73
+01/07/2012,Chainsaws,62.5
+01/07/2012,Cocoons,308.29
+01/07/2012,Drops,384.39
+01/07/2012,Diverseys,141.39
+01/07/2012,Fridays,107.46
+01/07/2012,Full Faces,505.8
+01/07/2012,Fumbles,300.92
+01/07/2012,Gauntlets,246.78
+01/07/2012,Javelins,348.23
+01/07/2012,Lavenders,338.97
+01/07/2012,Beams,32.6
+01/07/2012,Pressures,520.36
+01/07/2012,Rapids,156.53
+01/07/2012,Reflectors,753.57
+01/07/2012,Scripts,58.14
+01/07/2012,Shooters,41.53
+01/07/2012,Stalkers,536.46
+01/07/2012,Stations,279.61
+01/07/2012,Stickers,228.36
+01/07/2012,Stoles,320.52
+01/07/2012,Stringers,617.2
+01/07/2012,Surfacers,78.49
+01/07/2012,Surrounders,46.31
+01/07/2012,Tasters,406.39
+01/07/2012,Tortures,56.24
+01/07/2012,3D Maneuver Gears,3.01
+01/07/2012,Red Orbs,380.12
+01/07/2012,Blue Orbs,387.32
+01/07/2012,Choice Bands,118.69
+01/07/2012,Choice Scarfs,80.31
+01/07/2012,Choice Specs,117.09
+01/07/2012,Binding Bands,268.34
+01/07/2012,Damp Rocks,57.3
+01/07/2012,Grip Claws,392.6
+01/07/2012,Heat Rocks,14.88
+01/07/2012,Icy Rocks,280.56
+01/07/2012,Light Clays,78.83
+01/07/2012,Smooth Rocks,396.02
+01/07/2012,Terrain Extenders,250.83
+01/07/2012,Mental Herbs,305.43
+01/07/2012,Power Herbs,156.44
+01/07/2012,White Herbs,430.64
+01/07/2012,Big Roots,276.76
+01/07/2012,Leftovers,292.6
+01/07/2012,Shell Bells,559.75
+01/07/2012,Absorb Bulbs,198.75
+01/07/2012,Assault Vests,351.49
+01/07/2012,Berserk Genes,78.35
+01/07/2012,Cell Batteries,43.52
+01/07/2012,Electric Seeds,271.89
+01/07/2012,Expert Belts,288.93
+01/07/2012,Grassy Seeds,9.76
+01/07/2012,Life Orbs,14.75
+01/07/2012,Metronomes,90.67
+01/07/2012,Misty Seeds,168.53
+01/07/2012,Muscle Bands,255.28
+01/07/2012,Psychic Seeds,163.11
+01/07/2012,Scope Lens,16.28
+01/07/2012,Snowballs,67.36
+01/07/2012,Weakness Policies,246.39
+01/07/2012,Wide Lenses,56.69
+01/07/2012,Wise Glasses,235.08
+01/07/2012,Zoom Lens,246.05
+01/07/2012,Lagging Tails,193.05
+01/07/2012,Quick Claws,71.02
+01/07/2012,Focus Bands,527.73
+01/07/2012,Focus Sashes,34.36
+01/07/2012,Flame Orbs,145.17
+01/07/2012,Toxic Orbs,18.28
+01/07/2012,Sticky Barbs,171.19
+01/07/2012,Iron Balls,331.07
+01/07/2012,Black Sludges,424.74
+01/07/2012,Ring Targets,375.53
+01/07/2012,Adrenaline Orbs,225.3
+01/07/2012,Air Balloons,53.57
+01/07/2012,Amulet Coins,281.36
+01/07/2012,Bright Powders,232.6
+01/07/2012,Destiny Knots,27.38
+01/07/2012,Eject Buttons,56.31
+01/07/2012,Float Stones,315.16
+01/07/2012,King Rocks,304.67
+01/07/2012,Protective Pads,158.06
+01/07/2012,Razor Claws,27.28
+01/07/2012,Razor Fangs,15.83
+01/07/2012,Red Cards,375.36
+01/07/2012,Rocky Helmets,273.13
+01/07/2012,Safety Goggles,376.26
+01/07/2012,Shed Shells,84.86
+01/07/2012,Smoke Balls,489.06
+01/07/2012,Cainhurst Badges,288.2
+01/07/2012,Blood Dregs,173.46
+01/07/2012,Blue Elixirs,512.35
+01/07/2012,Bold Hunter's Marks,95.51
+01/07/2012,Bolt Papers,189.08
+01/07/2012,Bone Marrow Ashes,53.09
+01/07/2012,Coldblood Dews,385.86
+01/07/2012,Fire Papers,265.38
+01/07/2012,Frenzied Coldbloods,552.37
+01/07/2012,Gold Pendants,478.41
+01/07/2012,Great One's Wisdoms,330.9
+01/07/2012,Hand Lanterns,463.28
+01/07/2012,Lead Elixirs,140.79
+01/07/2012,Madman's Knowledges,316.19
+01/07/2012,Quicksilver Bullets,163.66
+01/07/2012,Red Jewelled Brooches,51.7
+01/07/2012,Shaman Bone Blades,141.59
+01/07/2012,Deck of Dragons,267.07
+01/07/2012,Shining Coins,469.43
+01/07/2012,Tear Stones,136.14
+01/07/2012,Cainhurt Summons,386.03
+01/07/2012,Celestial Dials,159.32
+01/07/2012,Old Hunter Bells,273.58
+01/07/2012,Tonsil Stones,307.99
+01/07/2012,Gorgon Heads,201.42
+01/07/2012,Niflheim Alloy Bars,19.08
+01/07/2012,Pandora Boxes,133.36
+01/07/2012,Wings of Icarus,117.32
+01/07/2012,Flames of Apollo,191.12
+01/07/2012,Keys of the Ram,303.85
+01/07/2012,Owls of Athena,302.37
+01/07/2012,Nemean Cestuses,478.09
+01/07/2012,Nemesis Whips,51.0
+01/07/2012,Primordial Flames,39.75
+01/07/2012,Spears of Destiny,23.47
+01/07/2012,Gauntlets of Zeus,94.01
+01/07/2012,Titan Horns,253.28
+01/07/2012,Hades Helms,520.37
+01/07/2012,Urns of Power,246.25
+01/07/2012,Unity Stones,212.46
+01/07/2012,Cerebros,324.97
+01/07/2012,Radioactive Spiders,332.59
+01/07/2012,Potora Earrings,10.88
+01/07/2012,Rejuvenation Tanks,821.83
+01/07/2012,Death Notes,328.11
+01/07/2012,Shinigami Eyes,100.01
+01/07/2012,Protopacks,213.96
+01/07/2012,Scooby Snacks,183.54
+01/07/2012,Blasting Rods,223.24
+01/07/2012,Millennium Puzzles,15.59
+01/07/2012,Millennium Eyes,467.22
+01/07/2012,Millennium Rings,11.89
+01/07/2012,Millennium Keys,465.35
+01/07/2012,Millennium Rods,285.84
+01/07/2012,Millennium Necklaces,248.3
+01/07/2012,Millennium Scales,75.04
+01/07/2012,Bolts,357.0
+01/07/2012,Gadgetrons,27.16
+01/07/2012,Raritanium Ore,590.13
+01/07/2012,Nanotech Crates,451.43
+01/07/2012,Armour Magnetizers,300.91
+01/07/2012,Zoni Vessels,180.79
+01/07/2012,Box Basher 2000s,322.71
+01/07/2012,Nefarious Security Cards,380.22
+01/07/2012,Omnigaskets,406.93
+01/07/2012,Treasure Mappers,214.65
+01/07/2012,Gold Bolts,298.37
+01/07/2012,Qwark Statuettes,53.72
+01/07/2012,Electrolyzers,333.56
+01/07/2012,Levitators,88.65
+01/07/2012,Infiltrators,500.27
+01/07/2012,Megacorp Helmets,83.98
+01/07/2012,Momentum Gliders,242.23
+01/07/2012,Platinum Bolts,161.1
+01/07/2012,Infobots,315.32
+01/07/2012,Rift Crackers,129.53
+01/07/2012,Clank Model Robots,110.97
+01/07/2012,CodeBots,52.1
+01/07/2012,Persuaders,352.42
+01/07/2012,Map-o-matics,469.97
+01/07/2012,Ultra Nanotech,65.91
+01/07/2012,Premium Nanotech,242.02
+01/07/2012,Gadgebot Upgrade Chips,124.08
+01/07/2012,Nano-paks,829.34
+01/07/2012,Mr. Zerkons,141.59
+01/07/2012,Golden Lucky Cats,301.43
+01/07/2012,Peace Bells,66.02
+01/07/2012,Wood Mats,166.5
+01/07/2012,Fog Pots,152.58
+01/07/2012,Golden Ink Pots,354.79
+01/07/2012,Thief Gloves,467.87
+01/07/2012,Fire Tablets,225.91
+01/07/2012,Water Tablets,74.86
+01/07/2012,Lucky Cat Paws,161.68
+01/07/2012,Scent Charms,29.26
+01/07/2012,String of Beads,3.09
+01/07/2012,Feedbags,92.83
+01/07/2012,Holy Bones,323.03
+01/07/2012,Exorcism Slips,189.39
+01/07/2012,Inkfinity Stones,60.07
+01/07/2012,Traveler Charms,166.93
+01/07/2012,Goldy Charms,26.47
+01/07/2012,Steel Soul Sake,122.64
+01/07/2012,Gold Dust,72.04
+01/07/2012,Mermaid Coins,166.09
+01/07/2012,Golden Peaches,306.26
+01/07/2012,Elven Boots,6.5
+01/07/2012,Fumble Boots,134.33
+01/07/2012,Jumping Boots,114.75
+01/07/2012,Kicking Boots,80.85
+01/07/2012,Levitation Boots,105.63
+01/07/2012,Speed Boots,272.1
+01/07/2012,Water Walking Boots,240.04
+01/07/2012,Alchemy Smocks,329.24
+01/07/2012,Cloaks of Displacement,60.28
+01/07/2012,Cloaks of Invisibility,36.71
+01/07/2012,Cloaks of Magic Resistance,114.76
+01/07/2012,Cloaks of Protection,228.91
+01/07/2012,Elven Cloaks,433.23
+01/07/2012,Gauntlets of Dexterity,267.89
+01/07/2012,Gauntlets of FUmbling,154.5
+01/07/2012,Gauntlets of Power,321.35
+01/07/2012,Cornuthaums,136.69
+01/07/2012,Dunce Caps,128.04
+01/07/2012,Helms of Brilliance,418.99
+01/07/2012,Helms of Opposite Alignment,208.69
+01/07/2012,Helms of Telepathy,18.22
+01/07/2012,Shields of Reflection,77.18
+01/07/2012,Bags of Tricks,356.5
+01/07/2012,Crystal Balls,389.37
+01/07/2012,Drums of Earthquake,116.89
+01/07/2012,Fire Horns,423.71
+01/07/2012,Frost Horns,295.83
+01/07/2012,Horns of Plenty,287.03
+01/07/2012,Magic Harps,90.62
+01/07/2012,Magic Lamps,44.46
+01/07/2012,Magic Markers,231.2
+01/07/2012,Magic Flute,276.2
+01/07/2012,Magic Whistles,177.86
+01/07/2012,Unicorn Horns,217.28
+01/07/2012,Loadstones,140.89
+01/07/2012,Luckstones,220.4
+01/07/2012,Touchstones,192.46
+01/07/2012,Potions of Acid,232.75
+01/07/2012,Potions of Booze,61.72
+01/07/2012,Potions of Fruit Juice,95.94
+01/07/2012,Potions of Oil,26.16
+01/07/2012,Potions of Sickness,215.08
+01/07/2012,Potions of Water,143.39
+01/07/2012,Scrolls of Blank Paper,253.54
+01/07/2012,Scrolls of Mail,25.33
+01/07/2012,Blank Spellbooks,236.02
+01/07/2012,Wands of Nothing,306.53
+01/07/2012,Meat Sticks,225.13
+01/07/2012,Meat Rings,82.66
+01/07/2012,Amulets of Yendor,184.4
+01/07/2012,Amulets of Change,300.84
+01/07/2012,Amulets of ESP,10.87
+01/07/2012,Amulets of Life Saving,327.98
+01/07/2012,Amulets of Reflection,92.81
+01/07/2012,Amulets of Restful Sleep,10.2
+01/07/2012,Amulets of Strangulation,110.72
+01/07/2012,Amulets of Unchanging,154.82
+01/07/2012,Amulets Versus Poison,64.32
+01/07/2012,Orcish Ring Mail,94.43
+01/07/2012,Elven Mithril Coats,164.48
+01/07/2012,Dragon Scale Mail,407.21
+01/07/2012,Rings of Adornment,90.85
+01/07/2012,Rings of Hunger,199.14
+01/07/2012,Rings of Protection,545.73
+01/07/2012,Rings of Protection from Shape Changers,321.07
+01/07/2012,Rings of Stealth,318.01
+01/07/2012,Rings of Sustain Ability,143.47
+01/07/2012,Rings of Warning,202.76
+01/07/2012,Rings of Aggravate Monster,247.1
+01/07/2012,Rings of Cold Resistance,219.07
+01/07/2012,Rings of Gain Constitution,152.04
+01/07/2012,Rings of Gain Strength,94.51
+01/07/2012,Rings of Increase Accuracy,189.04
+01/07/2012,Rings of Increase Damage,618.44
+01/07/2012,Rings of Invisibility,103.47
+01/07/2012,Rings of Poison Resistance,300.73
+01/07/2012,Rings of See Invisible,419.3
+01/07/2012,Rings of Shock Resistance,78.64
+01/07/2012,Rings of Fire Resistance,295.02
+01/07/2012,Rings of Free Action,280.36
+01/07/2012,Rings of Levitation,290.76
+01/07/2012,Rings of Regeneration,159.24
+01/07/2012,Rings of Searching,37.17
+01/07/2012,Rings of Slow Digestion,365.24
+01/07/2012,Rings of Teleportation,204.43
+01/07/2012,Rings of Conflict,217.02
+01/07/2012,Rings of Polymorph,591.61
+01/07/2012,Rings of Polymorph Control,157.97
+01/07/2012,Rings of Teleport Control,505.49
+01/07/2012,Wumpa Fruits,335.56
+01/07/2012,Blue Flutes,285.02
+01/07/2012,Digi-eggs,178.75
+01/07/2012,Crests,479.87
+01/07/2012,X-Antibodies,480.35
+01/07/2012,Holy Rings,23.6
+01/07/2012,Fusion Loaders,211.34
+01/07/2012,Gantz Balls,372.81
+01/07/2012,L Coffees,246.41
+01/07/2012,L-Viruses,133.19
+01/07/2012,Blue Digizoids,514.3
+01/07/2012,DigiBytes,214.61
+01/07/2012,V-Tamer Taags,143.67
+01/07/2012,Mocchi Disks,85.03
+01/07/2012,Monol Disks,108.3
+01/07/2012,Arrowhead Disks,305.18
+01/07/2012,Baku Disks,38.27
+01/07/2012,Beatas Disks,176.88
+01/07/2012,Ogyo Disks,297.88
+01/07/2012,Dragon Disks,298.46
+01/07/2012,Dino Disks,41.82
+01/07/2012,Doodle Disks,121.42
+01/07/2012,Falco Disks,182.64
+01/07/2012,Pixie Disks,374.15
+01/07/2012,Pokeballs,117.17
+01/07/2012,Pokedexes,170.22
+01/07/2012,Blue Shells,441.88
+01/07/2012,Red Shells,80.62
+01/07/2012,Stars,552.66
+01/07/2012,Piranha Plants,569.59
+01/07/2012,Garu Disks,23.18
+01/07/2012,Ghost Disks,33.94
+01/07/2012,Golem Disks,160.67
+01/07/2012,Hare Disks,251.95
+01/07/2012,Raiden Disks,30.84
+01/07/2012,Saibamen Seeds,258.25
+01/07/2012,Cell Cells,62.71
+01/07/2012,Phials of Galadriel,222.99
+01/07/2012,Angainors,328.62
+01/07/2012,Elven Ropes,32.5
+01/07/2012,Keys of Orthanc,165.56
+01/07/2012,Leaves of Lorien,123.22
+01/07/2012,Palantiris,414.16
+01/07/2012,Vilyas,383.75
+01/07/2012,Nenyas,106.73
+01/07/2012,Simarils,124.31
+01/07/2012,Doors of Durin,103.42
+01/07/2012,Naryas,197.98
+01/07/2012,Ithildins,330.11
+01/07/2012,Valars,234.36
+01/07/2012,Samehadas,254.02
+01/07/2012,Chakra Puppets,280.6
+01/07/2012,Absorbing Eyes,28.13
+01/07/2012,Kunais,315.96
+01/07/2012,Barrier Tags,358.98
+01/07/2012,Blue Fire Powder,86.85
+01/07/2012,Lightning Barrels,47.74
+01/07/2012,Chain Wind Staffs,280.48
+01/07/2012,Curries of Life,357.58
+01/07/2012,Curse Masks,41.46
+01/07/2012,Ninja Info Cards,410.15
+01/07/2012,Mirrors of Hope,679.6
+01/07/2012,Scrolls of Seals,169.15
+01/07/2012,Hexagonal Crystals,235.15
+01/07/2012,Iron Sands,379.69
+01/07/2012,Arc Reactors,644.76
+01/07/2012,Iron Spiders,258.35
+01/07/2012,Eyes of Agamotto,400.47
+01/07/2012,Books of Vishanti,168.09
+01/07/2012,Orbs of Agamotto,130.7
+01/07/2012,Cloaks of Levitation,421.54
+01/07/2012,Wands of Watoomb,428.64
+01/07/2012,Books of Cagliostro,163.73
+01/07/2012,X-genes,67.23
+01/07/2012,X-12s,566.55
+01/07/2012,Joy Cans,327.96
+01/07/2012,Learning Beds,48.39
+01/07/2012,PROBLEMs,310.91
+01/07/2012,Gargantua Space Stations,12.56
+01/07/2012,Boom Brooms,155.74
+01/07/2012,Futuros,484.05
+01/07/2012,Goliath Serum,244.52
+01/07/2012,I-Suits,467.54
+01/07/2012,Thermal Regulation Suppositories,326.75
+01/07/2012,Oo-Rays,372.0
+01/07/2012,Go-Pods,112.24
+01/07/2012,Monster Cells,174.59
+01/07/2012,Metal Knight Units,9.58
+01/07/2012,Tickle-tickle Bugs,156.15
+01/07/2012,Hero Association Mugs,39.46
+01/07/2012,Hero Association Catalogs,207.82
+01/07/2012,Kamidogus,155.11
+01/07/2012,Amulets of Shinnok,37.52
+01/07/2012,Naknadan Shrines,521.66
+01/07/2012,Wrath Hammers,24.55
+01/07/2012,Tarkartan Blades,127.56
+01/07/2012,Koins,123.54
+01/07/2012,Capes of Fujin,145.88
+01/07/2012,Dragon Medallions,334.7
+01/07/2012,Hearts of Onaga,598.2
+01/07/2012,Portal Guns,334.65
+01/07/2012,Gravity Guns,109.89
+01/07/2012,Companion Cubes,63.28
+01/07/2012,Razor-rimmed Hats,177.35
+01/07/2012,Bablefish,132.15
+01/07/2012,Hi-Potions,280.0
+01/07/2012,X-Potions,172.09
+01/07/2012,Ethers,142.66
+01/07/2012,Turbo Ethers,33.21
+01/07/2012,Dry Ethers,425.76
+01/07/2012,Gold Needles,482.24
+01/07/2012,Golden Apples,145.86
+01/07/2012,Silver Apples,311.43
+01/07/2012,Stamina Pluses,25.51
+01/07/2012,Power Pluses,192.69
+01/07/2012,Soma Drops,120.11
+01/07/2012,Mind Pluses,132.88
+01/07/2012,Light Curtains,366.74
+01/07/2012,Red Curtains,455.23
+01/07/2012,Lunar Curtains,323.11
+01/07/2012,Protect Drinks,181.99
+01/07/2012,Faerie Tonics,312.94
+01/07/2012,Spider Silks,292.29
+01/07/2012,White Fangs,67.37
+01/07/2012,Red Fangs,13.01
+01/07/2012,Cockatrice Claws,5.53
+01/07/2012,Vampire Fangs,213.83
+01/07/2012,Dire Rat Tails,580.59
+01/07/2012,Star Rubies,313.79
+01/07/2012,Nitro Powder Blocks,203.76
+01/07/2012,Mystic Keys,126.58
+01/07/2012,Bottled Faeries,187.93
+01/07/2012,Dazers,357.62
+01/07/2012,Dream Powder,89.38
+01/07/2012,War Gongs,92.29
+01/07/2012,Vagyrisk Claws,34.38
+01/07/2012,Mimett Greens,107.13
+01/07/2012,Sylkis Greens,601.67
+01/07/2012,Curiel Greens,378.99
+01/07/2012,Daenarians,71.86
+01/07/2012,Zelo Nuts,106.25
+01/07/2012,Lasan Nuts,152.26
+01/07/2012,Limit Break Manuals,111.46
+01/07/2012,Earth Harps,152.13
+01/07/2012,Black Materia Orbs,9.47
+01/07/2012,Gonnes,69.04
+01/07/2012,Blades of Chaos,171.7
+01/07/2012,Orcarinas of Time,330.12
+01/07/2012,Master Swords,29.44
+01/07/2012,Triforces,152.74
+01/07/2012,Fire Flowers,503.79
+01/07/2012,Rupees,331.58
+01/07/2012,Heart Containers,414.76
+01/07/2012,Azath Houses,245.5
+01/07/2012,Bombchus,454.02
+01/07/2012,Deku Sticks,412.4
+01/07/2012,Magic Beans,200.3
+01/07/2012,Moon Tears,197.04
+01/07/2012,Don Gero Masks,223.34
+01/07/2012,Kafel Masks,7.66
