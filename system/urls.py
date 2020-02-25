@@ -9,5 +9,6 @@ urlpatterns = [
     path('viewtrades/', views.viewTrades, name='viewTrades'),
     path('viewrules/',views.viewRules, name='viewRules'),
     path('report/', views.generateReport, name='generateReport'),
+    path('print/', views.printReport, name='printReport')
 
 ]
