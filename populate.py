@@ -8,6 +8,7 @@
 
 import os
 import csv
+import random
 from datetime import datetime
 from django.conf import settings
 from system.models import CompanyCodes, ProductSellers, CurrencyValues, ProductPrices, StockPrices, DerivativeTrades
@@ -114,12 +115,20 @@ for dataFolder in os.listdir(current):
                                         if day.endswith('.csv') and day.startswith('31'):
                                             with open(os.path.join(daydir,day), 'r') as file:
                                                 file.readline()
-                                                reader = csv.reader(file,delimiter=',')
+                                                readerr = csv.reader(file,delimiter=',')
+                                                reader = list(readerr)
                                                 count = 0
-                                                for row in reader:
-                                                    count += 1
+                                                random_el = random.sample(range(len(reader)), 300)
+                                                for element in random_el:
+                                                    row = reader[element]
                                                     company1 = CompanyCodes.objects.get(company_trade_id = row[3])
                                                     company2 = CompanyCodes.objects.get(company_trade_id = row[4])
                                                     DerivativeTrades.objects.get_or_create(date = datetime.strptime(row[0], '%d/%m/%Y %H:%M').strftime("%Y-%m-%d %H:%M"), trade_id = row[1], product = row[2], buying_party = company1, selling_party = company2, notional_amount = row[5], notional_currency = row[6], quantity = row[7], maturity_date = datetime.strptime(row[8], '%d/%m/%Y').strftime("%Y-%m-%d"), underlying_price = row[9], underlying_currency = row[10], strike_price = row[11])
-                                                    if count == 300:
-                                                        break
+
+                                                # for row in reader:
+                                                #     count += 1
+                                                #     company1 = CompanyCodes.objects.get(company_trade_id = row[3])
+                                                #     company2 = CompanyCodes.objects.get(company_trade_id = row[4])
+                                                #     DerivativeTrades.objects.get_or_create(date = datetime.strptime(row[0], '%d/%m/%Y %H:%M').strftime("%Y-%m-%d %H:%M"), trade_id = row[1], product = row[2], buying_party = company1, selling_party = company2, notional_amount = row[5], notional_currency = row[6], quantity = row[7], maturity_date = datetime.strptime(row[8], '%d/%m/%Y').strftime("%Y-%m-%d"), underlying_price = row[9], underlying_currency = row[10], strike_price = row[11])
+                                                #     if count == 300:
+                                                #         break
