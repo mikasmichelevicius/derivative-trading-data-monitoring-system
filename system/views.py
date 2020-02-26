@@ -3,9 +3,10 @@ from django.shortcuts import render
 from io import BytesIO
 from reportlab.pdfgen import canvas
 import reportlab
-from django.http import HttpResponse
+from django.http import HttpResponse, HttpResponseRedirect
 from reportlab.pdfbase import pdfmetrics
 from reportlab.pdfbase.ttfonts import TTFont
+from datetime import datetime
 
 from .models import CompanyCodes, ProductSellers, CurrencyValues, ProductPrices, StockPrices, DerivativeTrades
 from django.contrib.auth.models import User
@@ -32,11 +33,25 @@ def newTrade(request):
     return render(request, 'system/newtrade.html')
 
 def viewTrades(request):
-    latest_trades = DerivativeTrades.objects.order_by('-date')[:10]
-    context = {
-        'latest_trades' : latest_trades
-    }
+    # request.POST lets access submited data by key names
+    selected_day = request.POST.get('selected_day', False)
+    if selected_day:
+        print(selected_day)
+        daylist=selected_day.split('-')
+        trades_by_date = DerivativeTrades.objects.all().filter(date__year=daylist[0], date__month=daylist[1], date__day=daylist[2])
+        print(trades_by_date)
+        latest_trades = DerivativeTrades.objects.order_by('-date')[:10]
+        context = {
+            'latest_trades' : latest_trades,
+            'by_date' : trades_by_date
+        }
+    else:
+        latest_trades = DerivativeTrades.objects.order_by('-date')[:10]
+        context = {
+            'latest_trades' : latest_trades
+        }
     return render(request, 'system/viewtrades.html', context)
+
 
 def viewRules(request):
     return render(request, 'system/viewrules.html')

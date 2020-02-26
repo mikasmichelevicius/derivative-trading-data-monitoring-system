@@ -2,6 +2,10 @@
 {% block content %}
   <h1>View/Edit Trades</h1>
   <br>
+  <form action="{% url 'system:viewTrades' %}" method="post">{% csrf_token %}
+    <p>Select a day <input type = 'date'  name='selected_day' ></p>
+    <button type="submit">Submit</button>
+  </form>
   <h3>Latest trades:</h3>
   {% if latest_trades %}
     <ul>
