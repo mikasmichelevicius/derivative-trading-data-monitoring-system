@@ -62,7 +62,7 @@ def generateReport(request):
 def printReport(request):
     trade = DerivativeTrades.objects.order_by('-date')[0]
     response = HttpResponse(content_type='application/pdf')
-    response['Content-Disposition'] = 'inline; filename="dialyreport.pdf"'
+    response['Content-Disposition'] = 'inline; filename="dailyreport.pdf"'
 
     buffer = BytesIO()
     p = canvas.Canvas(buffer)
