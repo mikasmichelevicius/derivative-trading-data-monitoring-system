@@ -1,0 +1,20 @@
+{% extends "system/base.html" %}
+{% block content %}
+  <h1>New Trade</h1>
+
+  <form action="{% url 'system:newTrade' %}" method="post">{% csrf_token %}
+    <p>Enter Trade ID <input type = 'text'  name='trade_id' ></p>
+    <p>Enter Date of Trade <input type = 'date'  name='trade_date' ></p>
+    <p>Enter Product ID <input type = 'text'  name='product_id' ></p>
+    <p>Enter Seller ID <input type = 'text'  name='seller_id' ></p>
+    <p>Enter Buyer ID <input type = 'text'  name='buyer_id' ></p>
+    <p>Enter Notional Amount <input type = 'text'  name='notional_amount' ></p>
+    <p>Enter Quantity <input type = 'text'  name='quantity' ></p>
+    <p>Enter Notional Currency <input type = 'text'  name='notional_currency' ></p>
+    <p>Enter Date of Maturity <input type = 'date'  name='maturity_date' ></p>
+    <p>Enter Underlying Price <input type = 'text'  name='underlying_price' ></p>
+    <p>Enter Underlying Currency <input type = 'text'  name='underlying_currency' ></p>
+    <p>Enter Strike Price <input type = 'text'  name='strike_price' ></p>
+    <button class="btn btn-outline-info" type="submit">Submit</button>
+  </form>
+{% endblock content %}
