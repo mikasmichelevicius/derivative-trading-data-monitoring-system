@@ -86,3 +86,31 @@ class Checker():
         if ProductSellers.objects.filter(product_name = product, company_id = companyID).exists():
             return True
         return False
+
+
+    #Calculates the new average of the product with the new entry included, this new value will be saved in the database
+    def recalculateAverage(self,currentAverage,n, newValue):
+        return (currentAverage*n + newValue)/n+1
+
+    #Calculates the new variance of a product with the new entry included.
+    def recalculateVariance(self,currentVariance,average,n,newValue):
+        return (currentVariance*(n-1) + (newValue - average)*(newValue - average))/n 
+
+    #Uses the standard deviation to see if a value is within confidence range. Returns true if within confidence range and false otherwise
+    def checkConfidence(self,givenValue, standardDeviation,average,confidencePercentage):
+        z = abs((givenValue-average)/standardDeviation) #calculates how many SD's the value is from the mean.
+
+        #Don't know how to calculate z values manually yet, could be improved to calculate with a custom percentage.
+        if(confidencePercentage==95):
+            testZ =  1.96
+        elif(confidencePercentage ==99):
+            testZ = 2.58
+        else:
+            testZ =1.645
+
+
+        if(z<=testZ):
+            return True
+        else:
+            return False
+        
