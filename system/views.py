@@ -30,7 +30,19 @@ def home(request):
     return render(request, 'system/home.html', context)
 
 def newTrade(request):
-    return render(request, 'system/newtrade.html')
+    trade_id = request.POST.get('trade_id', False)
+    trade_date = request.POST.get('trade_date', False)
+    product_id = request.POST.get('product_id', False)
+    seller_id = request.POST.get('seller_id', False)
+    buyer_id = request.POST.get('buyer_id', False)
+    notional_amount = request.POST.get('notional_amount', False)
+    quantity = request.POST.get('quantity', False)
+    notional_currency = request.POST.get('notional_currency', False)
+    maturity_date = request.POST.get('maturity_date', False)
+    underlying_price = request.POST.get('underlying_price', False)
+    underlying_currency = request.POST.get('underlying_currency', False)
+    strike_price = request.POST.get('strike_price', False)
+    return render(request, 'system/newTrade.html')
 
 def viewTrades(request):
     # request.POST lets access submited data by key names
