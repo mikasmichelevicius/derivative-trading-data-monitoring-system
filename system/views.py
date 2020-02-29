@@ -1,5 +1,5 @@
 from django.shortcuts import render
-
+import json
 from io import BytesIO
 from reportlab.pdfgen import canvas
 import reportlab
@@ -7,9 +7,13 @@ from django.http import HttpResponse, HttpResponseRedirect
 from reportlab.pdfbase import pdfmetrics
 from reportlab.pdfbase.ttfonts import TTFont
 from datetime import datetime
+from django import forms
+from django.contrib import messages
 
 from .models import CompanyCodes, ProductSellers, CurrencyValues, ProductPrices, StockPrices, DerivativeTrades
 from django.contrib.auth.models import User
+
+from .newTrade_Backend import Checker
 # Create your views here.
 
 # View is responsible for one of two things: returning HttpResponse object
@@ -30,19 +34,41 @@ def home(request):
     return render(request, 'system/home.html', context)
 
 def newTrade(request):
-    trade_id = request.POST.get('trade_id', False)
-    trade_date = request.POST.get('trade_date', False)
-    product_id = request.POST.get('product_id', False)
-    seller_id = request.POST.get('seller_id', False)
-    buyer_id = request.POST.get('buyer_id', False)
-    notional_amount = request.POST.get('notional_amount', False)
-    quantity = request.POST.get('quantity', False)
-    notional_currency = request.POST.get('notional_currency', False)
-    maturity_date = request.POST.get('maturity_date', False)
-    underlying_price = request.POST.get('underlying_price', False)
-    underlying_currency = request.POST.get('underlying_currency', False)
-    strike_price = request.POST.get('strike_price', False)
-    return render(request, 'system/newTrade.html')
+    values = {
+        'trade_id' : [], 'product_id' : [], 'seller_id' : [],
+        'buyer_id' : [], 'notional_amount' : [], 'quantity' : [],
+        'notional_currency' : [], 'underlying_price' : [],
+        'underlying_currency' : [], 'strike_price' : []
+    }
+    if request.method == "POST":
+        trade_id = request.POST.get('trade_id', False)
+        trade_date = request.POST.get('trade_date', False)
+        product_id = request.POST.get('product_id', False)
+        seller_id = request.POST.get('seller_id', False)
+        buyer_id = request.POST.get('buyer_id', False)
+        notional_amount = request.POST.get('notional_amount', False)
+        quantity = request.POST.get('quantity', False)
+        notional_currency = request.POST.get('notional_currency', False)
+        maturity_date = request.POST.get('maturity_date', False)
+        underlying_price = request.POST.get('underlying_price', False)
+        underlying_currency = request.POST.get('underlying_currency', False)
+        strike_price = request.POST.get('strike_price', False)
+
+        c = Checker()
+        isValid = c.validateTrade(request, trade_id, trade_date, product_id, seller_id, buyer_id,
+                        notional_amount, quantity, notional_currency, maturity_date,
+                        underlying_price, underlying_currency, strike_price)
+
+        values = {
+            'trade_id' : [trade_id], 'product' : [product_id], 'seller_id' : [seller_id],
+            'buyer_id' : [buyer_id], 'notional_amount' : [notional_amount], 'quantity' : [quantity],
+            'notional_currency' : [notional_currency], 'underlying_price' : [underlying_price],
+            'underlying_currency' : [underlying_currency], 'strike_price' : [strike_price]
+        }
+        if isValid:
+            render(request, 'system/newTrade.html', values)
+
+    return render(request, 'system/newTrade.html', values)
 
 def viewTrades(request):
     # request.POST lets access submited data by key names

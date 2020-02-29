@@ -2,19 +2,25 @@
 {% block content %}
   <h1>New Trade</h1>
 
+  {% if messages %}
+    {% for message in messages %}
+      <li> <font color="red">{{message}}</font> </li>
+    {% endfor %}
+  {% endif %}
+  <br>
   <form action="{% url 'system:newTrade' %}" method="post">{% csrf_token %}
-    <p>Enter Trade ID <input type = 'text'  name='trade_id' ></p>
+    <p>Enter Trade ID <input type = 'text'  name='trade_id' value="{{trade_id.0}}" ></p>
     <p>Enter Date of Trade <input type = 'date'  name='trade_date' ></p>
-    <p>Enter Product ID <input type = 'text'  name='product_id' ></p>
-    <p>Enter Seller ID <input type = 'text'  name='seller_id' ></p>
-    <p>Enter Buyer ID <input type = 'text'  name='buyer_id' ></p>
-    <p>Enter Notional Amount <input type = 'text'  name='notional_amount' ></p>
-    <p>Enter Quantity <input type = 'text'  name='quantity' ></p>
-    <p>Enter Notional Currency <input type = 'text'  name='notional_currency' ></p>
+    <p>Enter Product Name <input type = 'text'  name='product_id' value="{{product.0}}"></p>
+    <p>Enter Seller ID <input type = 'text'  name='seller_id' value="{{seller_id.0}}"></p>
+    <p>Enter Buyer ID <input type = 'text'  name='buyer_id' value="{{buyer_id.0}}"></p>
+    <p>Enter Notional Amount <input type = 'text'  name='notional_amount' value="{{notional_amount.0}}"></p>
+    <p>Enter Quantity <input type = 'text'  name='quantity' value="{{quantity.0}}"></p>
+    <p>Enter Notional Currency <input type = 'text'  name='notional_currency' value="{{notional_currency.0}}"></p>
     <p>Enter Date of Maturity <input type = 'date'  name='maturity_date' ></p>
-    <p>Enter Underlying Price <input type = 'text'  name='underlying_price' ></p>
-    <p>Enter Underlying Currency <input type = 'text'  name='underlying_currency' ></p>
-    <p>Enter Strike Price <input type = 'text'  name='strike_price' ></p>
+    <p>Enter Underlying Price <input type = 'text'  name='underlying_price' value="{{underlying_price.0}}"></p>
+    <p>Enter Underlying Currency <input type = 'text'  name='underlying_currency' value="{{underlying_currency.0}}"></p>
+    <p>Enter Strike Price <input type = 'text'  name='strike_price' value="{{strike_price.0}}"></p>
     <button class="btn btn-outline-info" type="submit">Submit</button>
   </form>
 {% endblock content %}
