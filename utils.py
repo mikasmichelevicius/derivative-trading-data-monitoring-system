@@ -15,7 +15,7 @@ EOS = '*' # end of sequence.
 CHARS = list('abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ. ')
 REMOVE_CHARS = '[#$%"\+@<=>!&,-?:;()*\[\]^_`{|}~/\d\t\n\r\x0b\x0c]'
 
-
+#code from https://github.com/vuptran/deep-spell-checkr
 class CharacterTable(object):
     """Given a set of characters:
     + Encode them to a one-hot integer representation

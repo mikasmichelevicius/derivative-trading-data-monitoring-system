@@ -30,10 +30,11 @@ train_encoder, train_decoder, train_target = transform(
 encoder_model, decoder_model = restore_model(model_path, hidden_size)
 
 
+#modified code from https://github.com/vuptran/deep-spell-checkr
+
 #Call this function with a string and it will return a corrected string. (only works for words, does not work for IDs)
 def returnCorrectedString(inputString):
     
-
     tokens = tokenize(inputString)
     tokens = list(filter(None, tokens))
     nb_tokens = len(tokens)

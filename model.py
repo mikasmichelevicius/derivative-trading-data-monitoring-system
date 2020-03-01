@@ -7,7 +7,7 @@ from keras import optimizers, metrics, backend as K
 # Hacky and hard-coded for now.
 VAL_MAXLEN = 16
 
-
+#code from https://github.com/vuptran/deep-spell-checkr
 def truncated_acc(y_true, y_pred):
     y_true = y_true[:, :VAL_MAXLEN, :]
     y_pred = y_pred[:, :VAL_MAXLEN, :]
