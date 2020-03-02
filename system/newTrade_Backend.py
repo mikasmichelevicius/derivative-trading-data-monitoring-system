@@ -1,7 +1,7 @@
 from .models import CompanyCodes, ProductSellers, CurrencyValues, ProductPrices, StockPrices, DerivativeTrades
 from django.contrib.auth.models import User
 from django.contrib import messages
-
+import spicy.stats
 
 # Methods for the actions of the buttons on the New Trade entry screen
 # To be imported into the views.py class
@@ -110,20 +110,23 @@ class Checker():
     def recalculateVariance(self,currentVariance,average,n,newValue):
         return (currentVariance*(n-1) + (newValue - average)*(newValue - average))/n
 
-    #Uses the standard deviation to see if a value is within confidence range. Returns true if within confidence range and false otherwise
+    # Uses the standard deviation to see if a value is within confidence range. Returns true if within confidence range and false otherwise
     def checkConfidence(self,givenValue, standardDeviation,average,confidencePercentage):
-        z = abs((givenValue-average)/standardDeviation) #calculates how many SD's the value is from the mean.
 
-        #Don't know how to calculate z values manually yet, could be improved to calculate with a custom percentage.
-        if(confidencePercentage==95):
-            testZ =  1.96
-        elif(confidencePercentage ==99):
-            testZ = 2.58
+        # X~N(mean, sd squared)
+        # Lower Bound: P(X < givenValue)
+        # Upper Bound: P(X > givenValue)
+
+        lowerBoundConfidence = (1 - confidencePercentage) / 2
+        # Finds how much of the cumulative percentage the givenValue has in the normal distribution
+        probabilityConfidence = spicy.stats.norm(average, standardDeviation).cdf(givenValue)
+        # Checks lower bound
+        if (givenValue < average):
+            if (probabilityConfidence > lowerBoundConfidence):
+                return True
+        # Checks upper bound
         else:
-            testZ =1.645
+            if (probabilityConfidence < confidencePercentage):
+                return True
 
-
-        if(z<=testZ):
-            return True
-        else:
-            return False
+        return False
