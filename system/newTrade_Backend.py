@@ -1,7 +1,7 @@
 from .models import CompanyCodes, ProductSellers, CurrencyValues, ProductPrices, StockPrices, DerivativeTrades
 from django.contrib.auth.models import User
 from django.contrib import messages
-import spicy.stats
+import scipy.stats
 
 # Methods for the actions of the buttons on the New Trade entry screen
 # To be imported into the views.py class
@@ -21,7 +21,6 @@ class Checker():
                 messages.error(request, 'Fields cannot be empty')
                 return False
 
-        # --------- MUST CHANGE FOR ERROR CORRECTION AND NEURAL NET ----------
         # Checks whether the buying and selling parties are the same
         if sellingParty == buyingParty:
             messages.error(request, 'Buying Party and Selling Party are the same')
@@ -119,7 +118,7 @@ class Checker():
 
         lowerBoundConfidence = (1 - confidencePercentage) / 2
         # Finds how much of the cumulative percentage the givenValue has in the normal distribution
-        probabilityConfidence = spicy.stats.norm(average, standardDeviation).cdf(givenValue)
+        probabilityConfidence = scipy.stats.norm(average, standardDeviation).cdf(givenValue)
         # Checks lower bound
         if (givenValue < average):
             if (probabilityConfidence > lowerBoundConfidence):
