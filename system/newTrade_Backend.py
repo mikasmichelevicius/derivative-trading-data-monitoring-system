@@ -8,13 +8,13 @@ from django.contrib import messages
 class Checker():
 
     def validateTrade(self, request, tradeID, dateOfTrade, product, sellingParty,
-                        buyingParty, notionalAmount, quantity,
+                        buyingParty, quantity,
                         notionalCurrency, maturityDate, underlyingPrice,
                         underlyingCurrency, strikePrice):
 
         # Checks to see if any field is empty
         if not (dateOfTrade and tradeID and product and
-                buyingParty and sellingParty and notionalAmount and quantity and
+                buyingParty and sellingParty and quantity and
                 notionalCurrency and maturityDate and underlyingPrice and
                 underlyingCurrency and strikePrice):
 
@@ -22,12 +22,14 @@ class Checker():
                 return False
 
         # --------- MUST CHANGE FOR ERROR CORRECTION AND NEURAL NET ----------
-        # Checks whether the buying and selling parties exist
-        if not self.checkPartyExists(buyingParty):
-            messages.error(request, 'Buying Party does not exist')
+        # Checks whether the buying and selling parties are the same
+        if sellingParty == buyingParty:
+            messages.error(request, 'Buying Party and Selling Party are the same')
             return False
-        if not self.checkPartyExists(sellingParty):
-            messages.error(request, 'Selling Party does not exist')
+
+        # Checks to see whether the selling party sell the specific product
+        if not (self.checkPartyProduct(sellingParty, product)):
+            messages.error(request, 'Selling Party does not sell specified product')
             return False
 
         # Checks whether trade ID has already been taken in database
@@ -40,38 +42,49 @@ class Checker():
             messages.error(request, 'Maturity Date has to be later that the Date of Trade')
             return False
 
-        # uCurrencyinUSD = self.getCurrency(underlyingCurrency, dateOfTrade)
-        # nCurrencyinUSD = self.getCurrency(notionalCurrency, dateOfTrade)
-        uCurrencyinUSD = 1
-        nCurrencyinUSD = 1
+        # Checks whether the string inputs are numbers
+        if not self.checkNumericalValues(request, underlyingPrice, quantity, strikePrice):
+            return False
 
         underPrice = float(underlyingPrice)
         quant = int(quantity)
-        notAmount = float(notionalAmount)
 
-        # Checks to see whether notionalAmount is correct based on the other values
+        uValueInUSD = float(self.getCurrency(underlyingCurrency, dateOfTrade))
+        nValueInUSD = float(self.getCurrency(notionalCurrency, dateOfTrade))
 
-        # if not (underPrice / uCurrencyinUSD * quant * nCurrencyinUSD == notAmount):
-        #     return False
+        # Calculates Notional Amount
+        notionalAmount = underPrice / uValueInUSD * quant * nValueInUSD
 
-        # Checks to see whether the selling party sell the specific product
-        if not (self.checkPartyProduct(sellingParty, product)):
-            messages.error(request, 'Selling Party does not sell specified product')
+        return notionalAmount
+
+    # Checks whether underlying and strike prices are numerical values and if quantity is an integer
+    def checkNumericalValues(self, request, underlyingPrice, quantity, strikePrice):
+        try:
+            float(underlyingPrice)
+        except ValueError:
+            messages.error(request, 'Underlying Price has to be a number')
+            return False
+        try:
+            float(strikePrice)
+        except ValueError:
+            messages.error(request, 'Strike Price has to be a number')
+            return False
+        try:
+            int(quantity)
+            return True
+        except ValueError:
+            messages.error(request, 'Quantity has to be an integer')
             return False
 
-        return True
-
     # Gets the associated currency in USD on that specific date
+    # If such value for specified date does not exist, the value of the latest
+    # date is given (because we're not sotring latest data)
     def getCurrency(self, currency, dateOfTrade):
-        # TODO: Needs to access database
-        return 0
-
-    # Checks if party exists in datbase
-    def checkPartyExists(self, companyID):
-        # TODO: Needs access to database
-        if CompanyCodes.objects.filter(company_trade_id = companyID).exists():
-            return True
-        return False
+        try:
+            value = CurrencyValues.objects.get(currency = currency, date = dateOfTrade).value_in_usd
+        except CurrencyValues.DoesNotExist:
+            return CurrencyValues.objects.filter(currency = currency).latest('date').value_in_usd
+        return value
 
     # Checks if trade already exists in database
     def checkTradeExists(self, tradeID):
@@ -81,8 +94,9 @@ class Checker():
         return False
 
     # Checks whether the selling party sells the product
-    def checkPartyProduct(self, companyID, product):
+    def checkPartyProduct(self, sellingParty, product):
         # TODO: Needs to access database
+        companyID = CompanyCodes.objects.get(company_name = sellingParty)
         if ProductSellers.objects.filter(product_name = product, company_id = companyID).exists():
             return True
         return False
@@ -94,7 +108,7 @@ class Checker():
 
     #Calculates the new variance of a product with the new entry included.
     def recalculateVariance(self,currentVariance,average,n,newValue):
-        return (currentVariance*(n-1) + (newValue - average)*(newValue - average))/n 
+        return (currentVariance*(n-1) + (newValue - average)*(newValue - average))/n
 
     #Uses the standard deviation to see if a value is within confidence range. Returns true if within confidence range and false otherwise
     def checkConfidence(self,givenValue, standardDeviation,average,confidencePercentage):
@@ -113,5 +127,3 @@ class Checker():
             return True
         else:
             return False
-        
-    

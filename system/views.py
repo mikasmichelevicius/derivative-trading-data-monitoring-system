@@ -4,11 +4,13 @@ from io import BytesIO
 from reportlab.pdfgen import canvas
 import reportlab
 from django.http import HttpResponse, HttpResponseRedirect
+from django.db.models import Max
 from reportlab.pdfbase import pdfmetrics
 from reportlab.pdfbase.ttfonts import TTFont
 from datetime import datetime
 from django import forms
 from django.contrib import messages
+from django.urls import reverse
 
 from .models import CompanyCodes, ProductSellers, CurrencyValues, ProductPrices, StockPrices, DerivativeTrades
 from django.contrib.auth.models import User
@@ -34,19 +36,22 @@ def home(request):
     return render(request, 'system/home.html', context)
 
 def newTrade(request):
+    companies = CompanyCodes.objects.all().order_by('company_name')
+    products = ProductSellers.objects.all().order_by('product_name')
+    currencies = CurrencyValues.objects.values_list('currency', flat=True).distinct().order_by('currency')
     values = {
-        'trade_id' : [], 'product_id' : [], 'seller_id' : [],
-        'buyer_id' : [], 'notional_amount' : [], 'quantity' : [],
+        'trade_id' : [], 'quantity' : [],
         'notional_currency' : [], 'underlying_price' : [],
-        'underlying_currency' : [], 'strike_price' : []
+        'underlying_currency' : [], 'strike_price' : [], 'companies' : companies,
+        'trade_date' : [], 'maturity_date' : [],
+        'products' : products, 'currencies' : currencies
     }
     if request.method == "POST":
         trade_id = request.POST.get('trade_id', False)
         trade_date = request.POST.get('trade_date', False)
-        product_id = request.POST.get('product_id', False)
-        seller_id = request.POST.get('seller_id', False)
-        buyer_id = request.POST.get('buyer_id', False)
-        notional_amount = request.POST.get('notional_amount', False)
+        product_name = request.POST.get('product_name', False)
+        seller_name = request.POST.get('seller_name', False)
+        buyer_name = request.POST.get('buyer_name', False)
         quantity = request.POST.get('quantity', False)
         notional_currency = request.POST.get('notional_currency', False)
         maturity_date = request.POST.get('maturity_date', False)
@@ -55,20 +60,27 @@ def newTrade(request):
         strike_price = request.POST.get('strike_price', False)
 
         c = Checker()
-        isValid = c.validateTrade(request, trade_id, trade_date, product_id, seller_id, buyer_id,
-                        notional_amount, quantity, notional_currency, maturity_date,
+        notionalAmount = c.validateTrade(request, trade_id, trade_date, product_name, seller_name, buyer_name,
+                        quantity, notional_currency, maturity_date,
                         underlying_price, underlying_currency, strike_price)
 
         values = {
-            'trade_id' : [trade_id], 'product' : [product_id], 'seller_id' : [seller_id],
-            'buyer_id' : [buyer_id], 'notional_amount' : [notional_amount], 'quantity' : [quantity],
+            'trade_id' : [trade_id], 'product_name' : [product_name], 'seller_name' : [seller_name],
+            'buyer_name' : [buyer_name], 'quantity' : [quantity],
             'notional_currency' : [notional_currency], 'underlying_price' : [underlying_price],
-            'underlying_currency' : [underlying_currency], 'strike_price' : [strike_price]
+            'underlying_currency' : [underlying_currency], 'strike_price' : [strike_price],
+            'trade_date' : [trade_date], 'maturity_date' : [maturity_date],
+            'companies' : companies, 'products' : products, 'currencies' : currencies
+
         }
-        if isValid:
-            render(request, 'system/newTrade.html', values)
+        if notionalAmount:
+            # -> Code to update database with new trade
+            print('notional amount:', notionalAmount)
+            messages.success(request, 'Trade Inserted Successfully. You can enter another trade')
+            return HttpResponseRedirect(reverse('system:newTrade'))
 
     return render(request, 'system/newTrade.html', values)
+
 
 def viewTrades(request):
     # request.POST lets access submited data by key names
