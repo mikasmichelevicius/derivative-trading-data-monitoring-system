@@ -1,5 +1,9 @@
 {% extends "system/base.html" %}
 {% block content %}
   <h1>Generate Report</h1>
-  <a href="{% url 'system:printReport' %}">press to generate</a>
+  <form action="{% url 'system:printReport' %}"  method="post">{% csrf_token %}
+    <label for="date">Date of Report: </label>
+    <input id="date" type="date" name="date" value="{{ report_date }}">
+    <input type="submit" value="Generate">
+  </form>
 {% endblock content %}
