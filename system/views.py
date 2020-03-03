@@ -97,10 +97,8 @@ def viewRules(request):
     context = {
         'rules' : rules
     }
-    print("Gets here")
     if request.method == 'POST':
         #New Context for the updating field values
-
         ruleID = request.POST.get('choice', False)
         context = {
             'rules' : rules,

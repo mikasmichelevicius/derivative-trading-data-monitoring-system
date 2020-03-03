@@ -14,7 +14,7 @@
   </form>
   <br>
   <h3>Select rule to edit:</h3>
-  <form action="system:viewRules" method="post">{% csrf_token %}
+  <form action="{% url 'system:viewRules' %}" method="post">{% csrf_token %}
     {% if rules %}
       <ul>
         {% for rule in rules %}
