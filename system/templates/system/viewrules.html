@@ -7,10 +7,11 @@
     {% if updatingRule %}
       {% for rule in rules %}
         {% ifequal updatingRule|add:"0" rule.rule_id|add:"0" %}
-        <p><b>Rule ID:</b> {{rule.rule_id}}</p>
+        <label for="ruleIDOut">Rule ID:</label>
+        <input type="text" id="ruleIDOut" name="ruleIDUpdate" value="{{rule.rule_id}}" readonly><br><br>
           {% if rule.rule_typing == "slider" %}
-            <div class="slidecontainer">
-            <input type="range" min="0" max="100" value="{{rule.rule_edition}}" class="slider" id="myRange">
+            <div class="slidecontainer" id="slider">
+            <input name="updateSlider" type="range" min="0" max="100" value="{{rule.rule_edition}}" class="slider" id="myRange">
             <b>Value:</b> <span id="demo"></span>
             </div>
 

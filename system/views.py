@@ -99,11 +99,17 @@ def viewRules(request):
     }
     if request.method == 'POST':
         #New Context for the updating field values
-        ruleID = request.POST.get('choice', False)
-        context = {
-            'rules' : rules,
-            'updatingRule' : ruleID
-        }
+        if request.POST.get('select_rule'):
+            ruleID = request.POST.get('choice', False)
+            context = {
+                'rules' : rules,
+                'updatingRule' : ruleID
+            }
+        if request.POST.get('update_rule'):
+            newVal = request.POST.get('updateSlider', False)
+            ruleID = request.POST.get('ruleIDUpdate', False)
+            Rules.objects.filter(rule_id=ruleID).update(rule_edition=newVal)
+
 
     return render(request, 'system/viewrules.html', context)
 
