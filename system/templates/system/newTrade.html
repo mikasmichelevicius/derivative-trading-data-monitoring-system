@@ -10,7 +10,7 @@
   <br>
   <form action="{% url 'system:newTrade' %}" method="post">{% csrf_token %}
     <p>Enter Trade ID <input type = 'text'  name='trade_id' value="{{trade_id.0}}" ></p>
-    <p>Enter Date of Trade <input type = 'date'  name='trade_date' value="{{trade_date.0}}"></p>
+    <p>Enter Date of Trade <input type = "date"  name="trade_date" value="{{trade_date.0}}"></p>
     <p>Enter Seller <select name="seller_name">
       {% for company in companies %}
         <option>{{ company.company_name }}</option>

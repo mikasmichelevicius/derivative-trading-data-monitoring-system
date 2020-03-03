@@ -100,6 +100,34 @@ class Checker():
             return True
         return False
 
+    # initial fields dictionary for new trade page input fields
+    def initialFields(self):
+        companies = CompanyCodes.objects.all().order_by('company_name')
+        products = ProductSellers.objects.all().order_by('product_name')
+        currencies = CurrencyValues.objects.values_list('currency', flat=True).distinct().order_by('currency')
+        values = {
+            'trade_id' : [], 'quantity' : [],
+            'notional_currency' : [], 'underlying_price' : [],
+            'underlying_currency' : [], 'strike_price' : [], 'companies' : companies,
+            'trade_date' : [], 'maturity_date' : [],
+            'products' : products, 'currencies' : currencies
+        }
+        return values
+
+    # intermediate values for input fields if the trade entereded unsuccessfully
+    def interFields(self, trade_id, product_name, seller_name, buyer_name, quantity, notional_currency,
+                    underlying_price, underlying_currency, strike_price, trade_date, maturity_date,
+                    currencies, products, companies):
+        values = {
+            'trade_id' : [trade_id], 'product_name' : [product_name], 'seller_name' : [seller_name],
+            'buyer_name' : [buyer_name], 'quantity' : [quantity],
+            'notional_currency' : [notional_currency], 'underlying_price' : [underlying_price],
+            'underlying_currency' : [underlying_currency], 'strike_price' : [strike_price],
+            'trade_date' : [trade_date], 'maturity_date' : [maturity_date],
+            'companies' : companies, 'products' : products, 'currencies' : currencies
+        }
+        return values
+
 
     #Calculates the new average of the product with the new entry included, this new value will be saved in the database
     def recalculateAverage(self,currentAverage,n, newValue):
