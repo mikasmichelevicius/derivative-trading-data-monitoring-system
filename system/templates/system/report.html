@@ -6,4 +6,9 @@
     <input id="date" type="date" name="date" value="{{ report_date }}">
     <input type="submit" value="Generate">
   </form>
+  {% if messages %}
+    {% for message in messages %}
+      <li> <font color="red">{{message}}</font> </li>
+    {% endfor %}
+  {% endif %}
 {% endblock content %}
