@@ -9,14 +9,11 @@ from django.contrib.auth.models import User
 class CompanyCodes(models.Model):
     company_name = models.CharField(max_length=100)
     company_trade_id = models.CharField(max_length=10, primary_key=True)
-    # standardDeviation
-    # mean
-    # no of times
     def __str__(self):
         return self.company_name
 
 class ProductSellers(models.Model):
-    product_name = models.CharField(max_length=50, primary_key=True)
+    product_name = models.CharField(max_length=100, primary_key=True)
     company = models.ForeignKey(CompanyCodes, on_delete=models.CASCADE)
     def __str__(self):
         return self.product_name
@@ -83,3 +80,10 @@ class Rules(models.Model):
     rule_desc = models.CharField(max_length=200)
     rule_edition = models.CharField(max_length=10)
     rule_typing = models.CharField(max_length=10)
+
+class Analysis(models.Model):
+    product_name = models.CharField(max_length=100) # either product name or "Stock"
+    company_name = models.ForeignKey(CompanyCodes, on_delete=models.CASCADE) # buying company
+    average = models.DecimalField(max_digits=20, decimal_places=4) # average of notional amount
+    variance = models.DecimalField(max_digits=20, decimal_places=4)
+    prod_count = models.IntegerField(default=0) # number of times product was bought
