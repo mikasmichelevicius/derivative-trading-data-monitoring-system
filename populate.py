@@ -11,7 +11,7 @@ import csv
 import random
 from datetime import datetime
 from django.conf import settings
-from system.models import CompanyCodes, ProductSellers, CurrencyValues, ProductPrices, StockPrices, DerivativeTrades
+from system.models import CompanyCodes, ProductSellers, CurrencyValues, ProductPrices, StockPrices, DerivativeTrades, Rules
 current = os.path.abspath(os.path.join(os.curdir,'data'))
 
 for dataFolder in os.listdir(current):
@@ -131,4 +131,13 @@ for dataFolder in os.listdir(current):
                                                 #     company2 = CompanyCodes.objects.get(company_trade_id = row[4])
                                                 #     DerivativeTrades.objects.get_or_create(date = datetime.strptime(row[0], '%d/%m/%Y %H:%M').strftime("%Y-%m-%d %H:%M"), trade_id = row[1], product = row[2], buying_party = company1, selling_party = company2, notional_amount = row[5], notional_currency = row[6], quantity = row[7], maturity_date = datetime.strptime(row[8], '%d/%m/%Y').strftime("%Y-%m-%d"), underlying_price = row[9], underlying_currency = row[10], strike_price = row[11])
                                                 #     if count == 300:
+
                                                 #         break
+for dataFolder in os.listdir(current):
+    if dataFolder == 'rule.csv':
+        print('         ...LOADING RULES...')
+        with open(os.path.join(current,dataFolder), 'r') as file:
+            file.readline()
+            reader = csv.reader(file,delimiter=',')
+            for row in reader:
+                Rules.objects.get_or_create(rule_id = row[0], rule_desc = row[1], rule_edition = row[2], rule_typing = row[3])

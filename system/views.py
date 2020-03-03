@@ -12,7 +12,7 @@ from django import forms
 from django.contrib import messages
 from django.urls import reverse
 
-from .models import CompanyCodes, ProductSellers, CurrencyValues, ProductPrices, StockPrices, DerivativeTrades
+from .models import CompanyCodes, ProductSellers, CurrencyValues, ProductPrices, StockPrices, DerivativeTrades, Rules
 from django.contrib.auth.models import User
 
 from .newTrade_Backend import Checker
@@ -104,7 +104,12 @@ def viewTrades(request):
 
 
 def viewRules(request):
-    return render(request, 'system/viewrules.html')
+    rules = Rules.objects.all().order_by('rule_id')
+    context = {
+        'rules' : rules
+    }
+    return render(request, 'system/viewrules.html', context)
+
 
 def generateReport(request):
     return render(request, 'system/report.html')

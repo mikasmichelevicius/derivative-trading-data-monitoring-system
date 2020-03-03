@@ -74,3 +74,9 @@ class Actions(models.Model):
     user = models.ForeignKey(User, on_delete=models.CASCADE)
     event_type = models.CharField(max_length=10)
     date = models.DateTimeField()
+
+class Rules(models.Model):
+    rule_id = models.IntegerField()
+    rule_desc = models.CharField(max_length=200)
+    rule_edition = models.CharField(max_length=10)
+    rule_typing = models.CharField(max_length=10)
