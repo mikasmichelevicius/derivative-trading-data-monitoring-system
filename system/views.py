@@ -36,16 +36,9 @@ def home(request):
     return render(request, 'system/home.html', context)
 
 def newTrade(request):
-    companies = CompanyCodes.objects.all().order_by('company_name')
-    products = ProductSellers.objects.all().order_by('product_name')
-    currencies = CurrencyValues.objects.values_list('currency', flat=True).distinct().order_by('currency')
-    values = {
-        'trade_id' : [], 'quantity' : [],
-        'notional_currency' : [], 'underlying_price' : [],
-        'underlying_currency' : [], 'strike_price' : [], 'companies' : companies,
-        'trade_date' : [], 'maturity_date' : [],
-        'products' : products, 'currencies' : currencies
-    }
+    c = Checker()
+    # initial field values for new trade input fields
+    values = c.initialFields()
     if request.method == "POST":
         trade_id = request.POST.get('trade_id', False)
         trade_date = request.POST.get('trade_date', False)
@@ -59,20 +52,15 @@ def newTrade(request):
         underlying_currency = request.POST.get('underlying_currency', False)
         strike_price = request.POST.get('strike_price', False)
 
-        c = Checker()
         notionalAmount = c.validateTrade(request, trade_id, trade_date, product_name, seller_name, buyer_name,
                         quantity, notional_currency, maturity_date,
                         underlying_price, underlying_currency, strike_price)
 
-        values = {
-            'trade_id' : [trade_id], 'product_name' : [product_name], 'seller_name' : [seller_name],
-            'buyer_name' : [buyer_name], 'quantity' : [quantity],
-            'notional_currency' : [notional_currency], 'underlying_price' : [underlying_price],
-            'underlying_currency' : [underlying_currency], 'strike_price' : [strike_price],
-            'trade_date' : [trade_date], 'maturity_date' : [maturity_date],
-            'companies' : companies, 'products' : products, 'currencies' : currencies
+        # values for new trade input fields with saved input values of unsuccessful trade submission
+        values = c.interFields(trade_id, product_name, seller_name, buyer_name, quantity, notional_currency,
+                        underlying_price, underlying_currency, strike_price, trade_date, maturity_date,
+                        values['currencies'], values['products'], values['companies'])
 
-        }
         if notionalAmount:
             # -> Code to update database with new trade
             print('notional amount:', notionalAmount)
