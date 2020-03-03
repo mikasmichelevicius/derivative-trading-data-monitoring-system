@@ -122,19 +122,22 @@ def printReport(request):
     if request.method == 'POST':
         date = request.POST.get('date', False)
 
-        trade = DerivativeTrades.objects.order_by('-date')[0]
-        response = HttpResponse(content_type='application/pdf')
-        response['Content-Disposition'] = 'inline; filename="dailyreport.pdf"'
+        # Name the report based on the day of generation
+        reportName = "report_" + str(date)
 
+        # Generate the PDF response
+        response = HttpResponse(content_type='application/pdf')
+        response['Content-Disposition'] = 'inline; filename="'+ reportName + '.pdf"'
+
+        # Draw the report
         buffer = BytesIO()
         p = canvas.Canvas(buffer)
 
-        # Start writing the PDF here
         p.setFont('Times-Roman', 14)
         p.drawString(100, 750, 'Last trade:')
         p.setFont('Times-Roman', 11)
+        trade = DerivativeTrades.objects.order_by('-date')[0]
         p.drawString(100, 700, 'Trade id: ' + trade.trade_id)
-        # End writing
 
         p.showPage()
         p.save()
@@ -142,6 +145,7 @@ def printReport(request):
         pdf = buffer.getvalue()
         buffer.close()
         response.write(pdf)
+
         return response
 
     return render(request, 'system/report.html')
