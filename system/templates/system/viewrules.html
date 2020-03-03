@@ -3,40 +3,33 @@
   <h1>View/Edit Rules</h1>
   <br>
   <form action="{% url 'system:viewRules' %}" method="post">{% csrf_token %}
-    <button type="submit">Update All Editions</button>
+    {% if updatingRule %}
+      {% for rule in rules %}
+        {% if updatingRule == rule.rule_id %}
+          <p>THIS WORKS</p>
+        {% endif %}
+      {% endfor %}
+    {% endif %}
+    <button type="submit" name="update_rule" value="Update Rule"></button>
   </form>
   <br>
-  <h3> Rules: </h3>
-  {% if rules %}
-    <ul>
-    {% for rule in rules %}
-      <li>
-      <b>ID: </b>{{ rule.rule_id }}
-      <br>
-      <b>Description: </b>{{ rule.rule_desc }}
-      {% if rule.rule_typing == "slider" %}
-        <div class="slidecontainer">
-        <input type="range" min="0" max="100" value="{{rule.rule_edition}}" class="slider" id="myRange">
-        <b>Edition:</b> <span id="demo"></span>
-        </div>
-
-        <script>
-        var slider = document.getElementById("myRange");
-        var output = document.getElementById("demo");
-        output.innerHTML = slider.value;
-
-        slider.oninput = function() {
-          output.innerHTML = this.value;
-        }
-        </script>
-      {% else %}
-        <b>Rule Edition:</b>{{ rule.rule_edition }}
-      {% endif %}
-      </li>
-    {% endfor %}
-    </ul>
-  {% else %}
-    <b>No Rules to Display</b>
-  {% endif %}
-
+  <h3>Select rule to edit:</h3>
+  <form action="system:viewRules" method="post">{% csrf_token %}
+    {% if rules %}
+      <ul>
+        {% for rule in rules %}
+          <input type="radio" name="choice" value="{{ rule.rule_id }}">
+          <label for="choice{{ forloop.counter }}">
+            <b>ID:</b> {{ rule.rule_id }}
+            <br>
+            <b>Description:</b> {{ rule.rule_desc }}
+            <br>
+            <b>Value:</b> {{ rule.rule_edition }}
+          </label>
+          <br>
+        {% endfor %}
+      </ul>
+    {% endif %}
+    <input type="submit" value="Select">
+  </form>
 {% endblock content %}
