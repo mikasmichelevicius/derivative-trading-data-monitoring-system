@@ -9,6 +9,9 @@ from django.contrib.auth.models import User
 class CompanyCodes(models.Model):
     company_name = models.CharField(max_length=100)
     company_trade_id = models.CharField(max_length=10, primary_key=True)
+    # standardDeviation
+    # mean
+    # no of times
     def __str__(self):
         return self.company_name
 

@@ -3,15 +3,23 @@
   <h1>View/Edit Trades</h1>
   <br>
   <form action="{% url 'system:viewTrades' %}" method="post">{% csrf_token %}
-    <p>Select a day <input type = 'date'  name='selected_day' ></p>
+    <p>Select start date <input type = 'date'  name='start_day' ></p>
+    <p>Select end date <input type='date' name='end_day' ></p>
     <button type="submit">Submit</button>
   </form>
-  <h3>Latest trades:</h3>
-  {% if latest_trades %}
-    <ul>
-      {% for trade in latest_trades %}
-        <li><b>ID</b>: {{trade.trade_id}} <br><b>Buying</b>: {{trade.buying_party}},  <b>Selling:</b> {{trade.selling_party}},  <b>Date:</b> {{trade.date}}</li>
-      {% endfor %}
-    </ul>
-  {% endif %}
+  <br>
+  <h3>Select trade to edit:</h3>
+  <form action="system:viewTrades" method="post">{% csrf_token %}
+    {% if latest_trades %}
+      <ul>
+        {% for trade in latest_trades %}
+          <input type="radio" name="choice" id="choice{{ forloop.counter }}" value="{{ trade.trade_id }}">
+          <label for="choice{{ forloop.counter }}"><b>ID:</b> {{trade.trade_id}}  <b>Buyer:</b> {{ trade.buying_party }}  <b>Seller:</b> {{trade.selling_party}}</label>
+          <br>
+          <!-- <li><b>ID</b>: {{trade.trade_id}} <br><b>Buying</b>: {{trade.buying_party}},  <b>Selling:</b> {{trade.selling_party}},  <b>Date:</b> {{trade.date}}</li> -->
+        {% endfor %}
+      </ul>
+    {% endif %}
+    <input type="submit" value="Select">
+  </form>
 {% endblock content %}
