@@ -218,4 +218,7 @@ class Checker():
         underPrice = float(underlyingPrice)
         quant = int(quantity)
 
-        return underPrice / uValueInUSD * quant * nValueInUSD
+        return (underPrice * nValueInUSD * quant) / uValueInUSD
+
+    def getIDFromCompanyName(self, name):
+        return CompanyCodes.objects.values_list('company_trade_id', flat = True).get(company_name = name)
