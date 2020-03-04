@@ -212,3 +212,7 @@ class Checker():
                 return True
 
         return False
+        
+    def getConfidence(self):
+        confidence = Rules.objects.filter(rule_id = "1").only("rule_edition")
+        return confidence / 100
