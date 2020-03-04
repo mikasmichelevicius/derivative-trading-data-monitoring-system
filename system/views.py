@@ -85,8 +85,9 @@ def viewTrades(request):
     else:
         latest_trades = DerivativeTrades.objects.order_by('-date')[:10]
         context = {
-            'latest_trades' : latest_trades
+            'latest_trades' : latest_trades,
         }
+
     return render(request, 'system/viewtrades.html', context)
 
 
