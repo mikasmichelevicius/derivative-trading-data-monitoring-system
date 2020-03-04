@@ -93,7 +93,7 @@ class Checker():
         nValueInUSD = float(self.getCurrency(notionalCurrency, dateOfTrade))
 
         # Calculates Notional Amount
-        notionalAmount = underPrice / uValueInUSD * quant * nValueInUSD
+        notionalAmount = self.calcNotionalAmount(underPrice, uValueInUSD, quant, nValueInUSD)
 
         # Checks whether buyer already bought the product before, if so, calculates
         # new standar deviation, count and average values
@@ -212,7 +212,10 @@ class Checker():
                 return True
 
         return False
-        
+
     def getConfidence(self):
         confidence = Rules.objects.filter(rule_id = "1").only("rule_edition")
         return confidence / 100
+
+    def calcNotionalAmount(self, underPrice, uValueInUSD, quant, nValueInUSD):
+        return underPrice / uValueInUSD * quant * nValueInUSD
