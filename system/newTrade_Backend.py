@@ -2,6 +2,7 @@ from .models import CompanyCodes, ProductSellers, CurrencyValues, ProductPrices,
 from django.contrib.auth.models import User
 from django.contrib import messages
 import scipy.stats
+import math
 
 # Methods for the actions of the buttons on the New Trade entry screen
 # To be imported into the views.py class
@@ -57,6 +58,9 @@ class Checker():
         if not (strikePrice):
             messages.error(request, 'Strike price cannot be empty')
             return False
+
+
+
 
         # Checks whether the buying and selling parties are the same
         if sellingParty == buyingParty:
@@ -170,9 +174,9 @@ class Checker():
     def recalculateAverage(self,currentAverage,n, newValue):
         return (currentAverage*n + newValue)/n+1
 
-    #Calculates the new variance of a product with the new entry included.
-    def recalculateVariance(self,currentVariance,average,n,newValue):
-        return (currentVariance*(n-1) + (newValue - average)*(newValue - average))/n
+    #Calculates the new SD of a product with the new entry included.
+    def recalculateSD(self,currentSD,average,n,newValue):
+        return math.sqrt((currentSD*currentSD*(n-1) + (newValue - average)*(newValue - average))/n)
 
     # Uses the standard deviation to see if a value is within confidence range. Returns true if within confidence range and false otherwise
     def checkConfidence(self,givenValue, standardDeviation,average,confidencePercentage):
