@@ -67,6 +67,8 @@ def newTrade(request):
                                                               float(Analysis.objects.values_list("standard_dev", flat=True).get(product_name = product_name, company_name_id = c.getIDFromCompanyName(buyer_name))),
                                                               float(Analysis.objects.values_list("average", flat=True).get(product_name = product_name, company_name_id = c.getIDFromCompanyName(buyer_name))),
                                                               int(Rules.objects.values_list('rule_edition', flat = True).get(rule_id = "1")))
+            if not confidenceInNotional:
+                messages.error(request, 'Notional Amount seems unlikely: ' + str(c.calcNotionalAmount(underlying_price, underlying_currency, quantity, notional_currency, trade_date)) + ' Are you sure you would like to enter trade?')
             # -> Code to update database with new trade
             messages.success(request, 'Trade Inserted Successfully. You can enter another trade')
             return HttpResponseRedirect(reverse('system:newTrade'))
