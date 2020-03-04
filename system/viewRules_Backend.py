@@ -3,9 +3,9 @@
 class RuleBackend():
 
     def __init__(self, ruleNum, ruleEdits):
-
+        self.ruleNewValue = []
         for i in range(1,ruleNum):
-            self.ruleNewValue[i] = ruleEdits[i]
+            self.ruleNewValue.append(ruleEdits[i])
 
     # Update rules database with new rule values
     def updateRules(self, tupleRuleNumEdit):

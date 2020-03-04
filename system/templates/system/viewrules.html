@@ -3,14 +3,34 @@
   <h1>View/Edit Rules</h1>
   <br>
   <form action="{% url 'system:viewRules' %}" method="post">{% csrf_token %}
+    <!-- Finds the selected rule in rules  -->
     {% if updatingRule %}
       {% for rule in rules %}
-        {% if updatingRule == rule.rule_id %}
-          <p>THIS WORKS</p>
-        {% endif %}
+        {% ifequal updatingRule|add:"0" rule.rule_id|add:"0" %}
+        <label for="ruleIDOut">Rule ID:</label>
+        <input type="text" id="ruleIDOut" name="ruleIDUpdate" value="{{rule.rule_id}}" readonly><br><br>
+          {% if rule.rule_typing == "slider" %}
+            <div class="slidecontainer" id="slider">
+            <input name="updateSlider" type="range" min="0" max="100" value="{{rule.rule_edition}}" class="slider" id="myRange">
+            <b>Value:</b> <span id="demo"></span>
+            </div>
+
+            <script>
+            var slider = document.getElementById("myRange");
+            var output = document.getElementById("demo");
+            output.innerHTML = slider.value;
+
+            slider.oninput = function() {
+              output.innerHTML = this.value;
+            }
+            </script>
+          {% else %}
+            <b>Rule Edition:</b>{{ rule.rule_edition }}
+          {% endif %}
+        {% endifequal %}
       {% endfor %}
     {% endif %}
-    <button type="submit" name="update_rule" value="Update Rule"></button>
+    <input type="submit" name="update_rule" value="Update Rule"></input>
   </form>
   <br>
   <h3>Select rule to edit:</h3>
@@ -30,6 +50,6 @@
         {% endfor %}
       </ul>
     {% endif %}
-    <input type="submit" value="Select">
+    <input type="submit" name="select_rule" value="Select">
   </form>
 {% endblock content %}

@@ -2,6 +2,7 @@ from .models import CompanyCodes, ProductSellers, CurrencyValues, ProductPrices,
 from django.contrib.auth.models import User
 from django.contrib import messages
 import scipy.stats
+import math
 
 # Methods for the actions of the buttons on the New Trade entry screen
 # To be imported into the views.py class
@@ -13,13 +14,53 @@ class Checker():
                         underlyingCurrency, strikePrice):
 
         # Checks to see if any field is empty
-        if not (dateOfTrade and tradeID and product and
-                buyingParty and sellingParty and quantity and
-                notionalCurrency and maturityDate and underlyingPrice and
-                underlyingCurrency and strikePrice):
 
-                messages.error(request, 'Fields cannot be empty')
-                return False
+        
+        if not (tradeID):
+            messages.error(request, 'Trade ID field cannot be empty')
+            return False
+
+        if not (dateOfTrade):
+            messages.error(request, 'Date of trade field cannot be empty')
+            return False
+
+        if not (product):
+            messages.error(request, 'Product field cannot be empty')
+            return False
+
+        if not (buyingParty):
+            messages.error(request, 'Buying Party field cannot be empty')
+            return False
+
+        if not (sellingParty):
+            messages.error(request, 'Selling Party field cannot be empty')
+            return False    
+
+        if not (quantity): 
+            messages.error(request, 'Quantity field cannot be empty')
+            return False
+
+        if not (notionalCurrency): 
+            messages.error(request, 'Notional currency field cannot be empty')
+            return False      
+        if not (maturityDate):
+            messages.error(request, 'Maturity date field cannot be empty')
+            return False               
+
+        if not (underlyingPrice):
+            messages.error(request, 'Underlying price field cannot be empty')
+            return False 
+
+        if not (underlyingCurrency):
+            messages.error(request, 'Underlying currency field cannot be empty')
+            return False     
+
+        if not (strikePrice):
+            messages.error(request, 'Strike price cannot be empty')
+            return False
+
+
+
 
         # Checks whether the buying and selling parties are the same
         if sellingParty == buyingParty:
@@ -133,9 +174,9 @@ class Checker():
     def recalculateAverage(self,currentAverage,n, newValue):
         return (currentAverage*n + newValue)/n+1
 
-    #Calculates the new variance of a product with the new entry included.
-    def recalculateVariance(self,currentVariance,average,n,newValue):
-        return (currentVariance*(n-1) + (newValue - average)*(newValue - average))/n
+    #Calculates the new SD of a product with the new entry included.
+    def recalculateSD(self,currentSD,average,n,newValue):
+        return math.sqrt((currentSD*currentSD*(n-1) + (newValue - average)*(newValue - average))/n)
 
     # Uses the standard deviation to see if a value is within confidence range. Returns true if within confidence range and false otherwise
     def checkConfidence(self,givenValue, standardDeviation,average,confidencePercentage):

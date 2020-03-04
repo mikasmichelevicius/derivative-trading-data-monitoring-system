@@ -89,7 +89,7 @@ a.article-title:hover {
 
 .slider {
   -webkit-appearance: none;
-  width: 25%;
+  width: 50%;
   height: 10px;
   background: #e3e3e3;
   outline: none;
