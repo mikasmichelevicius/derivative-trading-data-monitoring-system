@@ -87,7 +87,7 @@ class Checker():
             return False
 
         # Calculates Notional Amount
-        notionalAmount = self.calcNotionalAmount(underlyingPrice, underlyingCurrency, quantity, notionalCurrency)
+        notionalAmount = self.calcNotionalAmount(underlyingPrice, underlyingCurrency, quantity, notionalCurrency, dateOfTrade)
 
         # Checks whether buyer already bought the product before, if so, calculates
         # new standar deviation, count and average values
