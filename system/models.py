@@ -85,5 +85,5 @@ class Analysis(models.Model):
     product_name = models.CharField(max_length=100) # either product name or "Stock"
     company_name = models.ForeignKey(CompanyCodes, on_delete=models.CASCADE) # buying company
     average = models.DecimalField(max_digits=20, decimal_places=4) # average of notional amount
-    variance = models.DecimalField(max_digits=20, decimal_places=4)
+    standard_dev = models.DecimalField(max_digits=20, decimal_places=4)
     prod_count = models.IntegerField(default=0) # number of times product was bought

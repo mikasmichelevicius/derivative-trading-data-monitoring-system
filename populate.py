@@ -9,9 +9,10 @@
 import os
 import csv
 import random
+import math
 from datetime import datetime
 from django.conf import settings
-from system.models import CompanyCodes, ProductSellers, CurrencyValues, ProductPrices, StockPrices, DerivativeTrades, Rules
+from system.models import CompanyCodes, ProductSellers, CurrencyValues, ProductPrices, StockPrices, DerivativeTrades, Rules, Analysis
 current = os.path.abspath(os.path.join(os.curdir,'data'))
 
 for dataFolder in os.listdir(current):
@@ -141,3 +142,38 @@ for dataFolder in os.listdir(current):
             reader = csv.reader(file,delimiter=',')
             for row in reader:
                 Rules.objects.get_or_create(rule_id = row[0], rule_desc = row[1], rule_edition = row[2], rule_typing = row[3])
+
+print("'         ...LOADING ANALYSIS...'")
+trades_list = DerivativeTrades.objects.values_list('buying_party', 'product', 'notional_amount')
+for trade in trades_list:
+    if not Analysis.objects.filter(company_name=trade[0], product_name=trade[1]):
+        company = CompanyCodes.objects.get(company_trade_id = trade[0])
+        Analysis.objects.get_or_create(product_name=trade[1], company_name=company, average=trade[2], standard_dev=0, prod_count=1)
+    else:
+        element = Analysis.objects.get(product_name=trade[1], company_name=trade[0])
+        count = element.prod_count
+        mean = float(element.average)
+        var = float(element.standard_dev) ** 2
+        newVal = float(trade[2])
+        if count < 2:
+            count += 1
+            oldVal = mean
+            mean = (oldVal + newVal) / count
+            variance = ((oldVal-mean)*(oldVal-mean) + (newVal-mean)*(newVal-mean))/count
+            element.average = mean
+            element.standard_dev = math.sqrt(variance)
+            element.prod_count = count
+            element.save()
+        else:
+            M2 = var * count
+            count += 1
+            delta = newVal - mean
+            mean += delta / count
+            delta2 = newVal - mean
+            M2 += delta * delta2
+            newVar = M2 / count
+
+            element.average = mean
+            element.standard_dev = math.sqrt(newVar)
+            element.prod_count = count
+            element.save()
