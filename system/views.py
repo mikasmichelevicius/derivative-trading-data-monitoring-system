@@ -42,6 +42,7 @@ def newTrade(request):
     if request.method == "POST":
         trade_id = request.POST.get('trade_id', False)
         trade_date = request.POST.get('trade_date', False)
+        trade_time = request.POST.get('trade_time', False)
         product_name = request.POST.get('product_name', False)
         seller_name = request.POST.get('seller_name', False)
         buyer_name = request.POST.get('buyer_name', False)
