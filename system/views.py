@@ -1,21 +1,21 @@
 from django.shortcuts import render
 import json
 from io import BytesIO
-from reportlab.pdfgen import canvas
-import reportlab
 from django.http import HttpResponse, HttpResponseRedirect
 from django.db.models import Max
-from reportlab.pdfbase import pdfmetrics
-from reportlab.pdfbase.ttfonts import TTFont
 from datetime import datetime
 from django import forms
 from django.contrib import messages
 from django.urls import reverse
 
+
 from .models import CompanyCodes, ProductSellers, CurrencyValues, ProductPrices, StockPrices, DerivativeTrades, Rules
 from django.contrib.auth.models import User
 
 from .newTrade_Backend import Checker
+
+from .report import renderReport
+
 # Create your views here.
 
 # View is responsible for one of two things: returning HttpResponse object
@@ -118,24 +118,27 @@ def generateReport(request):
     return render(request, 'system/report.html')
 
 def printReport(request):
-    trade = DerivativeTrades.objects.order_by('-date')[0]
-    response = HttpResponse(content_type='application/pdf')
-    response['Content-Disposition'] = 'inline; filename="dailyreport.pdf"'
+    # Get the date from the input form
+    if request.method == 'POST':
+        date = request.POST.get('date', False)
+        if date:
+            # Name the report based on the day of generation
+            reportName = "report_" + str(date) + ".pdf"
 
-    buffer = BytesIO()
-    p = canvas.Canvas(buffer)
+            # Prepare the report
+            buffer = BytesIO()
+            renderReport(buffer, reportName, date)
 
-    # Start writing the PDF here
-    p.setFont('Times-Roman', 14)
-    p.drawString(100, 750, 'Last trade:')
-    p.setFont('Times-Roman', 11)
-    p.drawString(100, 700, 'Trade id: ' + trade.trade_id)
-    # End writing
+            # Return the response
+            pdf = buffer.getvalue()
+            buffer.close()
 
-    p.showPage()
-    p.save()
+            # Generate the PDF response
+            response = HttpResponse(content_type='application/pdf')
+            response['Content-Disposition'] = 'inline; filename="'+ reportName + '"'
+            response.write(pdf)
 
-    pdf = buffer.getvalue()
-    buffer.close()
-    response.write(pdf)
-    return response
+            return response
+        else:
+            messages.error(request, 'Enter a date')
+    return render(request, 'system/report.html')
