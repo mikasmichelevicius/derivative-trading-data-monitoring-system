@@ -52,7 +52,7 @@ def newTrade(request):
         underlying_currency = request.POST.get('underlying_currency', False)
         strike_price = request.POST.get('strike_price', False)
 
-        notionalAmount = c.validateTrade(request, trade_id, trade_date, product_name, seller_name, buyer_name,
+        isValid = c.validateTrade(request, trade_id, trade_date, product_name, seller_name, buyer_name,
                         quantity, notional_currency, maturity_date,
                         underlying_price, underlying_currency, strike_price)
 
@@ -61,9 +61,8 @@ def newTrade(request):
                         underlying_price, underlying_currency, strike_price, trade_date, maturity_date,
                         values['currencies'], values['products'], values['companies'])
 
-        if notionalAmount:
+        if isValid:
             # -> Code to update database with new trade
-            print('notional amount:', notionalAmount)
             messages.success(request, 'Trade Inserted Successfully. You can enter another trade')
             return HttpResponseRedirect(reverse('system:newTrade'))
 

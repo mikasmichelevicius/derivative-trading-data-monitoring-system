@@ -1,4 +1,4 @@
-from .models import CompanyCodes, ProductSellers, CurrencyValues, ProductPrices, StockPrices, DerivativeTrades
+from .models import CompanyCodes, ProductSellers, CurrencyValues, ProductPrices, StockPrices, DerivativeTrades, Rules, Analysis
 from django.contrib.auth.models import User
 from django.contrib import messages
 import scipy.stats
@@ -15,7 +15,7 @@ class Checker():
 
         # Checks to see if any field is empty
 
-        
+
         if not (tradeID):
             messages.error(request, 'Trade ID field cannot be empty')
             return False
@@ -34,26 +34,26 @@ class Checker():
 
         if not (sellingParty):
             messages.error(request, 'Selling Party field cannot be empty')
-            return False    
+            return False
 
-        if not (quantity): 
+        if not (quantity):
             messages.error(request, 'Quantity field cannot be empty')
             return False
 
-        if not (notionalCurrency): 
+        if not (notionalCurrency):
             messages.error(request, 'Notional currency field cannot be empty')
-            return False      
+            return False
         if not (maturityDate):
             messages.error(request, 'Maturity date field cannot be empty')
-            return False               
+            return False
 
         if not (underlyingPrice):
             messages.error(request, 'Underlying price field cannot be empty')
-            return False 
+            return False
 
         if not (underlyingCurrency):
             messages.error(request, 'Underlying currency field cannot be empty')
-            return False     
+            return False
 
         if not (strikePrice):
             messages.error(request, 'Strike price cannot be empty')
@@ -95,7 +95,17 @@ class Checker():
         # Calculates Notional Amount
         notionalAmount = underPrice / uValueInUSD * quant * nValueInUSD
 
-        return notionalAmount
+        # Checks whether buyer already bought the product before, if so, calculates
+        # new standar deviation, count and average values
+        buyingID = CompanyCodes.objects.get(company_name = buyingParty)
+        if Analysis.objects.filter(company_name=buyingID, product_name=product):
+             analysisObj = Analysis.objects.get(company_name=buyingID, product_name=product)
+             oldAverage = float(analysisObj.average)
+             oldCount = analysisObj.prod_count
+             oldSD = float(analysisObj.standard_dev)
+             (newAverage, newCount, newSD) = self.recalculateSD(oldAverage, oldCount, oldSD, notionalAmount)
+
+        return True
 
     # Checks whether underlying and strike prices are numerical values and if quantity is an integer
     def checkNumericalValues(self, request, underlyingPrice, quantity, strikePrice):
@@ -169,14 +179,18 @@ class Checker():
         }
         return values
 
-
-    #Calculates the new average of the product with the new entry included, this new value will be saved in the database
-    def recalculateAverage(self,currentAverage,n, newValue):
-        return (currentAverage*n + newValue)/n+1
-
-    #Calculates the new SD of a product with the new entry included.
-    def recalculateSD(self,currentSD,average,n,newValue):
-        return math.sqrt((currentSD*currentSD*(n-1) + (newValue - average)*(newValue - average))/n)
+    #Calculates the new SD, average and count of a product with the new entry included.
+    def recalculateSD(self,average,count,standardDev,newValue):
+        variance = standardDev ** 2
+        M2 = variance * count
+        count += 1
+        delta = newValue - average
+        average += delta / count
+        delta2 = newValue - average
+        M2 += delta * delta2
+        newVariance = M2 / count
+        newSD = math.sqrt(newVariance)
+        return (average, count, newSD)
 
     # Uses the standard deviation to see if a value is within confidence range. Returns true if within confidence range and false otherwise
     def checkConfidence(self,givenValue, standardDeviation,average,confidencePercentage):
