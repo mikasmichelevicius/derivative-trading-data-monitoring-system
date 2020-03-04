@@ -15,7 +15,7 @@ class Checker():
 
         # Checks to see if any field is empty
 
-        
+
         if not (tradeID):
             messages.error(request, 'Trade ID field cannot be empty')
             return False
@@ -34,26 +34,26 @@ class Checker():
 
         if not (sellingParty):
             messages.error(request, 'Selling Party field cannot be empty')
-            return False    
+            return False
 
-        if not (quantity): 
+        if not (quantity):
             messages.error(request, 'Quantity field cannot be empty')
             return False
 
-        if not (notionalCurrency): 
+        if not (notionalCurrency):
             messages.error(request, 'Notional currency field cannot be empty')
-            return False      
+            return False
         if not (maturityDate):
             messages.error(request, 'Maturity date field cannot be empty')
-            return False               
+            return False
 
         if not (underlyingPrice):
             messages.error(request, 'Underlying price field cannot be empty')
-            return False 
+            return False
 
         if not (underlyingCurrency):
             messages.error(request, 'Underlying currency field cannot be empty')
-            return False     
+            return False
 
         if not (strikePrice):
             messages.error(request, 'Strike price cannot be empty')
@@ -181,7 +181,7 @@ class Checker():
     # Uses the standard deviation to see if a value is within confidence range. Returns true if within confidence range and false otherwise
     def checkConfidence(self,givenValue, standardDeviation,average,confidencePercentage):
 
-        # X~N(mean, sd squared)
+        # X~N(mean, sd)
         # Lower Bound: P(X < givenValue)
         # Upper Bound: P(X > givenValue)
 
