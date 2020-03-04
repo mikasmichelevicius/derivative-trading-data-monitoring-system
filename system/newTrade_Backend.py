@@ -13,13 +13,50 @@ class Checker():
                         underlyingCurrency, strikePrice):
 
         # Checks to see if any field is empty
-        if not (dateOfTrade and tradeID and product and
-                buyingParty and sellingParty and quantity and
-                notionalCurrency and maturityDate and underlyingPrice and
-                underlyingCurrency and strikePrice):
 
-                messages.error(request, 'Fields cannot be empty')
-                return False
+        
+        if not (tradeID):
+            messages.error(request, 'Trade ID field cannot be empty')
+            return False
+
+        if not (dateOfTrade):
+            messages.error(request, 'Date of trade field cannot be empty')
+            return False
+
+        if not (product):
+            messages.error(request, 'Product field cannot be empty')
+            return False
+
+        if not (buyingParty):
+            messages.error(request, 'Buying Party field cannot be empty')
+            return False
+
+        if not (sellingParty):
+            messages.error(request, 'Selling Party field cannot be empty')
+            return False    
+
+        if not (quantity): 
+            messages.error(request, 'Quantity field cannot be empty')
+            return False
+
+        if not (notionalCurrency): 
+            messages.error(request, 'Notional currency field cannot be empty')
+            return False      
+        if not (maturityDate):
+            messages.error(request, 'Maturity date field cannot be empty')
+            return False               
+
+        if not (underlyingPrice):
+            messages.error(request, 'Underlying price field cannot be empty')
+            return False 
+
+        if not (underlyingCurrency):
+            messages.error(request, 'Underlying currency field cannot be empty')
+            return False     
+
+        if not (strikePrice):
+            messages.error(request, 'Strike price cannot be empty')
+            return False
 
         # Checks whether the buying and selling parties are the same
         if sellingParty == buyingParty:
