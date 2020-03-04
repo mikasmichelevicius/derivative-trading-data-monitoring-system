@@ -86,14 +86,8 @@ class Checker():
         if not self.checkNumericalValues(request, underlyingPrice, quantity, strikePrice):
             return False
 
-        underPrice = float(underlyingPrice)
-        quant = int(quantity)
-
-        uValueInUSD = float(self.getCurrency(underlyingCurrency, dateOfTrade))
-        nValueInUSD = float(self.getCurrency(notionalCurrency, dateOfTrade))
-
         # Calculates Notional Amount
-        notionalAmount = self.calcNotionalAmount(underPrice, uValueInUSD, quant, nValueInUSD)
+        notionalAmount = self.calcNotionalAmount(underlyingPrice, underlyingCurrency, quantity, notionalCurrency)
 
         # Checks whether buyer already bought the product before, if so, calculates
         # new standar deviation, count and average values
@@ -217,5 +211,11 @@ class Checker():
         confidence = Rules.objects.filter(rule_id = "1").only("rule_edition")
         return confidence / 100
 
-    def calcNotionalAmount(self, underPrice, uValueInUSD, quant, nValueInUSD):
+    def calcNotionalAmount(self, underlyingPrice, underlyingCurrency, quantity, notionalCurrency, dateOfTrade):
+
+        uValueInUSD = float(self.getCurrency(underlyingCurrency, dateOfTrade))
+        nValueInUSD = float(self.getCurrency(notionalCurrency, dateOfTrade))
+        underPrice = float(underlyingPrice)
+        quant = int(quantity)
+
         return underPrice / uValueInUSD * quant * nValueInUSD
