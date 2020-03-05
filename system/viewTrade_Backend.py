@@ -18,3 +18,15 @@ class ViewTrader():
         for i in range (10, maxPage, 10):
             options.append(int(i/10))
         return options
+
+    def getTradeFromID(self, tradeID):
+        trade = DerivativeTrades.objects.filter(trade_id=tradeID).values()[0]
+
+        trade['trade_date'] = trade['date'].date()
+        trade['trade_time'] = trade['date'].time()
+        trade['buyer_name'] = self.getCompanyNameFromID(trade['buying_party_id'])
+        trade['seller_name'] = self.getCompanyNameFromID(trade['selling_party_id'])
+        return trade
+
+    def getCompanyNameFromID(self, ID):
+        return CompanyCodes.objects.filter(company_trade_id = ID).values()[0]['company_name']

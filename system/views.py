@@ -90,25 +90,32 @@ def viewTrades(request):
     print(request.POST.dict())
     # request.POST lets access submited data by key names
     selected_day = request.POST.get('selected_day', False)
-    if (selected_day and request.POST.get('selected_day_submit', False)) or (request.POST.get('pg_number')):
-        pg_number = 1
-        if request.POST.get('pg_number', False):
-            pg_number = request.POST.get('pg_number', False)
+    pg_number = request.POST.get('pg_number', False)
+    tradeIDSelected = request.POST.get('choice', False)
+    context = dict()
+    if tradeIDSelected:
+        companies = CompanyCodes.objects.all().order_by('company_name')
+        products = ProductSellers.objects.all().order_by('product_name')
+        currencies = CurrencyValues.objects.values_list('currency', flat=True).distinct().order_by('currency')
+        tradeToBeEdited = v.getTradeFromID(tradeIDSelected)
+        context['trade_edit'] = tradeToBeEdited
+        context['companies'] = companies
+        context['products'] = products
+        context['currencies'] = currencies
+    if (selected_day and (request.POST.get('selected_day_submit', False) or (pg_number))):
+        if not pg_number:
+            pg_number = 1
         trades_by_date = v.getTradesByDateTen(selected_day, int(pg_number))
         number_of_trades = v.getPageNumberOption(v.getNumTradesByDate(selected_day))
-        context = {
-            'view_trades' : trades_by_date,
-            'num_trades' : number_of_trades,
-            'date' : selected_day,
-            'cur_pg' : pg_number
-        }
+        context['view_trades'] = trades_by_date
+        context['num_trades'] = number_of_trades
+        context['date'] = selected_day
+        context['cur_pg'] = pg_number
     else:
         trades = DerivativeTrades.objects.order_by('-date')[:10]
-        context = {
-            'view_trades' : trades,
-            'num_trades' : '',
-            'date' : ''
-        }
+        context['view_trades'] = trades
+        context['num_trades'] = ''
+        context['date'] = ''
 
     return render(request, 'system/viewtrades.html', context)
 
