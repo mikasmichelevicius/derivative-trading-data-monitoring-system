@@ -52,26 +52,34 @@ def newTrade(request):
         underlying_price = request.POST.get('underlying_price', False)
         underlying_currency = request.POST.get('underlying_currency', False)
         strike_price = request.POST.get('strike_price', False)
+        confidence = request.POST.get('confidence', False)
 
+        ## If user decided to proceed with the trade that is not confident
+        if confidence != False:
+            ## UPDATE TABLES STANDARD DEVIATION, ANALYSIS
+            # c.updateTablesWithTrade()
+            messages.success(request, 'Trade Inserted Successfully. You can enter another trade')
+            return HttpResponseRedirect(reverse('system:newTrade'))
+
+        # Will return True if trade is confident and it is imserted into tables
+        # Will return False if values are not valid or doesn't exist
+        # Will return 0 if trade is not confident for further validation
         isValid = c.validateTrade(request, trade_id, trade_date, product_name, seller_name, buyer_name,
                         quantity, notional_currency, maturity_date,
                         underlying_price, underlying_currency, strike_price)
 
         # values for new trade input fields with saved input values of unsuccessful trade submission
         values = c.interFields(trade_id, product_name, seller_name, buyer_name, quantity, notional_currency,
-                        underlying_price, underlying_currency, strike_price, trade_date, maturity_date,
+                        underlying_price, underlying_currency, strike_price, trade_date, maturity_date, trade_time,
                         values['currencies'], values['products'], values['companies'])
 
-        if isValid:
-            confidenceInNotional = c.checkConfidence(c.calcNotionalAmount(underlying_price, underlying_currency, quantity, notional_currency, trade_date),
-                                                              float(Analysis.objects.values_list("standard_dev", flat=True).get(product_name = product_name, company_name_id = c.getIDFromCompanyName(buyer_name))),
-                                                              float(Analysis.objects.values_list("average", flat=True).get(product_name = product_name, company_name_id = c.getIDFromCompanyName(buyer_name))),
-                                                              int(Rules.objects.values_list('rule_edition', flat = True).get(rule_id = "1")))
-            if not confidenceInNotional:
-                messages.error(request, 'Notional Amount seems unlikely: ' + str(c.calcNotionalAmount(underlying_price, underlying_currency, quantity, notional_currency, trade_date)) + ' Are you sure you would like to enter trade?')
-            # -> Code to update database with new trade
+        if isValid == True:
             messages.success(request, 'Trade Inserted Successfully. You can enter another trade')
             return HttpResponseRedirect(reverse('system:newTrade'))
+
+        # returned when trade entered is not valid
+        if isValid == 0:
+            values.update({'not_confident' : True})
 
     return render(request, 'system/newTrade.html', values)
 

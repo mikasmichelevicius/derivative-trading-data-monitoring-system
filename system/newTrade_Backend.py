@@ -98,6 +98,26 @@ class Checker():
              oldCount = analysisObj.prod_count
              oldSD = float(analysisObj.standard_dev)
              (newAverage, newCount, newSD) = self.recalculateSD(oldAverage, oldCount, oldSD, notionalAmount)
+        else:
+            # If buyer,product is a new tuple, we update tables DerivativeTrades and Analysis
+            newAverage = notionalAmount
+            newCount = 1
+            newSD = 0
+            ## UPDATE TABLES CODE ----------------------------------------------
+            return True
+
+        percentage = int(Rules.objects.get(rule_id=1).rule_edition)
+        isConfident = self.checkConfidence(notionalAmount, newSD, newAverage,percentage)
+
+        # if trade is not confident, the error message is registered and 0 is returned for further validation
+        if not isConfident:
+            messages.error(request, 'Notional Amount seems unlikely: ' + str(notionalAmount) + '. Are you sure you would like to enter trade?')
+            return 0
+        # trade is confidet, tables are updated
+        # else:
+        #     self.updateTablesWithTrade()
+        #     return True
+
 
         return True
 
@@ -154,7 +174,7 @@ class Checker():
             'trade_id' : [], 'quantity' : [],
             'notional_currency' : [], 'underlying_price' : [],
             'underlying_currency' : [], 'strike_price' : [], 'companies' : companies,
-            'trade_date' : [], 'maturity_date' : [],
+            'trade_date' : [], 'trade_time' : [], 'maturity_date' : [],
             'products' : products, 'currencies' : currencies
         }
         return values
@@ -162,10 +182,10 @@ class Checker():
     # intermediate values for input fields if the trade entereded unsuccessfully
     def interFields(self, trade_id, product_name, seller_name, buyer_name, quantity, notional_currency,
                     underlying_price, underlying_currency, strike_price, trade_date, maturity_date,
-                    currencies, products, companies):
+                    trade_time, currencies, products, companies):
         values = {
             'trade_id' : [trade_id], 'product_name' : [product_name], 'seller_name' : [seller_name],
-            'buyer_name' : [buyer_name], 'quantity' : [quantity],
+            'buyer_name' : [buyer_name], 'quantity' : [quantity], 'trade_time' : [trade_time],
             'notional_currency' : [notional_currency], 'underlying_price' : [underlying_price],
             'underlying_currency' : [underlying_currency], 'strike_price' : [strike_price],
             'trade_date' : [trade_date], 'maturity_date' : [maturity_date],

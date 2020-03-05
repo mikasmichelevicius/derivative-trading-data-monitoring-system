@@ -9,6 +9,11 @@
   {% endif %}
   <br>
   <form action="{% url 'system:newTrade' %}" method="post">{% csrf_token %}
+    {% if not_confident %}
+      <input type="submit" name="confidence" value="Proceed with the trade" />
+      <br>
+      <br>
+    {% endif %}
     <p>Enter Trade ID <input type = 'text'  name='trade_id' value="{{trade_id.0}}" ></p>
     <p>Enter Date of Trade <input type = "date"  name="trade_date" value="{{trade_date.0}}"></p>
     <p>Enter Time of Trade <input type = "time"  name="trade_time" value="{{trade_time.0}}"></p>
