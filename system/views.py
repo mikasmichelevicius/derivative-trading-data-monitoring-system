@@ -50,11 +50,12 @@ def newTrade(request):
         quantity = request.POST.get('quantity', False)
         notional_currency = request.POST.get('notional_currency', False)
         maturity_date = request.POST.get('maturity_date', False)
-        underlying_price = request.POST.get('underlying_price', False)
+        # underlying_price = request.POST.get('underlying_price', False)
         underlying_currency = request.POST.get('underlying_currency', False)
         strike_price = request.POST.get('strike_price', False)
         confidence = request.POST.get('confidence', False)
 
+        print(trade_time)
         ## If user decided to proceed with the trade that is not confident
         if confidence != False:
             ## UPDATE TABLES STANDARD DEVIATION, ANALYSIS
@@ -67,11 +68,11 @@ def newTrade(request):
         # Will return 0 if trade is not confident for further validation
         isValid = c.validateTrade(request, trade_id, trade_date, product_name, seller_name, buyer_name,
                         quantity, notional_currency, maturity_date,
-                        underlying_price, underlying_currency, strike_price)
+                        underlying_currency, strike_price)
 
         # values for new trade input fields with saved input values of unsuccessful trade submission
         values = c.interFields(trade_id, product_name, seller_name, buyer_name, quantity, notional_currency,
-                        underlying_price, underlying_currency, strike_price, trade_date, maturity_date, trade_time,
+                        underlying_currency, strike_price, trade_date, maturity_date, trade_time,
                         values['currencies'], values['products'], values['companies'])
 
         if isValid == True:
@@ -79,7 +80,7 @@ def newTrade(request):
             return HttpResponseRedirect(reverse('system:newTrade'))
 
         # returned when trade entered is not valid
-        if isValid == 0:
+        if isValid == 2:
             values.update({'not_confident' : True})
 
     return render(request, 'system/newTrade.html', values)

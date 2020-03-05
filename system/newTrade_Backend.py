@@ -10,7 +10,7 @@ class Checker():
 
     def validateTrade(self, request, tradeID, dateOfTrade, product, sellingParty,
                         buyingParty, quantity,
-                        notionalCurrency, maturityDate, underlyingPrice,
+                        notionalCurrency, maturityDate,
                         underlyingCurrency, strikePrice):
 
         # Checks to see if any field is empty
@@ -47,10 +47,6 @@ class Checker():
             messages.error(request, 'Maturity date field cannot be empty')
             return False
 
-        if not (underlyingPrice):
-            messages.error(request, 'Underlying price field cannot be empty')
-            return False
-
         if not (underlyingCurrency):
             messages.error(request, 'Underlying currency field cannot be empty')
             return False
@@ -68,9 +64,10 @@ class Checker():
             return False
 
         # Checks to see whether the selling party sell the specific product
-        if not (self.checkPartyProduct(sellingParty, product)):
-            messages.error(request, 'Selling Party does not sell specified product')
-            return False
+        if product != 'Stocks':
+            if not (self.checkPartyProduct(sellingParty, product)):
+                messages.error(request, 'Selling Party does not sell specified product')
+                return False
 
         # Checks whether trade ID has already been taken in database
         if self.checkTradeExists(tradeID):
@@ -83,8 +80,10 @@ class Checker():
             return False
 
         # Checks whether the string inputs are numbers
-        if not self.checkNumericalValues(request, underlyingPrice, quantity, strikePrice):
+        if not self.checkNumericalValues(request, quantity, strikePrice):
             return False
+
+        underlyingPrice = self.getUnderlyingPrice(product,sellingParty,dateOfTrade)
 
         # Calculates Notional Amount
         notionalAmount = self.calcNotionalAmount(underlyingPrice, underlyingCurrency, quantity, notionalCurrency, dateOfTrade)
@@ -111,8 +110,9 @@ class Checker():
 
         # if trade is not confident, the error message is registered and 0 is returned for further validation
         if not isConfident:
+            print('Not Confident')
             messages.error(request, 'Notional Amount seems unlikely: ' + str(notionalAmount) + '. Are you sure you would like to enter trade?')
-            return 0
+            return 2
         # trade is confidet, tables are updated
         # else:
         #     self.updateTablesWithTrade()
@@ -121,13 +121,22 @@ class Checker():
 
         return True
 
+    def getUnderlyingPrice(self,product,sellingParty,dateOfTrade):
+        if product == 'Stocks':
+            companyID = CompanyCodes.objects.get(company_name = sellingParty)
+            try:
+                price = StockPrices.objects.get(date=dateOfTrade, company=companyID).stock_price
+            except StockPrices.DoesNotExist:
+                return StockPrices.objects.filter(company=companyID).latest('date').stock_price
+            return price
+        else:
+            try:
+                price = ProductPrices.objects.get(date=dateOfTrade, product=product).market_price
+            except ProductPrices.DoesNotExist:
+                return ProductPrices.objects.filter(product=product).latest('date').market_price
+            return price
     # Checks whether underlying and strike prices are numerical values and if quantity is an integer
-    def checkNumericalValues(self, request, underlyingPrice, quantity, strikePrice):
-        try:
-            float(underlyingPrice)
-        except ValueError:
-            messages.error(request, 'Underlying Price has to be a number')
-            return False
+    def checkNumericalValues(self, request, quantity, strikePrice):
         try:
             float(strikePrice)
         except ValueError:
@@ -172,7 +181,7 @@ class Checker():
         currencies = CurrencyValues.objects.values_list('currency', flat=True).distinct().order_by('currency')
         values = {
             'trade_id' : [], 'quantity' : [],
-            'notional_currency' : [], 'underlying_price' : [],
+            'notional_currency' : [],
             'underlying_currency' : [], 'strike_price' : [], 'companies' : companies,
             'trade_date' : [], 'trade_time' : [], 'maturity_date' : [],
             'products' : products, 'currencies' : currencies
@@ -181,12 +190,12 @@ class Checker():
 
     # intermediate values for input fields if the trade entereded unsuccessfully
     def interFields(self, trade_id, product_name, seller_name, buyer_name, quantity, notional_currency,
-                    underlying_price, underlying_currency, strike_price, trade_date, maturity_date,
+                    underlying_currency, strike_price, trade_date, maturity_date,
                     trade_time, currencies, products, companies):
         values = {
             'trade_id' : [trade_id], 'product_name' : [product_name], 'seller_name' : [seller_name],
             'buyer_name' : [buyer_name], 'quantity' : [quantity], 'trade_time' : [trade_time],
-            'notional_currency' : [notional_currency], 'underlying_price' : [underlying_price],
+            'notional_currency' : [notional_currency],
             'underlying_currency' : [underlying_currency], 'strike_price' : [strike_price],
             'trade_date' : [trade_date], 'maturity_date' : [maturity_date],
             'companies' : companies, 'products' : products, 'currencies' : currencies

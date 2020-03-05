@@ -34,6 +34,7 @@
       {% endfor %}
     </select></p>
     <p>Enter Product Name <select name="product_name">
+      <option>Stocks</option>
       {% for product in products %}
         <option>{{ product.product_name }}</option>
         {% if product_name %}
@@ -51,7 +52,6 @@
       {% endfor %}
     </select></p>
     <p>Enter Date of Maturity <input type = 'date'  name='maturity_date' value="{{maturity_date.0}}" ></p>
-    <p>Enter Underlying Price <input type = 'text'  name='underlying_price' value="{{underlying_price.0}}"></p>
     <p>Enter Underlying Currency <select name="underlying_currency">
       {% for currency in currencies %}
         <option>{{ currency }}</option>
