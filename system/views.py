@@ -13,6 +13,7 @@ from .models import CompanyCodes, ProductSellers, CurrencyValues, ProductPrices,
 from django.contrib.auth.models import User
 
 from .newTrade_Backend import Checker
+from .viewTrade_Backend import ViewTrader
 
 from .report import renderReport
 
@@ -85,23 +86,36 @@ def newTrade(request):
 
 
 def viewTrades(request):
+    v = ViewTrader()
+    print(request.POST.dict())
     # request.POST lets access submited data by key names
     selected_day = request.POST.get('selected_day', False)
-    if selected_day:
-        print(selected_day)
-        daylist=selected_day.split('-')
-        trades_by_date = DerivativeTrades.objects.all().filter(date__year=daylist[0], date__month=daylist[1], date__day=daylist[2])
-        print(trades_by_date)
-        latest_trades = DerivativeTrades.objects.order_by('-date')[:10]
-        context = {
-            'latest_trades' : latest_trades,
-            'by_date' : trades_by_date
-        }
+    pg_number = request.POST.get('pg_number', False)
+    tradeIDSelected = request.POST.get('choice', False)
+    context = dict()
+    if tradeIDSelected:
+        companies = CompanyCodes.objects.all().order_by('company_name')
+        products = ProductSellers.objects.all().order_by('product_name')
+        currencies = CurrencyValues.objects.values_list('currency', flat=True).distinct().order_by('currency')
+        tradeToBeEdited = v.getTradeFromID(tradeIDSelected)
+        context['trade_edit'] = tradeToBeEdited
+        context['companies'] = companies
+        context['products'] = products
+        context['currencies'] = currencies
+    if (selected_day and (request.POST.get('selected_day_submit', False) or (pg_number))):
+        if not pg_number:
+            pg_number = 1
+        trades_by_date = v.getTradesByDateTen(selected_day, int(pg_number))
+        number_of_trades = v.getPageNumberOption(v.getNumTradesByDate(selected_day))
+        context['view_trades'] = trades_by_date
+        context['num_trades'] = number_of_trades
+        context['date'] = selected_day
+        context['cur_pg'] = pg_number
     else:
-        latest_trades = DerivativeTrades.objects.order_by('-date')[:10]
-        context = {
-            'latest_trades' : latest_trades,
-        }
+        trades = DerivativeTrades.objects.order_by('-date')[:10]
+        context['view_trades'] = trades
+        context['num_trades'] = ''
+        context['date'] = ''
 
     return render(request, 'system/viewtrades.html', context)
 
@@ -112,6 +126,7 @@ def viewRules(request):
     context = {
         'rules' : rules
     }
+    print(request.POST.dict())
     if request.method == 'POST':
         #New Context for the updating field values
         if request.POST.get('select_rule'):

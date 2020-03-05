@@ -3,23 +3,91 @@
   <h1>View/Edit Trades</h1>
   <br>
   <form action="{% url 'system:viewTrades' %}" method="post">{% csrf_token %}
-    <p>Select start date <input type = 'date'  name='start_day' ></p>
-    <p>Select end date <input type='date' name='end_day' ></p>
-    <button type="submit">Submit</button>
-  </form>
-  <br>
-  <h3>Select trade to edit:</h3>
-  <form action="system:viewTrades" method="post">{% csrf_token %}
-    {% if latest_trades %}
-      <ul>
-        {% for trade in latest_trades %}
-          <input type="radio" name="choice" id="choice{{ forloop.counter }}" value="{{ trade.trade_id }}">
-          <label for="choice{{ forloop.counter }}"><b>ID:</b> {{trade.trade_id}}  <b>Buyer:</b> {{ trade.buying_party }}  <b>Seller:</b> {{trade.selling_party}}</label>
-          <br>
-          <!-- <li><b>ID</b>: {{trade.trade_id}} <br><b>Buying</b>: {{trade.buying_party}},  <b>Selling:</b> {{trade.selling_party}},  <b>Date:</b> {{trade.date}}</li> -->
-        {% endfor %}
-      </ul>
+    {% if trade_edit %}
+        <p>Trade ID: {{ trade_edit.trade_id}}</p>
+        <p>Enter Date of Trade <input type = "date"  name="trade_date" value="{{trade_edit.trade_date|date:"Y-m-d"}}"></p>
+        <p>Enter Time of Trade <input type = "time"  name="trade_time" value="{{trade_edit.trade_time|date:"G:i"}}"></p>
+        <p>Enter Seller <select name="seller_name">
+          {% for company in companies %}
+            <option>{{ company.company_name }}</option>
+            {% if trade_edit.seller_name %}
+              <option selected>{{ trade_edit.seller_name }}</option>
+            {% endif %}
+          {% endfor %}
+        </select></p>
+        <p>Enter Buyer <select name="buyer_name">
+          {% for company in companies %}
+            <option>{{ company.company_name }}</option>
+            {% if trade_edit.buyer_name %}
+              <option selected>{{ trade_edit.buyer_name }}</option>
+            {% endif %}
+          {% endfor %}
+        </select></p>
+        <p>Enter Product Name <select name="product_name">
+          {% for product in products %}
+            <option>{{ product.product_name }}</option>
+            {% if trade_edit.product %}
+              <option selected>{{ trade_edit.product }}</option>
+            {% endif %}
+          {% endfor %}
+        </select></p>
+        <p>Enter Quantity <input type = 'text'  name='quantity' value="{{ trade_edit.quantity }}"></p>
+        <p>Enter Notional Currency <select name="notional_currency">
+          {% for currency in currencies %}
+            <option>{{ currency }}</option>
+            {% if trade_edit.notional_currency %}
+              <option selected>{{ trade_edit.notional_currency}}</option>
+            {% endif %}
+          {% endfor %}
+        </select></p>
+        <p>Enter Date of Maturity <input type = 'date'  name='maturity_date' value="{{trade_edit.maturity_date|date:"Y-m-d"}}" ></p>
+        <p>Enter Underlying Price <input type = 'text'  name='underlying_price' value="{{trade_edit.underlying_price}}"></p>
+        <p>Enter Underlying Currency <select name="underlying_currency">
+          {% for currency in currencies %}
+            <option>{{ currency }}</option>
+            {% if trade_edit.underlying_currency %}
+              <option selected>{{ trade_edit.underlying_currency }}</option>
+            {% endif %}
+          {% endfor %}
+        </select></p>
+        <p>Enter Strike Price <input type = 'text'  name='strike_price' value="{{ trade_edit.strike_price }}"></p>
+        <input type="submit" name="confirm_edits_submit"value="Confirm Edits"></input>
     {% endif %}
-    <input type="submit" value="Select">
+    <br>
+    <br>
+    <p>Select Day <input type="date"  name="selected_day" value="{{ date }}"></input></p>
+    <input type="submit" name="selected_day_submit" value="Submit Day"></input>
+    <br>
+    <h3>Select trade to edit:</h3>
+    {% if date %}
+      <h5>Trades On: {{ date }} </h5>
+    {% else %}
+      <h5>Latest Trades:</h5>
+    {% endif %}
+      {% if view_trades %}
+        <ul>
+          {% for trade in view_trades %}
+            <input type="radio" name="choice" value="{{ trade.trade_id }}">
+            <label for="choice{{ forloop.counter }}">
+              <b>ID:</b> {{trade.trade_id}}
+              <b>Buyer:</b> {{ trade.buying_party }}
+              <b>Seller:</b> {{trade.selling_party}}
+            </label>
+            <br>
+          {% endfor %}
+        </ul>
+      {% endif %}
+      {% if num_trades %}
+      <label for="pg_number">Page Number: </label>
+      <select name="pg_number" onChange="form.submit();">
+        {% for num in num_trades %}
+          <option value={{num}}>{{ num }}</option>
+        {% endfor %}
+        <option selected>{{ cur_pg }}</option>
+      </select>
+
+      <br>
+      {% endif %}
+      <input type="submit" name="selected_trade_submit" value="Select Trade"></input>
   </form>
 {% endblock content %}
