@@ -13,6 +13,7 @@ from .models import CompanyCodes, ProductSellers, CurrencyValues, ProductPrices,
 from django.contrib.auth.models import User
 
 from .newTrade_Backend import Checker
+from .viewTrade_Backend import ViewTrader
 
 from .report import renderReport
 
@@ -85,22 +86,28 @@ def newTrade(request):
 
 
 def viewTrades(request):
+    v = ViewTrader()
+    print(request.POST.dict())
     # request.POST lets access submited data by key names
     selected_day = request.POST.get('selected_day', False)
-    if selected_day:
-        print(selected_day)
-        daylist=selected_day.split('-')
-        trades_by_date = DerivativeTrades.objects.all().filter(date__year=daylist[0], date__month=daylist[1], date__day=daylist[2])
-        print(trades_by_date)
-        latest_trades = DerivativeTrades.objects.order_by('-date')[:10]
+    if (selected_day and request.POST.get('selected_day_submit', False)) or (request.POST.get('pg_number')):
+        pg_number = 1
+        if request.POST.get('pg_number', False):
+            pg_number = request.POST.get('pg_number', False)
+        trades_by_date = v.getTradesByDateTen(selected_day, int(pg_number))
+        number_of_trades = v.getPageNumberOption(v.getNumTradesByDate(selected_day))
         context = {
-            'latest_trades' : latest_trades,
-            'by_date' : trades_by_date
+            'view_trades' : trades_by_date,
+            'num_trades' : number_of_trades,
+            'date' : selected_day,
+            'cur_pg' : pg_number
         }
     else:
-        latest_trades = DerivativeTrades.objects.order_by('-date')[:10]
+        trades = DerivativeTrades.objects.order_by('-date')[:10]
         context = {
-            'latest_trades' : latest_trades,
+            'view_trades' : trades,
+            'num_trades' : '',
+            'date' : ''
         }
 
     return render(request, 'system/viewtrades.html', context)
@@ -112,6 +119,7 @@ def viewRules(request):
     context = {
         'rules' : rules
     }
+    print(request.POST.dict())
     if request.method == 'POST':
         #New Context for the updating field values
         if request.POST.get('select_rule'):
