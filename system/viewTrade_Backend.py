@@ -1,5 +1,6 @@
 # Class for the backend for the view/edit trades page
-from .models import CompanyCodes, ProductSellers, CurrencyValues, ProductPrices, StockPrices, DerivativeTrades, Rules, Analysis
+from .models import CompanyCodes, ProductSellers, CurrencyValues, ProductPrices, StockPrices, DerivativeTrades, Rules, Analysis, Insertions
+from datetime import datetime, timedelta
 
 class ViewTrader():
 
@@ -30,3 +31,15 @@ class ViewTrader():
 
     def getCompanyNameFromID(self, ID):
         return CompanyCodes.objects.filter(company_trade_id = ID).values()[0]['company_name']
+
+    def checkUserName(self, tradeID, user):
+        username = Insertions.objects.filter(trade_id = tradeID).values()[0]['user_id']
+        if username == user:
+            return True
+        else:
+            return False
+
+    def checkTradeInLastDay(self, tradeID):
+        date = datetime.now() - timedelta(days = 1)
+        trades = DerivativeTrades.objects.filter(date__gt = date, trade_id = tradeID).values()
+        return trades

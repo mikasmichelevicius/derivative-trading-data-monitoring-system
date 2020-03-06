@@ -102,15 +102,6 @@ def viewTrades(request):
     pg_number = request.POST.get('pg_number', False)
     tradeIDSelected = request.POST.get('choice', False)
     context = dict()
-    if tradeIDSelected:
-        companies = CompanyCodes.objects.all().order_by('company_name')
-        products = ProductSellers.objects.all().order_by('product_name')
-        currencies = CurrencyValues.objects.values_list('currency', flat=True).distinct().order_by('currency')
-        tradeToBeEdited = v.getTradeFromID(tradeIDSelected)
-        context['trade_edit'] = tradeToBeEdited
-        context['companies'] = companies
-        context['products'] = products
-        context['currencies'] = currencies
     if (selected_day and (request.POST.get('selected_day_submit', False) or (pg_number))):
         if not pg_number:
             pg_number = 1
@@ -125,6 +116,19 @@ def viewTrades(request):
         context['view_trades'] = trades
         context['num_trades'] = ''
         context['date'] = ''
+    if tradeIDSelected and request.POST.get('selected_trade_submit', False):
+        if not v.checkTradeInLastDay(tradeIDSelected):
+             messages.error(request, 'Trade has been inserted more than 24 hours ago')
+             return render(request, 'system/viewtrades.html', context)
+        tradeToBeEdited = v.getTradeFromID(tradeIDSelected)
+        if not v.checkUserName(tradeToBeEdited['trade_id'], request.user.id):
+            messages.error(request, 'You have not inserted this trade')
+            return render(request, 'system/viewtrades.html', context)
+
+        currencies = CurrencyValues.objects.values_list('currency', flat=True).distinct().order_by('currency')
+        context['trade_edit'] = tradeToBeEdited
+        context['currencies'] = currencies
+
 
     return render(request, 'system/viewtrades.html', context)
 

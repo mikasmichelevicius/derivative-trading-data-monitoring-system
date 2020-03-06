@@ -3,34 +3,17 @@
   <h1>View/Edit Trades</h1>
   <br>
   <form action="{% url 'system:viewTrades' %}" method="post">{% csrf_token %}
+    {% if messages %}
+      {% for message in messages %}
+        <li> <font color="red">{{message}}</font> </li>
+      {% endfor %}
+    {% endif %}
     {% if trade_edit %}
         <p>Trade ID: {{ trade_edit.trade_id}}</p>
-        <p>Enter Date of Trade <input type = "date"  name="trade_date" value="{{trade_edit.trade_date|date:"Y-m-d"}}"></p>
-        <p>Enter Time of Trade <input type = "time"  name="trade_time" value="{{trade_edit.trade_time|date:"G:i"}}"></p>
-        <p>Enter Seller <select name="seller_name">
-          {% for company in companies %}
-            <option>{{ company.company_name }}</option>
-            {% if trade_edit.seller_name %}
-              <option selected>{{ trade_edit.seller_name }}</option>
-            {% endif %}
-          {% endfor %}
-        </select></p>
-        <p>Enter Buyer <select name="buyer_name">
-          {% for company in companies %}
-            <option>{{ company.company_name }}</option>
-            {% if trade_edit.buyer_name %}
-              <option selected>{{ trade_edit.buyer_name }}</option>
-            {% endif %}
-          {% endfor %}
-        </select></p>
-        <p>Enter Product Name <select name="product_name">
-          {% for product in products %}
-            <option>{{ product.product_name }}</option>
-            {% if trade_edit.product %}
-              <option selected>{{ trade_edit.product }}</option>
-            {% endif %}
-          {% endfor %}
-        </select></p>
+        <p>Date of Trade: {{trade_edit.trade_date|date:"d-m-Y"}}</p>
+        <p>Seller Name: {{ trade_edit.seller_name }} </p>
+        <p>Buyer: {{ trade_edit.buyer_name }} </p>
+        <p>Product Name: {{ trade_edit.product }}</p>
         <p>Enter Quantity <input type = 'text'  name='quantity' value="{{ trade_edit.quantity }}"></p>
         <p>Enter Notional Currency <select name="notional_currency">
           {% for currency in currencies %}
@@ -41,7 +24,7 @@
           {% endfor %}
         </select></p>
         <p>Enter Date of Maturity <input type = 'date'  name='maturity_date' value="{{trade_edit.maturity_date|date:"Y-m-d"}}" ></p>
-        <p>Enter Underlying Price <input type = 'text'  name='underlying_price' value="{{trade_edit.underlying_price}}"></p>
+        <p>Enter Underlying Price: {{trade_edit.underlying_price}}</p>
         <p>Enter Underlying Currency <select name="underlying_currency">
           {% for currency in currencies %}
             <option>{{ currency }}</option>
