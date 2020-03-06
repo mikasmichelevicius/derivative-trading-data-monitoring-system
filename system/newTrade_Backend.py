@@ -98,7 +98,7 @@ class Checker():
              oldSD = float(analysisObj.standard_dev)
              (newAverage, newCount, newSD) = self.recalculateSD(oldAverage, oldCount, oldSD, notionalAmount)
 
-             percentage = int(Rules.objects.get(rule_id=1).rule_edition)
+             percentage = int(Rules.objects.get(rule_id=1).rule_edition) / 100
              isConfident = self.checkConfidence(notionalAmount, newSD, newAverage,percentage)
         else:
             # If buyer,product is a new tuple, new trade is confident
@@ -109,7 +109,6 @@ class Checker():
 
         # if trade is not confident, the error message is registered and 0 is returned for further validation
         if not isConfident:
-            print('Not Confident')
             messages.error(request, 'Notional Amount seems unlikely: ' + str(notionalAmount) + '. Are you sure you would like to enter trade?')
             return 2
         # trade is confident, tables are updated
@@ -285,6 +284,7 @@ class Checker():
         lowerBoundConfidence = (1 - confidencePercentage) / 2
         # Finds how much of the cumulative percentage the givenValue has in the normal distribution
         probabilityConfidence = scipy.stats.norm(average, standardDeviation).cdf(givenValue)
+        
         # Checks lower bound
         if (givenValue < average):
             if (probabilityConfidence > lowerBoundConfidence):
