@@ -1,4 +1,4 @@
-from .models import CompanyCodes, ProductSellers, CurrencyValues, ProductPrices, StockPrices, DerivativeTrades, Rules, Analysis
+from .models import CompanyCodes, ProductSellers, CurrencyValues, ProductPrices, StockPrices, DerivativeTrades, Insertions, Rules, Analysis
 from django.contrib.auth.models import User
 from django.contrib import messages
 import scipy.stats
@@ -97,29 +97,89 @@ class Checker():
              oldCount = analysisObj.prod_count
              oldSD = float(analysisObj.standard_dev)
              (newAverage, newCount, newSD) = self.recalculateSD(oldAverage, oldCount, oldSD, notionalAmount)
+
+             percentage = int(Rules.objects.get(rule_id=1).rule_edition)
+             isConfident = self.checkConfidence(notionalAmount, newSD, newAverage,percentage)
         else:
-            # If buyer,product is a new tuple, we update tables DerivativeTrades and Analysis
+            # If buyer,product is a new tuple, new trade is confident
             newAverage = notionalAmount
             newCount = 1
             newSD = 0
-            ## UPDATE TABLES CODE ----------------------------------------------
-            return True
-
-        percentage = int(Rules.objects.get(rule_id=1).rule_edition)
-        isConfident = self.checkConfidence(notionalAmount, newSD, newAverage,percentage)
+            isConfident = True
 
         # if trade is not confident, the error message is registered and 0 is returned for further validation
         if not isConfident:
             print('Not Confident')
             messages.error(request, 'Notional Amount seems unlikely: ' + str(notionalAmount) + '. Are you sure you would like to enter trade?')
             return 2
-        # trade is confidet, tables are updated
-        # else:
-        #     self.updateTablesWithTrade()
-        #     return True
+        # trade is confident, tables are updated
+        else:
+            self.updateTablesWithTrade(request, dateOfTrade, tradeID, product, buyingParty,
+                                        sellingParty, notionalAmount, notionalCurrency, quantity,
+                                        maturityDate, underlyingPrice, underlyingCurrency, strikePrice,
+                                        newAverage, newCount, newSD)
+            return True
 
 
         return True
+
+    def updateTablesWithTrade(self,request, dateOfTrade, tradeID, product, buyingParty,
+                                sellingParty, notionalAmount, notionalCurrency, quantity,
+                                maturityDate, underlyingPrice, underlyingCurrency, strikePrice,
+                                newAverage, newCount, newSD):
+        self.updateDerivativeTrades(dateOfTrade, tradeID, product, buyingParty,
+                                    sellingParty, notionalAmount, notionalCurrency, quantity,
+                                    maturityDate, underlyingPrice, underlyingCurrency, strikePrice)
+        self.updateInsertions(request, tradeID, dateOfTrade)
+        if newAverage != 0 and newCount != 0 and newSD != 0:
+            self.updateConfidentAnalysis(buyingParty,product, newAverage, newCount, newSD)
+        else:
+            self.updateNotConfidentAnalysis(buyingParty, product, notionalAmount)
+
+
+    def updateDerivativeTrades(self, dateOfTrade, tradeID, product, buyingParty,
+                                sellingParty, notionalAmount, notionalCurrency, quantity,
+                                maturityDate, underlyingPrice, underlyingCurrency, strikePrice):
+
+        company1 = CompanyCodes.objects.get(company_name = buyingParty)
+        company2 = CompanyCodes.objects.get(company_name = sellingParty)
+        DerivativeTrades.objects.create(date = dateOfTrade, trade_id = tradeID, product = product, buying_party = company1, selling_party = company2, notional_amount = notionalAmount, notional_currency = notionalCurrency, quantity = quantity, maturity_date = maturityDate, underlying_price = underlyingPrice, underlying_currency = underlyingCurrency, strike_price = strikePrice)
+
+
+    def updateInsertions(self,request, tradeID, dateOfTrade):
+        # Get current user
+        currUser = request.user
+        newTrade = DerivativeTrades.objects.get(trade_id=tradeID)
+        Insertions.objects.create(user=currUser, trade = newTrade, date = dateOfTrade)
+
+
+    def updateConfidentAnalysis(self,buyingParty,product, newAverage, newCount, newSD):
+        company = CompanyCodes.objects.get(company_name=buyingParty)
+        if newCount == 1:
+            Analysis.objects.create(product_name=product, company_name=company, average=newAverage, standard_dev=newSD, prod_count=newCount)
+        else:
+            analysisObj = Analysis.objects.get(product_name=product, company_name=company)
+            analysisObj.average=newAverage
+            analysisObj.standard_dev=newSD
+            analysisObj.prod_count=newCount
+            analysisObj.save()
+
+
+    def updateNotConfidentAnalysis(self, buyingParty, product, notionalAmount):
+        buyingID = CompanyCodes.objects.get(company_name = buyingParty)
+        if Analysis.objects.filter(company_name=buyingID, product_name=product):
+             analysisObj = Analysis.objects.get(company_name=buyingID, product_name=product)
+             oldAverage = float(analysisObj.average)
+             oldCount = analysisObj.prod_count
+             oldSD = float(analysisObj.standard_dev)
+             (newAverage, newCount, newSD) = self.recalculateSD(oldAverage, oldCount, oldSD, notionalAmount)
+        else:
+            newAverage = notionalAmount
+            newCount = 1
+            newSD = 0
+
+        self.updateConfidentAnalysis(buyingParty,product,newAverage,newCount,newSD)
+
 
     def getUnderlyingPrice(self,product,sellingParty,dateOfTrade):
         if product == 'Stocks':

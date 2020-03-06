@@ -42,7 +42,7 @@ def newTrade(request):
     values = c.initialFields()
     if request.method == "POST":
         trade_id = request.POST.get('trade_id', False)
-        trade_date = request.POST.get('trade_date', False)
+        # trade_date = request.POST.get('trade_date', False)
         trade_time = request.POST.get('trade_time', False)
         product_name = request.POST.get('product_name', False)
         seller_name = request.POST.get('seller_name', False)
@@ -55,17 +55,25 @@ def newTrade(request):
         strike_price = request.POST.get('strike_price', False)
         confidence = request.POST.get('confidence', False)
 
-        print(trade_time)
+        now = datetime.now()
+        trade_date = now.strftime("%Y-%m-%d %H:%M")
+
         ## If user decided to proceed with the trade that is not confident
         if confidence != False:
-            ## UPDATE TABLES STANDARD DEVIATION, ANALYSIS
+            ## UPDATE TABLES STANDARD DEVIATION, ANALYSIS, INSERTIONS, DERIVATIVETRADES
             # c.updateTablesWithTrade()
+            underlyingPrice = c.getUnderlyingPrice(product_name,seller_name,trade_date)
+            notionalAmount = c.calcNotionalAmount(underlyingPrice, underlying_currency, quantity, notional_currency, trade_date)
+            c.updateTablesWithTrade(request, trade_date, trade_id, product_name, buyer_name,
+                                        seller_name, notionalAmount, notional_currency, quantity,
+                                        maturity_date, underlyingPrice, underlying_currency, strike_price,
+                                        0, 0, 0)
             messages.success(request, 'Trade Inserted Successfully. You can enter another trade')
             return HttpResponseRedirect(reverse('system:newTrade'))
 
         # Will return True if trade is confident and it is imserted into tables
         # Will return False if values are not valid or doesn't exist
-        # Will return 0 if trade is not confident for further validation
+        # Will return 2 if trade is not confident for further validation
         isValid = c.validateTrade(request, trade_id, trade_date, product_name, seller_name, buyer_name,
                         quantity, notional_currency, maturity_date,
                         underlying_currency, strike_price)
