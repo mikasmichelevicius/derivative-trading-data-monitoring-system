@@ -63,10 +63,13 @@
       {% if num_trades %}
       <label for="pg_number">Page Number: </label>
       <select name="pg_number" onChange="form.submit();">
-        {% for num in num_trades %}
-          <option value={{num}}>{{ num }}</option>
-        {% endfor %}
         <option selected>{{ cur_pg }}</option>
+        {% for num in num_trades %}
+          {% ifequal cur_pg|add:"0" num|add:"0" %}
+          {% else %}
+            <option value={{num}}>{{ num }}</option>
+          {% endifequal %}
+        {% endfor %}
       </select>
 
       <br>

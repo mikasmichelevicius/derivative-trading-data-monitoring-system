@@ -18,6 +18,8 @@ class ViewTrader():
         options = []
         for i in range (10, maxPage, 10):
             options.append(int(i/10))
+
+        options.append(int(maxPage/10) + 1)
         return options
 
     def getTradeFromID(self, tradeID):
