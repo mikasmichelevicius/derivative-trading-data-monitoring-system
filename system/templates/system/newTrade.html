@@ -1,6 +1,6 @@
 {% extends "system/base.html" %}
 {% block content %}
-  <h2>New Trade</h2>
+  <h1>New Trade</h1>
 
   {% if messages %}
     {% for message in messages %}
@@ -14,95 +14,53 @@
       <br>
       <br>
     {% endif %}
-    <div class="form-group">
-      <label for="trade_id">Enter Trade ID</label>
-      <input type="text" class="form-control" id="trade_id" placeholder="Enter Trade ID">
-    </div>
-    <div class="form-group">
-      <div class="input-group mb-3">
-        <div class="input-group-prepend">
-          <label class="input-group-text" for="seller_name">Choose Seller Name</label>
-        </div>
-        <select class="custom-select" id="seller_name">
-          {% for company in companies %}
-            <option>{{ company.company_name }}</option>
-            {% if seller_name %}
-              <option selected>{{ seller_name.0 }}</option>
-            {% endif %}
-          {% endfor %}
-        </select>
-    </div>
-  </div>
-  <div class="form-group">
-    <div class="input-group mb-3">
-      <div class="input-group-prepend">
-        <label class="input-group-text" for="buyer_name">Choose Buyer Name</label>
-      </div>
-      <select class="custom-select" id="buyer_name">
-        {% for company in companies %}
-          <option>{{ company.company_name }}</option>
-          {% if buyer_name %}
-            <option selected>{{ buyer_name.0 }}</option>
-          {% endif %}
-        {% endfor %}
-      </select>
-    </div>
-  </div>
-  <div class="form-group">
-    <div class="input-group mb-3">
-      <div class="input-group-prepend">
-        <label class="input-group-text" for="product_name">Choose Product Name</label>
-      </div>
-      <select class="custom-select" id="product_name">
-        {% for product in products %}
-          <option>{{ product.product_name }}</option>
-          {% if product_name %}
-            <option selected>{{ product_name.0 }}</option>
-          {% endif %}
-        {% endfor %}
-      </select>
-  </div>
-  </div>
-    <div class="form-group">
-      <label for="quantity">Enter Quantity</label>
-      <input type="text" class="form-control" id="quantity" placeholder="Quantity">
-    </div>
-      <div class="input-group mb-3">
-        <div class="input-group-prepend">
-          <label class="input-group-text" for="notional_currency">Choose Notional Currency</label>
-        </div>
-        <select class="custom-select" id="notional_currency">
-          {% for currency in currencies %}
-            <option>{{ currency }}</option>
-            {% if notional_currency %}
-              <option selected>{{ notional_currency.0 }}</option>
-            {% endif %}
-          {% endfor %}
-        </select>
-    </div>
-    <div class="form-group">
-      <label for="maturity_date">Enter Date of Maturity</label>
-      <input type="date" class="form-control" id="maturity_date">
-    </div>
-    <div class="input-group mb-3">
-      <div class="input-group-prepend">
-        <label class="input-group-text" for="underlying_currency">Choose Underlying Currency</label>
-      </div>
-      <select class="custom-select" id="underlying_currency">
-        {% for currency in currencies %}
-          <option>{{ currency }}</option>
-          {% if underlying_currency %}
-            <option selected>{{ underlying_currency.0 }}</option>
-          {% endif %}
-        {% endfor %}
-      </select>
-    </div>
-    <div class="form-group">
-      <label for="strike_price">Enter Strike Price</label>
-      <input type="text" class="form-control" id="strike_price" placeholder="Strike Price">
-    </div>
+    <p>Enter Trade ID <input type = 'text'  name='trade_id' value="{{trade_id.0}}" ></p>
+    <!-- <p>Enter Date of Trade <input type = "date"  name="trade_date" value="{{trade_date.0}}"></p>
+    <p>Enter Time of Trade <input type = "time"  name="trade_time" value="{{trade_time.0}}"></p> -->
+    <p>Enter Seller <select name="seller_name">
+      {% for company in companies %}
+        <option>{{ company.company_name }}</option>
+        {% if seller_name %}
+          <option selected>{{ seller_name.0 }}</option>
+        {% endif %}
+      {% endfor %}
+    </select></p>
+    <p>Enter Buyer <select name="buyer_name">
+      {% for company in companies %}
+        <option>{{ company.company_name }}</option>
+        {% if buyer_name %}
+          <option selected>{{ buyer_name.0 }}</option>
+        {% endif %}
+      {% endfor %}
+    </select></p>
+    <p>Enter Product Name <select name="product_name">
+      <option>Stocks</option>
+      {% for product in products %}
+        <option>{{ product.product_name }}</option>
+        {% if product_name %}
+          <option selected>{{ product_name.0 }}</option>
+        {% endif %}
+      {% endfor %}
+    </select></p>
+    <p>Enter Quantity <input type = 'text'  name='quantity' value="{{quantity.0}}"></p>
+    <p>Enter Notional Currency <select name="notional_currency">
+      {% for currency in currencies %}
+        <option>{{ currency }}</option>
+        {% if notional_currency %}
+          <option selected>{{ notional_currency.0 }}</option>
+        {% endif %}
+      {% endfor %}
+    </select></p>
+    <p>Enter Date of Maturity <input type = 'date'  name='maturity_date' value="{{maturity_date.0}}" ></p>
+    <p>Enter Underlying Currency <select name="underlying_currency">
+      {% for currency in currencies %}
+        <option>{{ currency }}</option>
+        {% if underlying_currency %}
+          <option selected>{{ underlying_currency.0 }}</option>
+        {% endif %}
+      {% endfor %}
+    </select></p>
+    <p>Enter Strike Price <input type = 'text'  name='strike_price' value="{{strike_price.0}}"></p>
     <button class="btn btn-outline-info" type="submit">Submit</button>
-    <div class="form-group">
-    </div>
   </form>
 {% endblock content %}
