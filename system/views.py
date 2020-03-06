@@ -181,3 +181,30 @@ def printReport(request):
         else:
             messages.error(request, 'Enter a date')
     return render(request, 'system/report.html')
+
+def newProducts(request):
+    values = {
+        'initial' : True, 'product' : False, 'company' : False
+    }
+    if request.method == 'POST':
+        productOption = request.POST.get('product', False)
+        companyOption = request.POST.get('company', False)
+        selected_company = request.POST.get('company_name', False)
+        product_name = request.POST.get('product_name', False)
+        product_price = request.POST.get('product_price', False)
+        if companyOption != False:
+            values['company'] = True
+            values['initial'] = False
+        if productOption != False:
+            values['product'] = True
+            values['initial'] = False
+            companies = CompanyCodes.objects.all().order_by('company_name')
+            values.update({'companies' : companies})
+        print(productOption)
+        print(companyOption)
+        print(selected_company)
+        print(product_name)
+        print(product_price)
+
+
+    return render(request, 'system/newProducts.html', values)
