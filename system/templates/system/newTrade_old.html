@@ -1,0 +1,66 @@
+{% extends "system/base.html" %}
+{% block content %}
+  <h1>New Trade</h1>
+
+  {% if messages %}
+    {% for message in messages %}
+      <li> <font color="red">{{message}}</font> </li>
+    {% endfor %}
+  {% endif %}
+  <br>
+  <form action="{% url 'system:newTrade' %}" method="post">{% csrf_token %}
+    {% if not_confident %}
+      <input type="submit" name="confidence" value="Proceed with the trade" />
+      <br>
+      <br>
+    {% endif %}
+    <p>Enter Trade ID <input type = 'text'  name='trade_id' value="{{trade_id.0}}" ></p>
+    <p>Enter Date of Trade <input type = "date"  name="trade_date" value="{{trade_date.0}}"></p>
+    <p>Enter Time of Trade <input type = "time"  name="trade_time" value="{{trade_time.0}}"></p>
+    <p>Enter Seller <select name="seller_name">
+      {% for company in companies %}
+        <option>{{ company.company_name }}</option>
+        {% if seller_name %}
+          <option selected>{{ seller_name.0 }}</option>
+        {% endif %}
+      {% endfor %}
+    </select></p>
+    <p>Enter Buyer <select name="buyer_name">
+      {% for company in companies %}
+        <option>{{ company.company_name }}</option>
+        {% if buyer_name %}
+          <option selected>{{ buyer_name.0 }}</option>
+        {% endif %}
+      {% endfor %}
+    </select></p>
+    <p>Enter Product Name <select name="product_name">
+      <option>Stocks</option>
+      {% for product in products %}
+        <option>{{ product.product_name }}</option>
+        {% if product_name %}
+          <option selected>{{ product_name.0 }}</option>
+        {% endif %}
+      {% endfor %}
+    </select></p>
+    <p>Enter Quantity <input type = 'text'  name='quantity' value="{{quantity.0}}"></p>
+    <p>Enter Notional Currency <select name="notional_currency">
+      {% for currency in currencies %}
+        <option>{{ currency }}</option>
+        {% if notional_currency %}
+          <option selected>{{ notional_currency.0 }}</option>
+        {% endif %}
+      {% endfor %}
+    </select></p>
+    <p>Enter Date of Maturity <input type = 'date'  name='maturity_date' value="{{maturity_date.0}}" ></p>
+    <p>Enter Underlying Currency <select name="underlying_currency">
+      {% for currency in currencies %}
+        <option>{{ currency }}</option>
+        {% if underlying_currency %}
+          <option selected>{{ underlying_currency.0 }}</option>
+        {% endif %}
+      {% endfor %}
+    </select></p>
+    <p>Enter Strike Price <input type = 'text'  name='strike_price' value="{{strike_price.0}}"></p>
+    <button class="btn btn-outline-info" type="submit">Submit</button>
+  </form>
+{% endblock content %}
