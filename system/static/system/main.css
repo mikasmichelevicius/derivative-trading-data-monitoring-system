@@ -117,3 +117,8 @@ a.article-title:hover {
   background: #99004d;
   cursor: pointer;
 }
+
+.inputaslabel {
+      outline: none;
+      border: 0px none;
+}
