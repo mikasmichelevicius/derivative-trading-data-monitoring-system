@@ -1,0 +1,46 @@
+{% extends "system/base.html" %}
+{% block content %}
+  <form action="{% url 'system:newProducts' %}" method="post">{% csrf_token %}
+    {% if initial %}
+      <h1>Add New Product/Company</h1>
+      <br>
+      {% if messages %}
+        {% for message in messages %}
+          <li> <font color="red">{{message}}</font> </li>
+        {% endfor %}
+      {% endif %}
+      <br>
+      <input type="submit" name="product" value="Add new product" />
+      <input type="submit" name="company" value="Add new company" />
+    {% endif %}
+    {% if product %}
+      <h1>New Product</h1>
+      <br>
+      {% if messages %}
+        {% for message in messages %}
+          <li> <font color="red">{{message}}</font> </li>
+        {% endfor %}
+      {% endif %}
+      <br>
+      <p>Enter Company Name <select name="company_name">
+        {% if company_input %}
+          <option selected>{{ company_input.0 }}</option>
+        {% endif %}
+        {% for company in companies %}
+          <option>{{ company.company_name }}</option>
+        {% endfor %}
+      </select></p>
+      <p>Enter New Product's Name <input type = 'text'  name='product_name' value="{{ product_input.0 }}"></p>
+      <p>Enter Product's Market Price <input type = 'text'  name='product_price' value="{{ price_input.0 }}"></p>
+      <button class="btn btn-outline-info" type="submit" name="submit_product">Submit</button>
+    {% endif %}
+    {% if company %}
+      <h1>New Company</h1>
+      <br>
+      <p>Enter New Company's Name <input type = 'text'  name='new_company_name'></p>
+      <p>Enter Unique 6 digit Company Trade ID <input type='text' name='trade_id'></p>
+      <button class="btn btn-outline-info" type="submit" name="submit_company">Submit</button>
+    {% endif %}
+  </form>
+
+{% endblock content %}
