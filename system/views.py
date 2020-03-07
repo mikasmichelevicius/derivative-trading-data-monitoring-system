@@ -196,7 +196,7 @@ def printReport(request):
 def newProducts(request):
     values = {
         'initial' : True, 'product' : False, 'company' : False,
-        'product_input' : [], 'price_input' : []
+        'product_input' : [], 'price_input' : [], 'trade_id_input' : []
     }
     if request.method == 'POST':
         productOption = request.POST.get('product', False)
@@ -230,7 +230,11 @@ def newProducts(request):
                 }
         if submit_company != False:
             p = prodChecker()
-            print(new_company_name, trade_id)
-            # isValid = p.validateCompany(request, )
+            isValid = p.validateCompany(request, new_company_name, trade_id)
+            if not isValid:
+                values = {
+                    'initial' : False, 'product' : False, 'company' : True,
+                    'company_input' : [new_company_name], 'trade_id_input' : [trade_id]
+                }
 
     return render(request, 'system/newProducts.html', values)

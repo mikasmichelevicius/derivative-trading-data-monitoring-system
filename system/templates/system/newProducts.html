@@ -37,8 +37,14 @@
     {% if company %}
       <h1>New Company</h1>
       <br>
-      <p>Enter New Company's Name <input type = 'text'  name='new_company_name'></p>
-      <p>Enter Unique 6 digit Company Trade ID <input type='text' name='trade_id'></p>
+      {% if messages %}
+        {% for message in messages %}
+          <li> <font color="red">{{message}}</font> </li>
+        {% endfor %}
+      {% endif %}
+      <br>
+      <p>Enter New Company's Name <input type = 'text'  name='new_company_name' value="{{company_input.0}}"></p>
+      <p>Enter Unique 6 digit Company Trade ID <input type='text' name='trade_id' value="{{trade_id_input.0}}" maxlength="6" pattern=".{6,}"   required title="6 characters minimum. Letters and numbers only" style="text-transform:uppercase"></p>
       <button class="btn btn-outline-info" type="submit" name="submit_company">Submit</button>
     {% endif %}
   </form>
