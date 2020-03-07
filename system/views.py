@@ -134,9 +134,59 @@ def viewTrades(request):
         context['trade_edit'] = tradeToBeEdited
         context['currencies'] = currencies
 
-    if request.POST.get('confirm_edits_submit', False):
-        c = Checker()
+    if request.POST.get('confirm_edits_submit', False) or request.POST.get('confidence'):
+        trade_id = request.POST.get('trade_id', False)
+        # trade_date = request.POST.get('date_trade', False)
+        trade_time = request.POST.get('trade_time', False)
+        product_name = request.POST.get('product', False)
+        seller_name = request.POST.get('seller_name', False)
+        buyer_name = request.POST.get('buyer_name', False)
+        quantity = request.POST.get('quantity', False)
+        notional_currency = request.POST.get('notional_currency', False)
+        maturity_date = request.POST.get('maturity_date', False)
+        underlying_price = request.POST.get('underlying_price', False)
+        underlying_currency = request.POST.get('underlying_currency', False)
+        strike_price = request.POST.get('strike_price', False)
+        confidence = request.POST.get('confidence', False)
+        currencies = CurrencyValues.objects.values_list('currency', flat=True).distinct().order_by('currency')
 
+        context['currencies'] = currencies
+        trade_date = v.getTradeFromID(trade_id)['date']
+        maturity_date = datetime.strptime(maturity_date, '%Y-%m-%d')
+
+        ## If user decided to proceed with the trade that is not confident
+        if confidence != False:
+            ## UPDATE TABLES STANDARD DEVIATION, ANALYSIS, INSERTIONS, DERIVATIVETRADES
+            # c.updateTablesWithTrade()
+            underlyingPrice = v.getUnderlyingPrice(product_name,seller_name,trade_date)
+            notionalAmount = v.calcNotionalAmount(underlyingPrice, underlying_currency, quantity, notional_currency, trade_date)
+            differences = v.checkDifferences(trade_id, quantity, notional_currency, maturity_date, underlying_currency, strike_price)
+
+            v.updateTablesWithTrade(request, trade_date, trade_id, product_name, buyer_name, notionalAmount, 0, 0, 0, differences)
+            messages.success(request, 'Trade Editted Successfully. You can enter another trade')
+            return HttpResponseRedirect(reverse('system:viewTrades'))
+
+        # Will return True if trade is confident and it is imserted into tables
+        # Will return False if values are not valid or doesn't exist
+        # Will return 2 if trade is not confident for further validation
+        isValid = v.validateTrade(request, trade_id, trade_date, product_name, seller_name, buyer_name,
+                        quantity, notional_currency, maturity_date,
+                        underlying_currency, strike_price)
+
+        # values for new trade input fields with saved input values of unsuccessful trade submission
+        context = v.interFields(trade_id, product_name, seller_name, buyer_name, quantity, notional_currency,
+                        underlying_currency, strike_price, trade_date, maturity_date, trade_time, underlying_price,
+                        context['currencies'], context)
+
+        if isValid == True:
+            messages.success(request, 'Trade Editted Successfully. You can enter another trade')
+            return HttpResponseRedirect(reverse('system:viewTrades'))
+
+        # returned when trade entered is not valid
+        if isValid == 2:
+            context.update({'not_confident' : True})
+
+        context['trade_edit']['date'] = v.getTradeFromID(trade_id)['date']
     return render(request, 'system/viewtrades.html', context)
 
 
