@@ -45,3 +45,14 @@ class ViewTrader():
         date = datetime.now() - timedelta(days = 1)
         trades = DerivativeTrades.objects.filter(date__gt = date, trade_id = tradeID).values()
         return trades
+
+
+    # Gets the associated currency in USD on that specific date
+    # If such value for specified date does not exist, the value of the latest
+    # date is given (because we're not sotring latest data)
+    def getCurrency(self, currency, dateOfTrade):
+        try:
+            value = CurrencyValues.objects.get(currency = currency, date = dateOfTrade).value_in_usd
+        except CurrencyValues.DoesNotExist:
+            return CurrencyValues.objects.filter(currency = currency).latest('date').value_in_usd
+        return value

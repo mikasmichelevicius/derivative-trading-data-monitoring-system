@@ -117,7 +117,7 @@ def viewTrades(request):
         context['view_trades'] = trades
         context['num_trades'] = ''
         context['date'] = ''
-    # Submitted a trade
+    # Selected a trade
     if tradeIDSelected and request.POST.get('selected_trade_submit', False):
 
         if not v.checkTradeInLastDay(tradeIDSelected):
@@ -133,6 +133,8 @@ def viewTrades(request):
         context['trade_edit'] = tradeToBeEdited
         context['currencies'] = currencies
 
+    if request.POST.get('confirm_edits_submit', False):
+        c = Checker()
 
     return render(request, 'system/viewtrades.html', context)
 
