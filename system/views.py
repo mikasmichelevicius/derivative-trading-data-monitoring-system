@@ -14,6 +14,7 @@ from django.contrib.auth.models import User
 
 from .newTrade_Backend import Checker
 from .viewTrade_Backend import ViewTrader
+from .newProduct_Backend import prodChecker
 
 from .report import renderReport
 
@@ -184,7 +185,8 @@ def printReport(request):
 
 def newProducts(request):
     values = {
-        'initial' : True, 'product' : False, 'company' : False
+        'initial' : True, 'product' : False, 'company' : False,
+        'product_input' : [], 'price_input' : []
     }
     if request.method == 'POST':
         productOption = request.POST.get('product', False)
@@ -192,19 +194,33 @@ def newProducts(request):
         selected_company = request.POST.get('company_name', False)
         product_name = request.POST.get('product_name', False)
         product_price = request.POST.get('product_price', False)
+        submit_product = request.POST.get('submit_product',False)
+        new_company_name = request.POST.get('new_company_name', False)
+        trade_id = request.POST.get('trade_id', False)
+        submit_company = request.POST.get('submit_company', False)
         if companyOption != False:
             values['company'] = True
             values['initial'] = False
         if productOption != False:
-            values['product'] = True
+            values.update({'product' : True})
+            # values['product'] = True
             values['initial'] = False
             companies = CompanyCodes.objects.all().order_by('company_name')
             values.update({'companies' : companies})
-        print(productOption)
-        print(companyOption)
-        print(selected_company)
-        print(product_name)
-        print(product_price)
 
+        if submit_product != False:
+            p = prodChecker()
+            isValid = p.validateProduct(request, selected_company, product_name,product_price)
+            companies = CompanyCodes.objects.all().order_by('company_name')
+            if not isValid:
+                values = {
+                    'initial' : False, 'product' : True, 'company' : False,
+                    'company_input' : [selected_company], 'product_input' : [product_name],
+                    'price_input' : [product_price], 'companies' : companies
+                }
+        if submit_company != False:
+            p = prodChecker()
+            print(new_company_name, trade_id)
+            # isValid = p.validateCompany(request, )
 
     return render(request, 'system/newProducts.html', values)
