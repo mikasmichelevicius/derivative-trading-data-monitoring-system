@@ -1,5 +1,6 @@
 # Class for the backend for the view/edit trades page
-from .models import CompanyCodes, ProductSellers, CurrencyValues, ProductPrices, StockPrices, DerivativeTrades, Rules, Analysis
+from .models import CompanyCodes, ProductSellers, CurrencyValues, ProductPrices, StockPrices, DerivativeTrades, Rules, Analysis, Insertions
+from datetime import datetime, timedelta
 
 class ViewTrader():
 
@@ -17,6 +18,8 @@ class ViewTrader():
         options = []
         for i in range (10, maxPage, 10):
             options.append(int(i/10))
+
+        options.append(int(maxPage/10) + 1)
         return options
 
     def getTradeFromID(self, tradeID):
@@ -30,3 +33,26 @@ class ViewTrader():
 
     def getCompanyNameFromID(self, ID):
         return CompanyCodes.objects.filter(company_trade_id = ID).values()[0]['company_name']
+
+    def checkUserName(self, tradeID, user):
+        username = Insertions.objects.filter(trade_id = tradeID).values()[0]['user_id']
+        if username == user:
+            return True
+        else:
+            return False
+
+    def checkTradeInLastDay(self, tradeID):
+        date = datetime.now() - timedelta(days = 1)
+        trades = DerivativeTrades.objects.filter(date__gt = date, trade_id = tradeID).values()
+        return trades
+
+
+    # Gets the associated currency in USD on that specific date
+    # If such value for specified date does not exist, the value of the latest
+    # date is given (because we're not sotring latest data)
+    def getCurrency(self, currency, dateOfTrade):
+        try:
+            value = CurrencyValues.objects.get(currency = currency, date = dateOfTrade).value_in_usd
+        except CurrencyValues.DoesNotExist:
+            return CurrencyValues.objects.filter(currency = currency).latest('date').value_in_usd
+        return value
