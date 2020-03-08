@@ -28,7 +28,7 @@ def renderReport(buffer, reportName, date):
 
     # Insertions
     S(Paragraph("Inserted Trades", style = styleHeading2))
-    
+
     # Add headers to the data
     data = []
     data.append((Paragraph("ID", style = styleSmall),
@@ -46,19 +46,19 @@ def renderReport(buffer, reportName, date):
 
     # Populate the data array with the trades
     for trade in DerivativeTrades.objects.filter(date__date = date).order_by("date"):
-        data.append((Paragraph(trade.trade_id, style = styleSmall), 
-                        Paragraph(str(trade.date), style = styleSmall), 
-                        Paragraph(trade.product, style = styleSmall), 
-                        Paragraph(str(trade.buying_party), style = styleSmall), 
-                        Paragraph(str(trade.selling_party), style = styleSmall), 
-                        Paragraph(str(trade.notional_amount), style = styleSmall), 
-                        Paragraph(trade.notional_currency, style = styleSmall), 
-                        Paragraph(str(trade.quantity), style = styleSmall), 
-                        Paragraph(str(trade.maturity_date), style = styleSmall), 
-                        Paragraph(str(trade.underlying_price), style = styleSmall), 
-                        Paragraph(trade.underlying_currency, style = styleSmall), 
+        data.append((Paragraph(trade.trade_id, style = styleSmall),
+                        Paragraph(str(trade.date), style = styleSmall),
+                        Paragraph(trade.product, style = styleSmall),
+                        Paragraph(str(trade.buying_party), style = styleSmall),
+                        Paragraph(str(trade.selling_party), style = styleSmall),
+                        Paragraph(str(trade.notional_amount), style = styleSmall),
+                        Paragraph(trade.notional_currency, style = styleSmall),
+                        Paragraph(str(trade.quantity), style = styleSmall),
+                        Paragraph(str(trade.maturity_date), style = styleSmall),
+                        Paragraph(str(trade.underlying_price), style = styleSmall),
+                        Paragraph(trade.underlying_currency, style = styleSmall),
                         Paragraph(str(trade.strike_price), style = styleSmall)))
-    
+
     # Specify a table filled with the data.
     cw = (width - (2 * inch)) / 12
     table = Table(data, colWidths=[cw, cw*1.07, cw*1.07, cw*1.07, cw*1.07, cw*1.07, cw*0.85, cw*0.95, cw, cw, cw*0.85, cw])
@@ -88,19 +88,19 @@ def renderReport(buffer, reportName, date):
 
     # Populate the data array with the trades
     for trade in DerivativeTrades.objects.filter(maturity_date__date = date).order_by("date"):
-        data.append((Paragraph(trade.trade_id, style = styleSmall), 
-                        Paragraph(str(trade.date), style = styleSmall), 
-                        Paragraph(trade.product, style = styleSmall), 
-                        Paragraph(str(trade.buying_party), style = styleSmall), 
-                        Paragraph(str(trade.selling_party), style = styleSmall), 
-                        Paragraph(str(trade.notional_amount), style = styleSmall), 
-                        Paragraph(trade.notional_currency, style = styleSmall), 
-                        Paragraph(str(trade.quantity), style = styleSmall), 
-                        Paragraph(str(trade.maturity_date), style = styleSmall), 
-                        Paragraph(str(trade.underlying_price), style = styleSmall), 
-                        Paragraph(trade.underlying_currency, style = styleSmall), 
+        data.append((Paragraph(trade.trade_id, style = styleSmall),
+                        Paragraph(str(trade.date), style = styleSmall),
+                        Paragraph(trade.product, style = styleSmall),
+                        Paragraph(str(trade.buying_party), style = styleSmall),
+                        Paragraph(str(trade.selling_party), style = styleSmall),
+                        Paragraph(str(trade.notional_amount), style = styleSmall),
+                        Paragraph(trade.notional_currency, style = styleSmall),
+                        Paragraph(str(trade.quantity), style = styleSmall),
+                        Paragraph(str(trade.maturity_date), style = styleSmall),
+                        Paragraph(str(trade.underlying_price), style = styleSmall),
+                        Paragraph(trade.underlying_currency, style = styleSmall),
                         Paragraph(str(trade.strike_price), style = styleSmall)))
-    
+
     # Specify a table filled with the data.
     cw = (width - (2 * inch)) / 12
     table = Table(data, colWidths=[cw, cw*1.07, cw*1.07, cw*1.07, cw*1.07, cw*1.07, cw*0.85, cw*0.95, cw, cw, cw*0.85, cw])
@@ -124,13 +124,13 @@ def renderReport(buffer, reportName, date):
 
     # Populate the data array with the trades
     for edit in Edits.objects.filter(date__date = date).order_by("date"):
-        data.append((Paragraph(edit.user, style = styleSmall), 
-                        Paragraph(edit.trade, style = styleSmall), 
-                        Paragraph(str(edit.date), style = styleSmall), 
-                        Paragraph(str(edit.field), style = styleSmall), 
-                        Paragraph(str(edit.old_value), style = styleSmall), 
+        data.append((Paragraph(edit.user.username, style = styleSmall),
+                        Paragraph(edit.trade.trade_id, style = styleSmall),
+                        Paragraph(str(edit.date), style = styleSmall),
+                        Paragraph(str(edit.field), style = styleSmall),
+                        Paragraph(str(edit.old_value), style = styleSmall),
                         Paragraph(str(edit.new_value), style = styleSmall)))
-    
+
     # Specify a table filled with the data.
     cw = (width - (2 * inch)) / 6
     table = Table(data, colWidths=[cw, cw, cw, cw, cw, cw])
@@ -151,10 +151,10 @@ def renderReport(buffer, reportName, date):
 
     # Populate the data array with the trades
     for removal in Removals.objects.filter(date__date = date).order_by("date"):
-        data.append((Paragraph(edit.user, style = styleSmall), 
-                        Paragraph(edit.trade, style = styleSmall), 
-                        Paragraph(str(edit.date), style = styleSmall)))
-    
+        data.append((Paragraph(removal.user.username, style = styleSmall),
+                        Paragraph(removal.trade_id, style = styleSmall),
+                        Paragraph(str(removal.date), style = styleSmall)))
+
     # Specify a table filled with the data.
     cw = (width - (2 * inch)) / 3
     table = Table(data, colWidths=[cw, cw, cw])

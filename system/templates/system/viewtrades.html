@@ -61,50 +61,56 @@
     {% endif %}
     <br>
     <br>
-    <p>Select Day <input type="date"  name="selected_day" value="{{ date }}"></input></p>
-    <input type="submit" name="selected_day_submit" value="Submit Day"></input>
-    <br>
-    <br>
-    <h3>Select trade to edit or delete:</h3>
-    {% if date %}
-      {% if view_trades %}
-        <h5>Trades On: {{ date }} </h5>
-      {% else %}
-        <h5>No Trades Were Added On: {{ date }}</h5>
-      {% endif %}
-    {% else %}
-      <h5>Latest Trades:</h5>
-    {% endif %}
-      {% if view_trades %}
-        <ul>
-          {% for trade in view_trades %}
-            <input type="radio" name="choice" value="{{ trade.trade_id }}">
-            <label for="choice{{ forloop.counter }}">
-              <b>ID:</b> {{trade.trade_id}}
-              <b>Buyer:</b> {{ trade.buying_party }}
-              <b>Seller:</b> {{trade.selling_party}}
-            </label>
-            <br>
-          {% endfor %}
-        </ul>
-      {% endif %}
-      {% if view_trades %}
-        {% if num_trades %}
-        <label for="pg_number">Page Number: </label>
-        <select name="pg_number" onChange="form.submit();">
-          <option selected>{{ cur_pg }}</option>
-          {% for num in num_trades %}
-            {% ifequal cur_pg|add:"0" num|add:"0" %}
-            {% else %}
-              <option value={{num}}>{{ num }}</option>
-            {% endifequal %}
-          {% endfor %}
-        </select>
 
-        <br>
+
+    {% if not trade_edit %}
+
+
+      <p>Select Day <input type="date"  name="selected_day" value="{{ date }}"></input></p>
+      <input type="submit" name="selected_day_submit" value="Submit Day"></input>
+      <br>
+      <br>
+      <h3>Select trade to edit or delete:</h3>
+      {% if date %}
+        {% if view_trades %}
+          <h5>Trades On: {{ date }} </h5>
+        {% else %}
+          <h5>No Trades Were Added On: {{ date }}</h5>
         {% endif %}
-        <input type="submit" name="selected_trade_submit" value="Edit Selected Trade"></input>
-        <input type="submit" name="selected_trade_delete" value="Delete Selected Trade"></input>
+      {% else %}
+        <h5>Latest Trades:</h5>
       {% endif %}
+        {% if view_trades %}
+          <ul>
+            {% for trade in view_trades %}
+              <input type="radio" name="choice" value="{{ trade.trade_id }}">
+              <label for="choice{{ forloop.counter }}">
+                <b>ID:</b> {{trade.trade_id}}
+                <b>Buyer:</b> {{ trade.buying_party }}
+                <b>Seller:</b> {{trade.selling_party}}
+              </label>
+              <br>
+            {% endfor %}
+          </ul>
+        {% endif %}
+        {% if view_trades %}
+          {% if num_trades %}
+          <label for="pg_number">Page Number: </label>
+          <select name="pg_number" onChange="form.submit();">
+            <option selected>{{ cur_pg }}</option>
+            {% for num in num_trades %}
+              {% ifequal cur_pg|add:"0" num|add:"0" %}
+              {% else %}
+                <option value={{num}}>{{ num }}</option>
+              {% endifequal %}
+            {% endfor %}
+          </select>
+
+          <br>
+          {% endif %}
+          <input type="submit" name="selected_trade_submit" value="Edit Selected Trade"></input>
+          <input type="submit" name="selected_trade_delete" value="Delete Selected Trade"></input>
+        {% endif %}
+    {% endif %}
   </form>
 {% endblock content %}

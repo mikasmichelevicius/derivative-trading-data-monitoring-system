@@ -129,6 +129,7 @@ def viewTrades(request):
             messages.error(request, 'You have not inserted this trade')
             return render(request, 'system/viewtrades.html', context)
 
+        v.updateRemovals(request.user, tradeIDSelected)
         v.deleteTrade(tradeIDSelected)
         messages.success(request, "Trade With ID: '" +tradeIDSelected+"' Deleted Successfully. You can select another trade")
         return HttpResponseRedirect(reverse('system:viewTrades'))

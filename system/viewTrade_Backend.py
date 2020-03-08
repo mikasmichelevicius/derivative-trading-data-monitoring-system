@@ -1,5 +1,5 @@
 # Class for the backend for the view/edit trades page
-from .models import CompanyCodes, ProductSellers, CurrencyValues, ProductPrices, StockPrices, DerivativeTrades, Rules, Analysis, Edits, Insertions
+from .models import CompanyCodes, ProductSellers, CurrencyValues, ProductPrices, StockPrices, DerivativeTrades, Removals, Rules, Analysis, Edits, Insertions
 from datetime import datetime, timedelta
 from django.contrib.auth.models import User
 from django.contrib import messages
@@ -128,6 +128,11 @@ class ViewTrader():
 
 
         return True
+
+    def updateRemovals(self, user, tradeID):
+        now = datetime.now()
+        rem_date = now.strftime("%Y-%m-%d")
+        Removals.objects.create(user=user, trade_id=tradeID, date=rem_date)
 
     def updateTablesWithTrade(self, request, dateOfTrade, tradeID, product, buyingParty,
                                 notionalAmount, newAverage, newCount, newSD,
