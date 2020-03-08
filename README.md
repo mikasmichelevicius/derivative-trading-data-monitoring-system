@@ -1,9 +1,6 @@
-# group_project
- group39
-
 # Derivative Trade Data Monitoring System
 
-System provides user to import/delete/edit trades in the system, generates a report or
+Prototype system to monitor derivative trade data. It provides user to import/delete/edit trades in the system, generates a report and lets add new products and companies to the system.
 
 ## Installation
 
