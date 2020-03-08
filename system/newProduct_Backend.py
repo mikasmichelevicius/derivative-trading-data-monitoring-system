@@ -61,7 +61,6 @@ class prodChecker():
         return True
 
     def updateCompany(self, request, companyName, tradeID):
-        print('updating')
         tradeID = tradeID.upper()
         CompanyCodes.objects.create(company_name=companyName, company_trade_id=tradeID)
         messages.error(request, "Company '" + companyName +  "' successfully inserted with trade ID '" + tradeID + "' to the system")

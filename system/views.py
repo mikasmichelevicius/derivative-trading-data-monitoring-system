@@ -83,7 +83,6 @@ def newTrade(request):
         values = c.interFields(trade_id, product_name, seller_name, buyer_name, quantity, notional_currency,
                         underlying_currency, strike_price, trade_date, maturity_date, trade_time,
                         values['currencies'], values['products'], values['companies'])
-        print('inter: ', len(values['currencies']))
 
         if isValid == True:
             messages.success(request, 'Trade Inserted Successfully. You can enter another trade')
@@ -98,7 +97,6 @@ def newTrade(request):
 
 def viewTrades(request):
     v = ViewTrader()
-    print(request.POST.dict())
     # request.POST lets access submited data by key names
     selected_day = request.POST.get('selected_day', False)
     pg_number = request.POST.get('pg_number', False)
@@ -212,7 +210,6 @@ def viewRules(request):
     context = {
         'rules' : rules
     }
-    print(request.POST.dict())
     if request.method == 'POST':
         #New Context for the updating field values
         if request.POST.get('select_rule'):
@@ -280,11 +277,9 @@ def newProducts(request):
         approve_old_comp = request.POST.get('approve_old_comp', False)
         approve_corrected_comp = request.POST.get('approve_corrected_comp')
         if approve_old_comp:
-            print('approved old?', approve_old_comp)
             p.updateCompany(request, approve_old_comp, trade_id)
             return render(request, 'system/newProducts.html', values)
         if approve_corrected_comp:
-            print('approved corrected?', approve_corrected_comp)
             p.updateCompany(request, approve_corrected_comp, trade_id)
             return render(request, 'system/newProducts.html', values)
         if approve_old_prod:
@@ -314,7 +309,6 @@ def newProducts(request):
                     'company_input' : [selected_company], 'product_input' : [product_name],
                     'price_input' : [product_price], 'companies' : companies
                 }
-                print('NOT VALID INPUTS')
 
             if isValid:
                 corrected = p.spellChecker(request, product_name, values)
@@ -330,10 +324,8 @@ def newProducts(request):
                     'price_input' : [product_price], 'companies' : companies,
                     'corrected_name' : corrected
                 }
-                print('STRINGS NOT EQUAL, INPUTS VALID', corrected)
 
             if isValid and stringsEqual:
-                print('EVERYTHING VALID INSERTED')
                 p.updateProduct(request, selected_company, product_name, product_price)
                 return render(request, 'system/newProducts.html', values)
 
@@ -358,10 +350,8 @@ def newProducts(request):
                     'company_input' : [new_company_name], 'trade_id_input' : [trade_id],
                     'corrected_name' : corrected
                 }
-                print('STRINGS NOT EQUAL, INPUTS VALID', corrected)
 
             if isValid and stringsEqual:
-                print('EVERYTHING VALID INSERTED')
                 p.updateCompany(request, new_company_name, trade_id)
                 return render(request, 'system/newProducts.html', values)
 

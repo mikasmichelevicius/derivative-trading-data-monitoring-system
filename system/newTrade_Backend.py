@@ -245,7 +245,6 @@ class Checker():
             'trade_date' : [], 'trade_time' : [], 'maturity_date' : [],
             'products' : products, 'currencies' : currencies
         }
-        print('initial: ', len(values['currencies']))
         return values
 
     # intermediate values for input fields if the trade entereded unsuccessfully
