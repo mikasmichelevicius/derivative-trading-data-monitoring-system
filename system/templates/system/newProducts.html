@@ -15,6 +15,16 @@
     {% if product %}
       <h1>New Product</h1>
       <br>
+      {% if corrected_name %}
+        <h5><font color="red">Did you mean {{corrected_name}}?</font></h5>
+        <br>
+        Continue with name <input type="submit" name="approve_corrected" value="{{corrected_name}}" />
+        <br>
+        <br>
+        Continue with name <input type="submit" name="approve_old" value="{{product_input.0}}">
+        <br>
+        <br>
+      {% endif %}
       {% if messages %}
         {% for message in messages %}
           <li> <font color="red">{{message}}</font> </li>
@@ -36,6 +46,16 @@
     {% if company %}
       <h1>New Company</h1>
       <br>
+      {% if corrected_name %}
+        <h5><font color="red">Did you mean {{corrected_name}}?</font></h5>
+        <br>
+        Continue with name <input type="submit" name="approve_corrected_comp" value="{{corrected_name}}" />
+        <br>
+        <br>
+        Continue with name <input type="submit" name="approve_old_comp" value="{{company_input.0}}">
+        <br>
+        <br>
+      {% endif %}
       {% if messages %}
         {% for message in messages %}
           <li> <font color="red">{{message}}</font> </li>

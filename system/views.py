@@ -265,6 +265,7 @@ def newProducts(request):
         'product_input' : [], 'price_input' : [], 'trade_id_input' : []
     }
     if request.method == 'POST':
+        p = prodChecker()
         productOption = request.POST.get('product', False)
         companyOption = request.POST.get('company', False)
         selected_company = request.POST.get('company_name', False)
@@ -274,6 +275,25 @@ def newProducts(request):
         new_company_name = request.POST.get('new_company_name', False)
         trade_id = request.POST.get('trade_id', False)
         submit_company = request.POST.get('submit_company', False)
+        approve_old_prod = request.POST.get('approve_old',False)
+        approve_corrected_prod = request.POST.get('approve_corrected', False)
+        approve_old_comp = request.POST.get('approve_old_comp', False)
+        approve_corrected_comp = request.POST.get('approve_corrected_comp')
+        if approve_old_comp:
+            print('approved old?', approve_old_comp)
+            p.updateCompany(request, approve_old_comp, trade_id)
+            return render(request, 'system/newProducts.html', values)
+        if approve_corrected_comp:
+            print('approved corrected?', approve_corrected_comp)
+            p.updateCompany(request, approve_corrected_comp, trade_id)
+            return render(request, 'system/newProducts.html', values)
+        if approve_old_prod:
+            p.updateProduct(request, selected_company, approve_old_prod, product_price)
+            return render(request, 'system/newProducts.html', values)
+        if approve_corrected_prod:
+            p.updateProduct(request, selected_company, approve_corrected_prod, product_price)
+            return render(request, 'system/newProducts.html', values)
+
         if companyOption != False:
             values['company'] = True
             values['initial'] = False
@@ -285,24 +305,64 @@ def newProducts(request):
             values.update({'companies' : companies})
 
         if submit_product != False:
-            p = prodChecker()
             isValid = p.validateProduct(request, selected_company, product_name,product_price)
             companies = CompanyCodes.objects.all().order_by('company_name')
+
             if not isValid:
                 values = {
                     'initial' : False, 'product' : True, 'company' : False,
                     'company_input' : [selected_company], 'product_input' : [product_name],
                     'price_input' : [product_price], 'companies' : companies
                 }
-            correction = p.spellChecker(request, product_name, values)
+                print('NOT VALID INPUTS')
+
+            if isValid:
+                corrected = p.spellChecker(request, product_name, values)
+                if corrected == product_name:
+                    stringsEqual=True
+                else:
+                    stringsEqual=False
+
+            if isValid and not stringsEqual:
+                values = {
+                    'initial' : False, 'product' : True, 'company' : False,
+                    'company_input' : [selected_company], 'product_input' : [product_name],
+                    'price_input' : [product_price], 'companies' : companies,
+                    'corrected_name' : corrected
+                }
+                print('STRINGS NOT EQUAL, INPUTS VALID', corrected)
+
+            if isValid and stringsEqual:
+                print('EVERYTHING VALID INSERTED')
+                p.updateProduct(request, selected_company, product_name, product_price)
+                return render(request, 'system/newProducts.html', values)
+
 
         if submit_company != False:
-            p = prodChecker()
             isValid = p.validateCompany(request, new_company_name, trade_id)
             if not isValid:
                 values = {
                     'initial' : False, 'product' : False, 'company' : True,
                     'company_input' : [new_company_name], 'trade_id_input' : [trade_id]
                 }
+            if isValid:
+                corrected = p.spellChecker(request, new_company_name, values)
+                if corrected == new_company_name:
+                    stringsEqual=True
+                else:
+                    stringsEqual=False
+
+            if isValid and not stringsEqual:
+                values = {
+                    'initial' : False, 'product' : False, 'company' : True,
+                    'company_input' : [new_company_name], 'trade_id_input' : [trade_id],
+                    'corrected_name' : corrected
+                }
+                print('STRINGS NOT EQUAL, INPUTS VALID', corrected)
+
+            if isValid and stringsEqual:
+                print('EVERYTHING VALID INSERTED')
+                p.updateCompany(request, new_company_name, trade_id)
+                return render(request, 'system/newProducts.html', values)
 
     return render(request, 'system/newProducts.html', values)
