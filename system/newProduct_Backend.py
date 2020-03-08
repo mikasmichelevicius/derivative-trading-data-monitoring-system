@@ -3,6 +3,10 @@ from django.contrib.auth.models import User
 from django.contrib import messages
 import re
 from datetime import datetime
+# import sys
+# import os
+#
+# sys.path.append(os.getcwd() + '/..')
 # import evaluate
 
 class prodChecker():
@@ -26,8 +30,6 @@ class prodChecker():
         except ValueError:
             messages.error(request, "Product's Price has to be a number")
             return False
-
-        ## update tables
 
         now = datetime.now()
         date = now.strftime("%Y-%m-%d")
@@ -63,11 +65,12 @@ class prodChecker():
 
         tradeID = tradeID.upper()
         CompanyCodes.objects.create(company_name=companyName, company_trade_id=tradeID)
-        ## update tables
+
         messages.error(request, "Company '" + companyName +  "' successfully inserted with trade ID '" + tradeID + "' to the system")
 
         return True
 
     # def spellChecker(self, request, stringValue, values):
+    #     print('spell checker here')
     #     print(evaluate.returnCorrectedString(stringValue))
     #     return True

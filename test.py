@@ -1,4 +1,4 @@
 import evaluate
 
-result=evaluate.returnCorrectedString("Xbox 360")
+result=evaluate.returnCorrectedString("Testing strign")
 print(result)

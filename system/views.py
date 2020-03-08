@@ -84,7 +84,7 @@ def newTrade(request):
                         underlying_currency, strike_price, trade_date, maturity_date, trade_time,
                         values['currencies'], values['products'], values['companies'])
         print('inter: ', len(values['currencies']))
-        
+
         if isValid == True:
             messages.success(request, 'Trade Inserted Successfully. You can enter another trade')
             return HttpResponseRedirect(reverse('system:newTrade'))
@@ -294,6 +294,7 @@ def newProducts(request):
                     'company_input' : [selected_company], 'product_input' : [product_name],
                     'price_input' : [product_price], 'companies' : companies
                 }
+            # correction = p.spellChecker(request, product_name, values)
 
         if submit_company != False:
             p = prodChecker()
