@@ -121,8 +121,8 @@ def viewTrades(request):
     # Selected a trade
     if tradeIDSelected and request.POST.get('selected_trade_submit', False):
 
-        if not v.checkTradeInLastDay(tradeIDSelected):
-             messages.error(request, 'Trade has been inserted more than 24 hours ago')
+        if not v.checkTradeInLastDay(request, tradeIDSelected):
+             # messages.error(request, 'Trade has been inserted more than 24 hours ago')
              return render(request, 'system/viewtrades.html', context)
         tradeToBeEdited = v.getTradeFromID(tradeIDSelected)
 
@@ -278,6 +278,7 @@ def newProducts(request):
                     'company_input' : [selected_company], 'product_input' : [product_name],
                     'price_input' : [product_price], 'companies' : companies
                 }
+
         if submit_company != False:
             p = prodChecker()
             isValid = p.validateCompany(request, new_company_name, trade_id)

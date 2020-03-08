@@ -4,6 +4,7 @@ os.environ['CUDA_VISIBLE_DEVICES'] = '-1'
 from utils import CharacterTable, transform
 from utils import restore_model, decode_sequences
 from utils import read_text, tokenize
+import keras
 
 error_rate = 0.6
 reverse = True
@@ -34,11 +35,11 @@ encoder_model, decoder_model = restore_model(model_path, hidden_size)
 
 #Call this function with a string and it will return a corrected string. (only works for words, does not work for IDs)
 def returnCorrectedString(inputString):
-    
+
     tokens = tokenize(inputString)
     tokens = list(filter(None, tokens))
     nb_tokens = len(tokens)
-   
+
 
 
 
@@ -48,8 +49,8 @@ def returnCorrectedString(inputString):
     target_chars = set(' '.join(train_decoder))
     input_ctable = CharacterTable(input_chars)
     target_ctable = CharacterTable(target_chars)
-    
-    
+
+
     input_tokens, target_tokens, decoded_tokens = decode_sequences(
         misspelled_tokens, target_tokens, input_ctable, target_ctable,
         maxlen, reverse, encoder_model, decoder_model, nb_tokens,
@@ -58,4 +59,3 @@ def returnCorrectedString(inputString):
     #print('Decoded sentence:', ' '.join([token for token in decoded_tokens]))
     newString = ' '.join([token for token in decoded_tokens])
     return newString
-    

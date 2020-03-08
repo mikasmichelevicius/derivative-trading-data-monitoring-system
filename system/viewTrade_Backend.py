@@ -45,9 +45,12 @@ class ViewTrader():
         else:
             return False
 
-    def checkTradeInLastDay(self, tradeID):
-        date = datetime.now() - timedelta(days = 1)
+    def checkTradeInLastDay(self, request, tradeID):
+        hoursInterval = int(Rules.objects.get(rule_id=2).rule_edition)
+        date = datetime.now() - timedelta(hours = hoursInterval)
         trades = DerivativeTrades.objects.filter(date__gt = date, trade_id = tradeID).values()
+        if not trades:
+            messages.error(request, 'Trade has been inserted more than ' + str(hoursInterval) + ' hours ago')
         return trades
 
     def validateTrade(self, request, tradeID, dateOfTrade, product, sellingParty,
@@ -339,5 +342,5 @@ class ViewTrader():
             differences['underlyingCurrency'] = [trade['underlying_currency'], underlyingCurrency]
         if float(strikePrice) != float(trade['strike_price']):
             differences['strikePrice'] = [trade['strike_price'], strikePrice]
-            
+
         return differences

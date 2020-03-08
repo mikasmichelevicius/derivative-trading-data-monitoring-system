@@ -11,7 +11,12 @@
         <input type="text" id="ruleIDOut" name="ruleIDUpdate" value="{{rule.rule_id}}" readonly><br><br>
           {% if rule.rule_typing == "slider" %}
             <div class="slidecontainer" id="slider">
-            <input name="updateSlider" type="range" min="0" max="100" value="{{rule.rule_edition}}" class="slider" id="myRange">
+            {% if rule.rule_id == 1 %}
+              <input name="updateSlider" type="range" min="0" max="100" value="{{rule.rule_edition}}" class="slider" id="myRange">
+            {% endif %}
+            {% if rule.rule_id == 2 %}
+              <input name="updateSlider" type="range" min="0" max="48" value="{{rule.rule_edition}}" class="slider" id="myRange">
+            {% endif %}
             <b>Value:</b> <span id="demo"></span>
             </div>
 

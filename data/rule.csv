@@ -1,2 +1,3 @@
 ruleID,ruleDesc,ruleEdition,ruleTyping
 1,Error detection in the notional amount of a trade based on the product being bought and the buying party's history of buying the product. If the notional amount is calculated to be past a certain percentage away from the average - the error is detected. Set the error change using the slider: ,95,slider
+2,Set the number of hours after new trade insertion during which user can edit or delete trade from the system. Up to 48 hours: ,24,slider

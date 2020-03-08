@@ -3,6 +3,7 @@ from django.contrib.auth.models import User
 from django.contrib import messages
 import re
 from datetime import datetime
+# import evaluate
 
 class prodChecker():
 
@@ -66,3 +67,7 @@ class prodChecker():
         messages.error(request, "Company '" + companyName +  "' successfully inserted with trade ID '" + tradeID + "' to the system")
 
         return True
+
+    # def spellChecker(self, request, stringValue, values):
+    #     print(evaluate.returnCorrectedString(stringValue))
+    #     return True
