@@ -36,19 +36,19 @@
         <p>Enter Notional Currency <select name="notional_currency">
           {% for currency in currencies %}
             <option>{{ currency }}</option>
-            {% if trade_edit.notional_currency %}
-              <option selected>{{ trade_edit.notional_currency}}</option>
-            {% endif %}
           {% endfor %}
+          {% if trade_edit.notional_currency %}
+            <option selected>{{ trade_edit.notional_currency}}</option>
+          {% endif %}
         </select></p>
         <p>Enter Date of Maturity <input type = 'date'  name='maturity_date' required value="{{ trade_edit.maturity_date|date:"Y-m-d" }}" ></p>
         <p>Enter Underlying Currency <select name="underlying_currency">
           {% for currency in currencies %}
             <option>{{ currency }}</option>
-            {% if trade_edit.underlying_currency %}
-              <option selected>{{ trade_edit.underlying_currency }}</option>
-            {% endif %}
           {% endfor %}
+          {% if trade_edit.underlying_currency %}
+            <option selected>{{ trade_edit.underlying_currency }}</option>
+          {% endif %}
         </select></p>
         <p>Enter Strike Price <input type = 'text'  name='strike_price' pattern="[0-9]+([\.][0-9]+)?" step="0.01" required title="A number with up to 2 decimal places" value="{{ trade_edit.strike_price }}"></p>
         <input type="submit" name="confirm_edits_submit"value="Confirm Edits"></input>

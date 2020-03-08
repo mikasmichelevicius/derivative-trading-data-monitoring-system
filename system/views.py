@@ -83,7 +83,8 @@ def newTrade(request):
         values = c.interFields(trade_id, product_name, seller_name, buyer_name, quantity, notional_currency,
                         underlying_currency, strike_price, trade_date, maturity_date, trade_time,
                         values['currencies'], values['products'], values['companies'])
-
+        print('inter: ', len(values['currencies']))
+        
         if isValid == True:
             messages.success(request, 'Trade Inserted Successfully. You can enter another trade')
             return HttpResponseRedirect(reverse('system:newTrade'))
