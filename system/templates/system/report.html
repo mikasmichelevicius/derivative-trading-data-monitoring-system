@@ -3,7 +3,7 @@
   <h1>Generate Report</h1>
   <form action="{% url 'system:printReport' %}"  method="post">{% csrf_token %}
     <label for="date">Date of Report: </label>
-    <input id="date" type="date" name="date" value="{{ report_date }}">
+    <input id="date" type="date" name="date" required value="{{ report_date }}">
     <input type="submit" value="Generate">
   </form>
   {% if messages %}

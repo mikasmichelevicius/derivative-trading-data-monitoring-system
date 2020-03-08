@@ -14,9 +14,7 @@
       <br>
       <br>
     {% endif %}
-    <p>Enter Trade ID <input type = 'text'  name='trade_id' value="{{trade_id.0}}" ></p>
-    <!-- <p>Enter Date of Trade <input type = "date"  name="trade_date" value="{{trade_date.0}}"></p>
-    <p>Enter Time of Trade <input type = "time"  name="trade_time" value="{{trade_time.0}}"></p> -->
+    <p>Enter Trade ID <input type = 'text'  name='trade_id' pattern="^[a-zA-Z0-9]*$" maxlength="16" pattern=".{16,}"   required title="16 digit ID. Letters and numbers only" style="text-transform:uppercase" value="{{trade_id.0}}" ></p>
     <p>Enter Seller <select name="seller_name">
       {% for company in companies %}
         <option>{{ company.company_name }}</option>
@@ -42,7 +40,7 @@
         {% endif %}
       {% endfor %}
     </select></p>
-    <p>Enter Quantity <input type = 'text'  name='quantity' value="{{quantity.0}}"></p>
+    <p>Enter Quantity <input type = 'text'  name='quantity' pattern="^[0-9]*$" required title="Number has to be an integer" value="{{quantity.0}}"></p>
     <p>Enter Notional Currency <select name="notional_currency">
       {% for currency in currencies %}
         <option>{{ currency }}</option>
@@ -51,7 +49,7 @@
         {% endif %}
       {% endfor %}
     </select></p>
-    <p>Enter Date of Maturity <input type = 'date'  name='maturity_date' value="{{maturity_date.0}}" ></p>
+    <p>Enter Date of Maturity <input type = 'date'  name='maturity_date' value="{{maturity_date.0}}" required></p>
     <p>Enter Underlying Currency <select name="underlying_currency">
       {% for currency in currencies %}
         <option>{{ currency }}</option>
@@ -60,7 +58,7 @@
         {% endif %}
       {% endfor %}
     </select></p>
-    <p>Enter Strike Price <input type = 'text'  name='strike_price' value="{{strike_price.0}}"></p>
+    <p>Enter Strike Price <input type = 'text'  name='strike_price' pattern="[0-9]+([\.][0-9]+)?" step="0.01" required title="A number with up to 2 decimal places" value="{{strike_price.0}}"></p>
     <button class="btn btn-outline-info" type="submit">Submit</button>
   </form>
 {% endblock content %}

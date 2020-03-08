@@ -15,26 +15,24 @@
           <br>
         {% endif %}
         <p>
-          <label for="trade_id">Trade ID: </label>
-          <input type="text" name="trade_id" value="{{trade_edit.trade_id}}" readonly class="inputaslabel"></input>
+          <label for="trade_id">Trade ID: <b>{{ trade_edit.trade_id }}</b></label>
         </p>
         <p>
-          <label for="trade_date">Date of Trade: </label>
-          <input type="text" name="trade_date" value="{{trade_edit.date|date:"d-m-Y H:i"}}" readonly class="inputaslabel"></input>
+          <label for="trade_date">Date of Trade: <b>{{trade_edit.date|date:"d-m-Y H:i"}}</b></label>
         </p>
         <p>
-          <label for="seller_name">Seller Name: </label>
-          <input type="text" name="seller_name" value="{{ trade_edit.seller_name }}" readonly class="inputaslabel"></input>
+          <label for="seller_name">Seller Name: <b>{{ trade_edit.seller_name }}</b></label>
         </p>
         <p>
-          <label for="buyer_name">Buyer: </label>
-          <input type="text" name="buyer_name" value="{{ trade_edit.buyer_name }}" readonly class="inputaslabel"></input>
+          <label for="buyer_name">Buyer: <b>{{ trade_edit.buyer_name }}</b></label>
         </p>
         <p>
-          <label for="product">Product: </label>
-          <input type="text" name="product" value="{{ trade_edit.product }}" readonly class="inputaslabel"></input>
+          <label for="product">Product: <b>{{ trade_edit.product }}</b></label>
         </p>
-        <p>Enter Quantity <input type = 'text'  name='quantity' value="{{ trade_edit.quantity }}">        </p>
+        <!-- <p>
+          <label for="underlying_price">Underlying Price: <b>{{ trade_edit.underlying_price }}</b></label>
+        </p> -->
+        <p>Enter Quantity <input type = 'text'  name='quantity' value="{{ trade_edit.quantity }}" pattern="^[0-9]*$" required title="Number has to be an integer">        </p>
         <p>Enter Notional Currency <select name="notional_currency">
           {% for currency in currencies %}
             <option>{{ currency }}</option>
@@ -43,11 +41,7 @@
             {% endif %}
           {% endfor %}
         </select></p>
-        <p>Enter Date of Maturity <input type = 'date'  name='maturity_date' value="{{ trade_edit.maturity_date|date:"Y-m-d" }}" ></p>
-        <p>
-          <label for="underlying_price">Underlying Price:</label>
-          <input type="text" name="underlying_price" value="{{ trade_edit.underlying_price }}" readonly class="inputaslabel"></input>
-        </p>
+        <p>Enter Date of Maturity <input type = 'date'  name='maturity_date' required value="{{ trade_edit.maturity_date|date:"Y-m-d" }}" ></p>
         <p>Enter Underlying Currency <select name="underlying_currency">
           {% for currency in currencies %}
             <option>{{ currency }}</option>
@@ -56,7 +50,7 @@
             {% endif %}
           {% endfor %}
         </select></p>
-        <p>Enter Strike Price <input type = 'text'  name='strike_price' value="{{ trade_edit.strike_price }}"></p>
+        <p>Enter Strike Price <input type = 'text'  name='strike_price' pattern="[0-9]+([\.][0-9]+)?" step="0.01" required title="A number with up to 2 decimal places" value="{{ trade_edit.strike_price }}"></p>
         <input type="submit" name="confirm_edits_submit"value="Confirm Edits"></input>
     {% endif %}
     <br>
@@ -71,6 +65,7 @@
       <br>
       <br>
       <h3>Select trade to edit or delete:</h3>
+      <br>
       {% if date %}
         {% if view_trades %}
           <h5>Trades On: {{ date }} </h5>
