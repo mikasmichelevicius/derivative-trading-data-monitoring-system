@@ -3,13 +3,15 @@ from django.contrib.auth.models import User
 from django.contrib import messages
 import re
 from datetime import datetime
-# import sys
-# import os
-#
-# sys.path.append(os.getcwd() + '/..')
-# import evaluate
+import sys
+import os
 
+sys.path.append(os.getcwd() + '/..')
+from evaluate import NeuralNetwork
 class prodChecker():
+    
+        
+        
 
     def validateProduct(self, request, companyName, productName, productPrice):
 
@@ -70,7 +72,8 @@ class prodChecker():
 
         return True
 
-    # def spellChecker(self, request, stringValue, values):
-    #     print('spell checker here')
-    #     print(evaluate.returnCorrectedString(stringValue))
-    #     return True
+    def spellChecker(self, request, stringValue, values):
+         print('spell checker here')
+         nn = NeuralNetwork() # this is what makes it slow, should call it once during initialisation
+         print(nn.returnCorrectedString(stringValue))
+         return True

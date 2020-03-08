@@ -294,7 +294,7 @@ def newProducts(request):
                     'company_input' : [selected_company], 'product_input' : [product_name],
                     'price_input' : [product_price], 'companies' : companies
                 }
-            # correction = p.spellChecker(request, product_name, values)
+            correction = p.spellChecker(request, product_name, values)
 
         if submit_company != False:
             p = prodChecker()
