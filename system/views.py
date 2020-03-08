@@ -119,6 +119,20 @@ def viewTrades(request):
         context['num_trades'] = ''
         context['date'] = ''
     # Selected a trade
+    if tradeIDSelected and request.POST.get('selected_trade_delete', False):
+        if not v.checkTradeInLastDay(request, tradeIDSelected):
+            return render(request, 'system/viewtrades.html', context)
+
+        tradeToBeEdited = v.getTradeFromID(tradeIDSelected)
+
+        if not v.checkUserName(tradeToBeEdited['trade_id'], request.user.id):
+            messages.error(request, 'You have not inserted this trade')
+            return render(request, 'system/viewtrades.html', context)
+
+        v.deleteTrade(tradeIDSelected)
+        messages.success(request, "Trade With ID: '" +tradeIDSelected+"' Deleted Successfully. You can select another trade")
+        return HttpResponseRedirect(reverse('system:viewTrades'))
+
     if tradeIDSelected and request.POST.get('selected_trade_submit', False):
 
         if not v.checkTradeInLastDay(request, tradeIDSelected):
@@ -163,7 +177,7 @@ def viewTrades(request):
             differences = v.checkDifferences(trade_id, quantity, notional_currency, maturity_date, underlying_currency, strike_price)
 
             v.updateTablesWithTrade(request, trade_date, trade_id, product_name, buyer_name, notionalAmount, 0, 0, 0, differences)
-            messages.success(request, 'Trade Editted Successfully. You can enter another trade')
+            messages.success(request, 'Trade Editted Successfully. You can select another trade')
             return HttpResponseRedirect(reverse('system:viewTrades'))
 
         # Will return True if trade is confident and it is imserted into tables
@@ -179,7 +193,7 @@ def viewTrades(request):
                         context['currencies'], context)
 
         if isValid == True:
-            messages.success(request, 'Trade Editted Successfully. You can enter another trade')
+            messages.success(request, 'Trade Editted Successfully. You can select another trade')
             return HttpResponseRedirect(reverse('system:viewTrades'))
 
         # returned when trade entered is not valid

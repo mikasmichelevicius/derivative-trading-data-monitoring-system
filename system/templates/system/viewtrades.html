@@ -65,7 +65,7 @@
     <input type="submit" name="selected_day_submit" value="Submit Day"></input>
     <br>
     <br>
-    <h3>Select trade to edit:</h3>
+    <h3>Select trade to edit or delete:</h3>
     {% if date %}
       {% if view_trades %}
         <h5>Trades On: {{ date }} </h5>
@@ -103,7 +103,8 @@
 
         <br>
         {% endif %}
-        <input type="submit" name="selected_trade_submit" value="Select Trade"></input>
+        <input type="submit" name="selected_trade_submit" value="Edit Selected Trade"></input>
+        <input type="submit" name="selected_trade_delete" value="Delete Selected Trade"></input>
       {% endif %}
   </form>
 {% endblock content %}

@@ -186,6 +186,9 @@ class ViewTrader():
             analysisObj.prod_count=newCount
             analysisObj.save()
 
+    def deleteTrade(self, tradeID):
+        trade=DerivativeTrades.objects.get(trade_id=tradeID)
+        trade.delete()
 
     def updateNotConfidentAnalysis(self, buyingParty, product, notionalAmount):
         buyingID = CompanyCodes.objects.get(company_name = buyingParty)
