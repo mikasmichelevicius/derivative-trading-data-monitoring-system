@@ -10,7 +10,8 @@ sys.path.append(os.getcwd() + '/..')
 from evaluate import NeuralNetwork
 class prodChecker():
     
-        
+    def __init__(self):
+        self.nn = NeuralNetwork()        
         
 
     def validateProduct(self, request, companyName, productName, productPrice):
@@ -74,6 +75,6 @@ class prodChecker():
 
     def spellChecker(self, request, stringValue, values):
          print('spell checker here')
-         nn = NeuralNetwork() # this is what makes it slow, should call it once during initialisation
-         print(nn.returnCorrectedString(stringValue))
+          # this is what makes it slow, should call it once during initialisation
+         print(self.nn.returnCorrectedString(stringValue))
          return True

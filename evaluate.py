@@ -12,6 +12,7 @@ import keras.backend.tensorflow_backend as tb
 
 #modified code from https://github.com/vuptran/deep-spell-checkr
 class NeuralNetwork():
+    
     def __init__(self):
         self.error_rate = 0.6
         self.reverse = True
