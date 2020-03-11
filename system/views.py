@@ -17,7 +17,8 @@ from .viewTrade_Backend import ViewTrader
 from .newProduct_Backend import prodChecker
 
 from .report import renderReport
-
+from evaluate import NeuralNetwork
+nn = NeuralNetwork()
 # Create your views here.
 
 # View is responsible for one of two things: returning HttpResponse object
@@ -312,7 +313,7 @@ def newProducts(request):
                 }
 
             if isValid:
-                corrected = p.spellChecker(request, product_name, values)
+                corrected = p.spellChecker(request, product_name, values,nn)
                 if corrected == product_name:
                     stringsEqual=True
                 else:
@@ -339,7 +340,7 @@ def newProducts(request):
                     'company_input' : [new_company_name], 'trade_id_input' : [trade_id]
                 }
             if isValid:
-                corrected = p.spellChecker(request, new_company_name, values)
+                corrected = p.spellChecker(request, new_company_name, values,nn)
                 if corrected == new_company_name:
                     stringsEqual=True
                 else:

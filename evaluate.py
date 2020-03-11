@@ -40,7 +40,7 @@ class NeuralNetwork():
 
     #Call this function with a string and it will return a corrected string. (only works for words, does not work for IDs)
     def returnCorrectedString(self,inputString):
-
+        tb._SYMBOLIC_SCOPE.value = True
         tokens = tokenize(inputString)
         tokens = list(filter(None, tokens))
         nb_tokens = len(tokens)

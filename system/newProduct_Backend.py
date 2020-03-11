@@ -74,8 +74,8 @@ class prodChecker():
         ProductPrices.objects.create(date=date, product=product, market_price=productPrice)
         messages.error(request, "Product '" + productName +  "' successfully inserted for '" + companyName + "' to the system")
 
-    def spellChecker(self, request, stringValue, values):
+    def spellChecker(self, request, stringValue, values,nn):
           # this is what makes it slow, should call it once during initialisation
-         corrected = NeuralNetwork().returnCorrectedString(stringValue)
+         corrected = nn.returnCorrectedString(stringValue)
          # corrected = self.nn.returnCorrectedString(stringValue)
          return corrected
