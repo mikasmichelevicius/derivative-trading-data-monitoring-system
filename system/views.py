@@ -165,6 +165,7 @@ def viewTrades(request):
         currencies = CurrencyValues.objects.values_list('currency', flat=True).distinct().order_by('currency')
 
         context['currencies'] = currencies
+        print(trade_id)
         trade_date = v.getTradeFromID(trade_id)['date']
         maturity_date = datetime.strptime(maturity_date, '%Y-%m-%d')
 

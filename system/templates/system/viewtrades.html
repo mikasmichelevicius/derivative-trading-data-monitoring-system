@@ -15,19 +15,24 @@
           <br>
         {% endif %}
         <p>
-          <label for="trade_id">Trade ID: <b>{{ trade_edit.trade_id }}</b></label>
+          <label for="trade_id">Trade ID: </label>
+          <input type="text" name="trade_id" value="{{trade_edit.trade_id}}" readonly class="inputaslabel" />
         </p>
         <p>
-          <label for="trade_date">Date of Trade: <b>{{trade_edit.date|date:"d-m-Y H:i"}}</b></label>
+          <label for="trade_date">Date of Trade: <b></b></label>
+          <input type="text" name="trade_date" value="{{ trade_edit.date|date:"d-m-Y H:i"}}" readonly class="inputaslabel" />
         </p>
         <p>
-          <label for="seller_name">Seller Name: <b>{{ trade_edit.seller_name }}</b></label>
+          <label for="seller_name">Seller Name: <b></b></label>
+          <input type="text" name="seller_name" value="{{ trade_edit.seller_name }}" readonly class="inputaslabel" />
         </p>
         <p>
-          <label for="buyer_name">Buyer: <b>{{ trade_edit.buyer_name }}</b></label>
+          <label for="buyer_name">Buyer: <b></b></label>
+          <input type="text" name="buyer_name" value="{{ trade_edit.buyer_name }}" readonly class="inputaslabel" />
         </p>
         <p>
-          <label for="product">Product: <b>{{ trade_edit.product }}</b></label>
+          <label for="product">Product: <b></b></label>
+          <input type="text" name="product" value="{{ trade_edit.product }}" readonly class="inputaslabel" />
         </p>
         <!-- <p>
           <label for="underlying_price">Underlying Price: <b>{{ trade_edit.underlying_price }}</b></label>
