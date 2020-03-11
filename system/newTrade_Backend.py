@@ -109,7 +109,7 @@ class Checker():
 
         # if trade is not confident, the error message is registered and 0 is returned for further validation
         if not isConfident:
-            messages.error(request, 'Notional Amount seems unlikely: ' + str(notionalAmount) + '. Are you sure you would like to enter trade?')
+            messages.error(request, 'Notional Amount seems unlikely: ' + str(round(notionalAmount, 2)) + ' in ' + str(notionalCurrency) +'. Are you sure you would like to enter trade?')
             return 2
         # trade is confident, tables are updated
         else:
